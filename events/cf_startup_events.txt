@@ -28,6 +28,9 @@ character_event = {
 			death = { death_reason = death_murder_unknown }
 			set_global_flag = tsaadead
             abdicate_to = c_1200048
+            c_1200048 = {
+                wealth = PREV
+            }
 		}	   
     }
 }
