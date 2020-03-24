@@ -1,6 +1,8 @@
-#on_startup = {
-#  events = {    }
-#}
+on_startup = {
+    events = {    
+        castart.1
+    }
+}
 
 on_crusade_creation = {
 	events = {

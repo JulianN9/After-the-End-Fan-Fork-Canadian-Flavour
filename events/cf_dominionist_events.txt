@@ -1037,7 +1037,8 @@ narrative_event = {
 province_event = {
 	id = dominion.25
 	hide_window = yes
-	
+	has_global_flag = dom_splint
+
 	trigger = {
 		NOR = { 
 			has_province_modifier = dominionist_faithful
@@ -1045,7 +1046,6 @@ province_event = {
 			has_province_modifier = three_mothers_conversions
 			has_province_modifier = rinkite_conversions
 		}
-		has_global_flag = dom_splint
 		religion = dominionist
 	}
 
@@ -1283,7 +1283,8 @@ narrative_event = {
 province_event = {
 	id = dominion.27
 	hide_window = yes
-	
+	has_global_flag = dominionist_prophet_dead
+
 	trigger = {
 		OR = { 
 			has_province_modifier = dominionist_faithful
@@ -1292,7 +1293,9 @@ province_event = {
 			has_province_modifier = three_mothers_conversions
 		}
 		NOT = {has_global_flag = dom_splint}
-		has_global_flag = dominionist_prophet_dead
+		NOT = { 
+			had_global_flag = { flag = dominionist_prophet_dead days = 365 }
+		}
 	}
 
 	mean_time_to_happen = {

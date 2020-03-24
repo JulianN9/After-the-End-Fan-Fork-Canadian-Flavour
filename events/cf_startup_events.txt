@@ -1,6 +1,6 @@
 namespace = castart
 
-character_event = {
+narrative_event = {
     id = castart.1
 	desc = castartdesc.1
 	picture = GFX_evt_lunatic_arabic
@@ -9,28 +9,217 @@ character_event = {
 	only_independent = yes
 	has_character_flag = vancouver_king
 	only_playable = yes
+    is_triggered_only = yes
 
 	mean_time_to_happen = {
 		days = 100
 	}	
 
-	option = {
-		name = castartopA.1
-		hidden_tooltip = {
-			death = { death_reason = death_murder_unknown }
-			set_global_flag = tsaadead
-		}	
-	}
-
     option = {
-        name = castartoptB.1
+        name = castartoptA.1
      	hidden_tooltip = {
+            clr_character_flag = vancouver_king
 			death = { death_reason = death_murder_unknown }
-			set_global_flag = tsaadead
+			set_global_flag = tsaahaida
             abdicate_to = c_1200048
             c_1200048 = {
                 wealth = PREV
+                set_charcter_flag = vancouver_king
             }
-		}	   
+		}
+        ai_chance = {
+            factor = 50
+        }	   
+    }
+
+	option = {
+		name = castartopB.1
+		hidden_tooltip = {
+            clr_character_flag = vancouver_king
+			death = { death_reason = death_murder_unknown }
+			set_global_flag = tsaacanuck
+            c_1200046 = {
+                set_charcter_flag = vancouver_king
+            }
+		}	
+        ai_chance = {
+            factor = 50
+        }
+	}
+}
+
+narrative_event = {
+    id = castart.2
+	desc = castartdesc.2
+	picture = GFX_evt_lunatic_arabic
+	border = GFX_event_normal_frame_intrigue
+	prisoner = no
+	only_independent = yes
+    has_global_flag = tsaacanuck
+	has_character_flag = vancouver_king
+	only_playable = yes
+
+	mean_time_to_happen = {
+		days = 10
+	}	
+
+    immediate = {
+        c_victoria = {
+            religion = raven_tales
+        }
+        any_demesne_province = {
+            culture = haisla
+        }
+        clr_character_flag = vancouver_king
+    }
+
+	option = {
+		name = castartopA.2
+	}
+}
+
+province_event = {
+    id = castart.3
+    hide_window = yes
+    has_global_flag = tsaacanuck
+
+    mean_time_to_happen = {
+        months = 6
+    }
+
+    trigger = {
+        OR = {
+            AND = {
+                culture_group = northwest_coast
+                NOT = { culture = haisla } 
+            }
+            culture = canuck
+        }
+        owner = {
+            OR = {
+                culture = haisla
+                any_liege = {
+                    culture = haisla
+                }
+            }
+        }
+    }
+
+    immediate = {
+        culture = haisla
+        add_province_modifier = {
+            name = cultural_tension
+            duration = 90
+        }
+    }
+}
+
+narrative_event = {
+    id = castart.11
+	desc = castartdesc.11
+	picture = GFX_evt_lunatic_arabic
+	border = GFX_event_normal_frame_intrigue
+	prisoner = no
+	only_independent = yes
+    has_global_flag = tsaahaida
+	has_character_flag = vancouver_king
+	only_playable = yes
+
+	mean_time_to_happen = {
+		days = 10
+	}	
+
+    immediate = {
+        c_victoria = {
+            religion = raven_tales
+            culture = haida
+        }
+        c_cowichan = {
+            religion = raven_tales
+            culture = haida
+        }
+        c_san_juan_islands = {
+            religion = raven_tales
+            culture = haida
+        }
+        c_vancouver = {
+            add_province_modifier = {
+                name = religious_tension
+				duration = 180
+            }
+        }
+        c_bellingham_bay = {
+            add_province_modifier = {
+            	name = religious_tension
+				duration = 90
+            }
+        }
+        c_camano = {
+            add_province_modifier = {
+            	name = religious_tension
+				duration = 90
+            }
+        }
+        c_snohomish = {
+            add_province_modifier = {
+                name = religious_tension
+                duration = 90
+            }
+        }
+        c_1845081 = {
+            character_event = { id = castart.12 days = 7 }
+        }
+        clr_character_flag = vancouver_king
+    }
+
+	option = {
+		name = castartopA.11
+        add_claim = k_great_coast
+        hidden_tooltip = {
+            k_great_coast = {
+                holder_scope = {
+                    character_event = { id = castart.13 days = 7 }
+                }
+            }
+        }
+	}
+    option = {
+        name = castartdescB.11
+    }
+}
+
+narrative_event = {
+    id = castart.12
+	desc = castartdesc.12
+	picture = GFX_evt_lunatic_arabic
+	border = GFX_event_normal_frame_intrigue
+    is_triggered_only = yes
+	only_playable = yes
+
+	option = {
+		name = castartopA.12
+	}
+}
+
+narrative_event = {
+    id = castart.13
+	desc = castartdesc.13
+	picture = GFX_evt_lunatic_arabic
+	border = GFX_event_normal_frame_intrigue
+    is_triggered_only = yes
+	only_playable = yes
+
+	option = {
+		name = castartopA.13
+        ai_chance = {
+            factor = 75
+        }
+	}
+    option = {
+        name = castartopB.13
+        add_claim = k_vancouver
+        ai_chance = {
+            factor = 25
+        }
     }
 }
