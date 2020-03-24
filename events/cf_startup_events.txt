@@ -1,0 +1,36 @@
+namespace = castart
+
+character_event = {
+    id = castart.1
+	desc = castartdesc.1
+#	picture = GFX_evt_lunatic_arabic
+	border = GFX_event_normal_frame_intrigue
+	prisoner = no
+	only_independent = yes
+	has_character_flag = vancouver_king
+	only_playable = yes
+
+	mean_time_to_happen = {
+		days = 100
+	}	
+
+	option = {
+		name = "evtopt_ammondeath"
+		hidden_tooltip = {
+			death = { death_reason = death_murder_unknown }
+			set_global_flag = tsaadead
+		}	
+	}
+
+    option = {
+        name = castartoptB.1
+     	hidden_tooltip = {
+			death = { death_reason = death_murder_unknown }
+			set_global_flag = tsaadead
+            abdicate_to = c_1200048
+            c_1200048 = {
+                wealth = PREV
+            }
+		}	   
+    }
+}

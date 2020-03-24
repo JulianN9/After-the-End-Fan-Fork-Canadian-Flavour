@@ -113,6 +113,11 @@
 	mother=1200002
 	2640.8.19={birth=yes}
 	2649.3.12={add_spouse=1200005}
+	2660.1.1={
+		effect={
+			set_character_flag=haida_king
+		}
+	}
 }
 
 1200005={#son's wife, who is a little shy. notably, she is tsimshianic, as she is the daughter of the current duke. no kids yet, wonder why?
@@ -761,6 +766,11 @@
 	2615.1.23={add_spouse=1200044}
 	2660.1.1={
 		capital=c_victoria
+	}
+	2660.1.1={
+		effect={
+			set_character_flag = vancouver_king
+		}
 	}
 	2666.8.20={death=yes}
 }

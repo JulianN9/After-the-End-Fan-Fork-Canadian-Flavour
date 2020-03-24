@@ -1772,6 +1772,11 @@
 	mother=1200012
 	2620.1.12={birth=yes}
 	2645.2.15={add_spouse=1845084}
+	2660.1.1={
+		effect={
+			set_character_flag = chilliwack_count
+		}
+	}
 	2678.4.6={death=yes}
 }
 

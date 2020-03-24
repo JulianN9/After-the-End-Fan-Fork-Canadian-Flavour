@@ -1,3 +1,9 @@
+on_startup = {
+    events = {
+        
+    }
+}
+
 on_crusade_creation = {
 	events = {
 		canada.104 # Confederation War 
