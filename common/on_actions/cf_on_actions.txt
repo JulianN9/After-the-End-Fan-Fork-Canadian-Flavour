@@ -1,0 +1,11 @@
+on_crusade_creation = {
+	events = {
+		canada.104 # Confederation War 
+    }
+}
+
+on_death = {
+	events = {
+        dominion.24
+    }
+}

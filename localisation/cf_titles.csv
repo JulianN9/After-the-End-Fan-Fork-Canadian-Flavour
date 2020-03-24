@@ -1,0 +1,22 @@
+e_qbc;Nouvelle-France;;;;;;;;;;;;;x
+e_bc;British Columbia;;;;;;;;;;;;;x
+
+k_up_north;Up North;;;;;;;;;;;;;x
+k_saskatchewan;Saskatchewan;;;;;;;;;;;;;x
+k_alberta;Alberta;;;;;;;;;;;;;x
+k_yukon;Yukon;;;;;;;;;;;;;x
+
+d_battleford;Battleford;;;;;;;;;;;;;x
+
+d_con_urs;Ursuline See;;;;;;;;;;;;;x
+d_con_ang;Cantebury;;;;;;;;;;;;;x
+
+d_dominionist;Govener Generalship of Canada;;;;;;;;;;;;;x
+k_three_mothers;The House of the Three Mothers;;;;;;;;;;;;;x
+d_lyonist;Prime Ministership of Canada;;;;;;;;;;;;;x
+
+dominionist_REVOLT;Dominionist Revolt;;;;;;;;;;;;;x
+
+RULE_CAN_PROVINCE_DECISIONS;Province Decisions;;;;;;;;;;;;;x
+RULE_CAN_PROVINCES_ON_DESC;Canadian provinces can be reformed by united canadian church or old world cultists.;;;;;;;;;;;;;x
+RULE_CAN_PROVINCES_OFF_DESC;Canadian provinces cannot be reformed.;;;;;;;;;;;;;x

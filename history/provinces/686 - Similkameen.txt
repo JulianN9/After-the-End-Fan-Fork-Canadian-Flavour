@@ -1,0 +1,16 @@
+# County Title
+title=c_similkameen
+
+# Settlements
+max_settlements=3
+
+b_keremos_BC=castle
+b_princeton_BC=city
+
+
+# Misc
+culture=canuck
+religion=rinkite
+terrain=hills
+
+#History

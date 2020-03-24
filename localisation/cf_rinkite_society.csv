@@ -1,0 +1,25 @@
+#Society
+warrior_lodge_rinkite;The Locker Room;;;;;;;;;;;;;x
+warrior_lodge_rinkite_desc;The Locker Room is a collection of hockey enthousiastes throughout the northern reaches. This antediluvian tradition has persisted for many cultures and religions. However, the upper levels of the Society are reserved for the Rinkite fanatics, who find the game to be a holy ceremony.;;;;;;;;;;;;;x
+
+warrior_lodge_rinkite_rank_1_female;Rookie;;;;;;;;;;;;;x
+warrior_lodge_rinkite_rank_2_female;Third Liner;;;;;;;;;;;;;x
+warrior_lodge_rinkite_rank_3_female;Professional;;;;;;;;;;;;;x
+warrior_lodge_rinkite_rank_4_female;Coach;;;;;;;;;;;;;x
+warrior_lodge_rinkite_rank_1_male;Rookie;;;;;;;;;;;;;x
+warrior_lodge_rinkite_rank_2_male;Third Linear;;;;;;;;;;;;;x
+warrior_lodge_rinkite_rank_3_male;Proffesional;;;;;;;;;;;;;x
+warrior_lodge_rinkite_rank_4_male;Coach;;;;;;;;;;;;;x
+
+warrior_lodge_choose_position;Choose a Hockey Position;;;;;;;;;;;;;x
+warrior_lodge_choose_position_power_desc;All dedicated rinkites hone their craft in one of the five traditional hockey poistions.;;;;;;;;;;;;;x
+
+currency_name_warrior_lodge_rinkite;Renown;;;;;;;;;;;;;x
+
+#Decisions
+
+warrior_lodge_rinkite_position;Choose a Hockey Position;;;;;;;;;;;;;x
+warrior_lodge_rinkite_position_desc;All dedicated rinkites hone their craft in one of the five traditional hockey poistions.;;;;;;;;;;;;;x
+
+request_to_rank_up_within_society_rinkite;Rank Up;;;;;;;;;;;;;x
+

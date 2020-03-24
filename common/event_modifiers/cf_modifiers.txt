@@ -1,0 +1,15 @@
+lyonist_conversions = {
+	icon = 26
+}
+
+three_mothers_conversions = {
+	icon = 26
+}
+
+rinkite_conversions = {
+	icon = 26
+}
+
+dominionist_faithful = {
+	icon = 26
+}

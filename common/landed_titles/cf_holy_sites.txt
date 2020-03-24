@@ -1,0 +1,30 @@
+c_ottawa = {
+    holy_site = dominionist
+}
+c_toronto = {
+    holy_site = rinkite
+}
+c_cap_diamant = {
+    holy_site = dominionist
+}
+c_hochelaga = {
+    holy_site = rinkite
+}
+c_annapolis = {
+    holy_site = dominionist
+}
+c_st_johns = {
+    holy_site = dominionist
+}
+c_winnipeg = {
+    holy_site = dominionist
+}
+c_vancouver = {
+    holy_site = rinkite
+}
+c_edmonton = {
+    holy_site = rinkite
+}
+c_prince_edward = {
+    holy_site = rinkite
+}

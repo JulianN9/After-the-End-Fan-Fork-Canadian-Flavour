@@ -1,0 +1,15 @@
+canadian_province_decisions = {
+	name = "RULE_CAN_PROVINCE_DECISIONS"
+	group = "RULE_GROUP_ATE"
+	option = {
+		name = on
+		text = "RULE_OPTION_ON"
+		desc = "RULE_CAN_PROVINCES_ON_DESC"
+	}
+	option = {
+		name = off
+		text = "RULE_OPTION_OFF"
+		desc = "RULE_CAN_PROVINCES_OFF_DESC"
+	}
+	
+}

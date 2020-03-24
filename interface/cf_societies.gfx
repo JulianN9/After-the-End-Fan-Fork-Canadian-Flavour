@@ -1,0 +1,31 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_society_main_background_warrior_lodge_rinkite"
+		texturefile = "gfx\\interface\\societies\\society_bg_warrior_lodge_rinkite.tga"
+	}
+	spriteType = {
+		name = "GFX_society_expansion_background_warrior_lodge_rinkite"
+		texturefile = "gfx\\interface\\societies\\society_exp_bg_olympic_champions.tga"
+	}
+	spriteType = {
+		name = "GFX_society_portrait_ring_warrior_lodge_rinkite"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_olympic_champions.tga"
+	}
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_warrior_lodge_rinkite"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_small_olympic_champions.tga"
+	}
+    spriteType = {
+		name = "GFX_icon_small_warrior_lodge_rinkite"
+		texturefile = "gfx\\interface\\societies\\symbol_small_warrior_lodge_rinkite.tga"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_society_currency_warrior_lodge_rinkite"
+		texturefile = "gfx\\interface\\societies\\society_currency_warriors.dds"
+	}
+	spriteType = {
+		name = "GFX_event_window_society_quest_background_warrior_lodge_rinkite"
+		textureFile = "gfx\\interface\\societies\\mission_bg_warrior_lodge_rinkite.dds"
+	}
+}

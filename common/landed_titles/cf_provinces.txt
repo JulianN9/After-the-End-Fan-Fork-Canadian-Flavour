@@ -1,0 +1,124 @@
+e_qbc = {
+	color = { 0 31 151 }
+	color2 = { 220 220 0}
+	short_name = yes
+	capital = 1217 #Hochelaga
+	#capital = 1199 #Cap Diamant
+	creation_requires_capital = no
+	dynasty_title_names = no
+	
+	allow = {
+		AND = {
+			OR = {
+				culture = quebecois
+				culture = acadien
+				culture = yiddish
+			}
+			FROM = { # FROM = this title
+				any_previous_holder = {
+					always = yes # The title has existed before
+				}
+			}
+		}
+	}
+}
+
+e_bc = {
+	color = { 95 44 13 }
+	color2 = { 220 220 0}
+	short_name = no
+	capital = 548 #Vancouver
+	#capital = 3029 #Victoria
+	creation_requires_capital = no
+	dynasty_title_names = no
+	
+	allow = {
+		FROM = { # FROM = this title
+			any_previous_holder = {
+				always = yes # The title has existed before
+			}
+		}
+	}
+}
+
+k_up_north = {
+	color = { 64 224 208 }
+	color2 = { 220 220 0 }
+	capital = 553 #Prince Rupert
+	creation_requires_capital = no
+	short_name = yes
+	dynasty_title_names = no
+	
+	allow = {
+		FROM = { # FROM = this title
+			any_previous_holder = {
+				always = yes # The title has existed before
+			}
+		}
+	}
+}
+
+k_yukon = {
+	color = { 165 242 243 }
+	color2 = { 220 220 0 }
+	capital = 848 #Whitehorse
+	creation_requires_capital = no
+	short_name = yes
+	dynasty_title_names = no
+	
+	allow = {
+		FROM = { # FROM = this title
+			any_previous_holder = {
+				always = yes # The title has existed before
+			}
+		}
+	}
+}
+
+k_alberta = {
+	color = { 26 71 130 }
+	color2 = { 220 220 0 }
+	capital = 2093 #Philadelphia
+	creation_requires_capital = no
+	dynasty_title_names = no
+	
+	allow = {
+		FROM = { # FROM = this title
+			any_previous_holder = {
+				always = yes # The title has existed before
+			}
+		}
+	}
+}
+
+k_saskatchewan = {
+	color = { 253 213 0 }
+	color2 = { 220 220 0 }
+	capital = 574 #Philadelphia
+	creation_requires_capital = no
+	dynasty_title_names = no
+	
+	allow = {
+		FROM = { # FROM = this title
+			any_previous_holder = {
+				always = yes # The title has existed before
+			}
+		}
+	}
+}
+
+d_battleford = {
+	color = { 1 106 27 }
+	color2 = { 220 220 0 }
+	capital = 27 #Philadelphia
+	creation_requires_capital = no
+	dynasty_title_names = no
+	
+	allow = {
+		FROM = { # FROM = this title
+			any_previous_holder = {
+				always = yes # The title has existed before
+			}
+		}
+	}
+}

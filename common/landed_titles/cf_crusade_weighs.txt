@@ -1,0 +1,16 @@
+k_ontario       = { confederated = 1000 }
+k_quebec        = { confederated = 900 }
+k_maritimes     = { confederated = 850 }
+k_aurora        = { confederated = 800 }
+
+k_jamesie       = { confederated = 500 }
+k_newfoundland  = { confederated = 450 }
+k_cote_nord     = { confederated = 250 }
+k_nunavik       = { confederated = 200 }
+
+k_manitoba      = { confederated = 100 }
+k_prairieland   = { confederated = 90 }
+k_peace         = { confederated = 80 }
+k_klondike      = { confederated = 50 }
+k_caledonia     = { confederated = 25 }
+k_vancouver     = { confederated = 5 }

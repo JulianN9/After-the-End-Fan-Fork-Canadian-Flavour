@@ -1,0 +1,97 @@
+goon = {
+	religious = yes
+	martial = 2
+	monthly_character_piety = 1
+	combat_rating = 10
+	same_opinion = 10
+	random = no
+}
+rocket = {
+	religious = yes
+	diplomacy = 2
+	monthly_character_prestige = 1
+	vassal_opinion = 5
+	same_opinion = 10
+	random = no
+}
+goalkeeper = {
+	religious = yes
+	stewardship = 2	
+	monthly_character_piety = 0.5
+	global_tax_modifier = .2
+	church_opinion = 5
+	same_opinion = 10
+	random = no
+}
+playmaker = {
+	religious = yes
+	learning = 2
+	monthly_character_prestige = 0.5
+	monthly_character_piety = 0.5	
+	same_opinion = 10
+	random = no
+}
+diver = {
+	religious = yes
+	intrigue = 2
+	monthly_character_prestige = 0.5	
+	combat_rating = 5
+	same_opinion = 10
+	random = no
+}
+coach = {
+	religious = yes
+	martial = 1
+	intrigue = 1
+	diplomacy = 1
+	stewardship = 1
+	learning = 1
+	monthly_character_piety = 2
+	dominionist_reformed_opinion = 10
+	random = no
+}
+dom_queen = {
+	religious = yes
+	three_mothers_opinion = 10
+	dominionist_opinion = 10
+	lyonist_opinion = -10
+	monthly_character_piety = 1
+	random = no
+}
+dom_lady = {
+	religious = yes
+	three_mothers_opinion = 5
+	lyonist_opinion = 5
+	americanist_opinion = 5
+	hamiltonian_opinion = 5
+	jeffersonian_opinion = 5
+	libertarian_opinion = 5
+	random = no
+}
+dom_mary = {
+	religious = yes
+	three_mothers_opinion = 5
+	christian_opinion = 20
+	dominionist_opinion = -5
+	lyonist_opinion = -5
+	monthly_character_piety = -1
+	random = no
+}
+dom_general = {
+	religious = yes
+	dominionist_opinion = 10
+	lyonist_opinion = 10
+	three_mothers_opinion = 10
+	martial = 2
+	random = no
+}
+rinkite_leader = {
+	leader = yes
+	random = no
+	command_modifier = {
+		terrain = plains
+		terrain = farmlands
+		morale_defence = 0.3
+		#morale_offence = 0.2
+	}
+}

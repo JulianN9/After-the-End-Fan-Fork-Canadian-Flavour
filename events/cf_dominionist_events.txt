@@ -1,0 +1,1942 @@
+namespace = dominion
+
+character_event = {
+	id = dominion.1
+	desc = domdesc.1
+	picture = GFX_evt_hockey_position
+	is_triggered_only = yes
+	
+	option = {
+		name = domoptA.1
+		custom_tooltip = { text = goon_position }
+		add_trait = goon
+		ai_chance = {
+			factor = 20
+			modifier = { factor = 2 trait = brave }
+			modifier = { factor = 2 trait = brilliant_strategist }
+			modifier = { factor = 2 trait = skilled_tactician }
+			modifier = { factor = 2 trait = tough_soldier }
+			modifier = { factor = 2 trait = misguided_warrior }
+			modifier = { factor = 2 trait = wroth }
+			modifier = { factor = 2 trait = strategist }
+			modifier = { factor = 2 trait = strong trait = zealous }
+			modifier = { factor = 2 NOT = { learning = 8 } }
+			modifier = { factor = 0.2 learning = 12 }
+			modifier = { factor = 1.5 martial = 12 }
+			modifier = { factor = 0.2 trait = craven }
+			modifier = { factor = 2 is_feudal = yes }	
+		}
+	}
+	
+	option = {
+		name = domoptB.1
+		custom_tooltip = { text = rocket_position }
+		add_trait = rocket
+		ai_chance = {
+			factor = 20
+			modifier = { factor = 2 trait = grey_eminence }
+			modifier = { factor = 2 trait = charismatic_negotiator }
+			modifier = { factor = 2 trait = underhanded_rogue }
+			modifier = { factor = 2 trait = naive_appeaser }
+			modifier = { factor = 1.5 diplomacy = 12 }
+		}
+	}
+	
+	option = {
+		name = domoptC.1
+		custom_tooltip = { text = goalkeeper_position }
+		add_trait = goalkeeper
+		ai_chance = {
+			factor = 20
+			modifier = { factor = 2 trait = midas_touched }
+			modifier = { factor = 2 trait = fortune_builder }
+			modifier = { factor = 2 trait = thrifty_clerk }
+			modifier = { factor = 2 trait = indulgent_wastrel }
+			modifier = { factor = 2 trait = architect }
+			modifier = { factor = 1.5 stewardship = 12 }
+			modifier = { factor = 2 is_merchant_republic = yes }
+		}
+	}
+	
+	option = {
+		name = domoptD.1
+		character_event = { id = dominion.2 }
+		ai_chance = {
+			factor = 40
+			modifier = { factor = 2	trait = mastermind_theologian }
+			modifier = { factor = 2	trait = scholarly_theologian }
+			modifier = { factor = 2	trait = martial_cleric }
+			modifier = { factor = 2	trait = detached_priest }
+			modifier = { factor = 2	trait = theologian }
+			modifier = { factor = 2	trait = scholar }
+			modifier = { factor = 2	trait = celibate }
+			modifier = { factor = 2	trait = mystic }
+			modifier = { factor = 2	trait = zealous }
+			modifier = { factor = 1.5 trait = diligent }
+			modifier = { factor = 1.5 trait = humble }
+			modifier = { factor = 2 is_theocracy = yes }
+			modifier = { factor = 2 trait = elusive_shadow }
+			modifier = { factor = 2 trait = intricate_webweaver }
+			modifier = { factor = 2 trait = flamboyant_schemer }
+			modifier = { factor = 2 trait = amateurish_plotter }
+			modifier = { factor = 1.5 intrigue = 12 }
+		}
+	}
+}
+
+character_event = {
+	id = dominion.2
+	desc = domdesc.1
+	picture = GFX_evt_hockey_position
+	is_triggered_only = yes
+	
+	option = {
+		name = domoptA.2
+		custom_tooltip = { text = playmaker_position }
+		add_trait = playmaker
+		ai_chance = {
+			factor = 20
+			modifier = { factor = 2	trait = mastermind_theologian }
+			modifier = { factor = 2	trait = scholarly_theologian }
+			modifier = { factor = 2	trait = martial_cleric }
+			modifier = { factor = 2	trait = detached_priest }
+			modifier = { factor = 2	trait = theologian }
+			modifier = { factor = 2	trait = scholar }
+			modifier = { factor = 2	trait = celibate }
+			modifier = { factor = 2	trait = mystic }
+			modifier = { factor = 2	trait = zealous }
+			modifier = { factor = 1.5 trait = diligent }
+			modifier = { factor = 1.5 trait = humble }
+			modifier = { factor = 2 is_theocracy = yes }
+		}
+	}
+
+	option = {
+		name = domoptB.2
+		custom_tooltip = { text = diver_position }
+		add_trait = diver
+		ai_chance = {
+			factor = 20
+			modifier = { factor = 2 trait = elusive_shadow }
+			modifier = { factor = 2 trait = intricate_webweaver }
+			modifier = { factor = 2 trait = flamboyant_schemer }
+			modifier = { factor = 2 trait = amateurish_plotter }
+			modifier = { factor = 1.5 intrigue = 12 }
+		}
+	}
+
+	option = {
+		name = domoptC.2
+		character_event = { id = dominion.1 }
+		ai_chance = {
+			factor = 0
+		}	
+	}
+}
+
+character_event = {
+	id = dominion.3
+	desc = domdesc.3
+	picture = GFX_evt_mother_saint
+	is_triggered_only = yes
+	
+	option = {
+		name = domoptA.3
+		custom_tooltip = { text = dom_queen_saint }
+		add_trait = dom_queen 
+		ai_chance = {
+			factor = 34
+			modifier = { factor = 2	trait = mastermind_theologian }
+			modifier = { factor = 2	trait = scholarly_theologian }
+			modifier = { factor = 2	trait = martial_cleric }
+			modifier = { factor = 2	trait = detached_priest }
+			modifier = { factor = 2	trait = theologian }
+			modifier = { factor = 2	trait = scholar }
+			modifier = { factor = 2	trait = celibate }
+			modifier = { factor = 2	trait = mystic }
+			modifier = { factor = 2 trait = zealous }
+			modifier = { factor = 1.5 learning = 12 }
+			modifier = { factor = 0.2 trait = cynical }
+		}
+	}
+	
+	option = {
+		name = domoptB.3
+		custom_tooltip = { text = dom_lady_saint }
+		add_trait = dom_lady
+		ai_chance = {
+			factor = 33
+			modifier = { factor = 2 trait = midas_touched }
+			modifier = { factor = 2 trait = fortune_builder }
+			modifier = { factor = 2 trait = thrifty_clerk }
+			modifier = { factor = 2 trait = indulgent_wastrel }
+			modifier = { factor = 2 trait = architect }
+			modifier = { factor = 1.5 stewardship = 12 }
+			modifier = { factor = 0.2 NOT = { stewardship = 8 } }
+			modifier = { factor = 2 is_merchant_republic = yes }
+		}
+	}
+	
+	option = {
+		name = domoptC.3
+		custom_tooltip = { text = dom_mary_saint }
+		add_trait = dom_mary
+		ai_chance = {
+			factor = 33
+			modifier = { factor = 2 trait = grey_eminence }
+			modifier = { factor = 2 trait = charismatic_negotiator }
+			modifier = { factor = 2 trait = underhanded_rogue }
+			modifier = { factor = 2 trait = naive_appeaser }
+			modifier = { factor = 1.5 diplomacy = 12 }
+			modifier = { factor = 0.2 NOT = { diplomacy = 9 } }
+			modifier = { factor = 0.2 trait = zealous }
+		}
+	}
+}
+
+#Beatification
+#character_event = {
+	id = dominion.10
+	hide_window = yes
+	is_triggered_only = yes
+	has_dlc = "Holy Fury"
+	only_playable = yes
+	min_age = 16
+
+	trigger = {
+		death_in_china_trigger = no
+		death_no_trace_trigger = no
+		prestige = 1000
+		piety = 500 
+		is_adult = yes
+		has_religion_feature = dominion_beatification
+	}
+
+	immediate = {
+		save_event_target_as = saint_person
+
+		check_if_canadian_ancestor_worship_worthy_effect = yes
+	}
+}
+
+# Religious Head is notified about potential Ancestor material
+#character_event = {
+	id = dominion.11
+	desc = domdesc.11
+	picture = GFX_evt_council
+	border = GFX_event_normal_frame_religion
+	is_triggered_only = yes
+	trigger = {
+	
+	}
+
+	immediate = {
+		sound_effect = saint_proclaimed
+		save_event_target_as = canonizer_person
+	}
+
+	option = {	  
+		name = EVTOPTA_HF_40020
+		custom_tooltip = {
+			text = pagan_pope_cannonize_choice_TT
+
+			# Titles and Bloodlines
+			event_target:saint_person = {
+				set_special_character_title = BLESSED_TITLE
+
+				random_list = {
+					10 = {
+						modifier = {
+							factor = 0.4
+							any_owned_bloodline = {
+								has_bloodline_flag = bloodline_heroes
+							}
+						}
+						if = {
+							limit = {
+								is_female = yes
+							}
+							create_bloodline = {
+								type = ancestor_worship_bloodline_01
+								religion = event_target:saint_person
+								inheritance = matrilineal
+							}
+						}
+						else = {
+							create_bloodline = {
+								type = ancestor_worship_bloodline_01
+								religion = event_target:saint_person
+							}
+						}
+						if = {
+							limit = {
+								can_apply_average_nickname_trigger = yes
+							}
+							give_nickname = nick_the_great
+						}
+					}
+					30 = {
+						trigger = {
+							OR = {
+								trait = bastard
+								trait = legit_bastard
+							}
+						}
+						modifier = {
+							factor = 0.1
+							any_owned_bloodline = {
+								has_bloodline_flag = bloodline_legitimize
+							}
+						}
+						if = {
+							limit = {
+								is_female = yes
+							}
+							create_bloodline = {
+								type = ancestor_worship_bloodline_02
+								religion = event_target:saint_person
+								inheritance = matrilineal
+							}
+						}
+						else = {
+							create_bloodline = {
+								type = ancestor_worship_bloodline_02
+								religion = event_target:saint_person
+							}
+						}
+						if = {
+							limit = {
+								can_apply_lame_nickname_trigger = yes
+							}
+							give_nickname = nick_the_bastard
+						}
+					}
+					20 = {
+						trigger = {
+							OR = {
+								AND = {
+									government = nomadic_government
+									OR = {
+										religion = trailwalker
+										religion = trailwalker_reformed
+									}
+								}
+								religion = gaian
+							}
+						}
+						modifier = {
+							factor = 0.2
+							any_owned_bloodline = {
+								has_bloodline_flag = bloodline_sky_burial
+							}
+						}
+						if = {
+							limit = {
+								is_female = yes
+							}
+							create_bloodline = {
+								type = ancestor_worship_bloodline_03
+								religion = event_target:saint_person
+								inheritance = matrilineal
+							}
+						}
+						else = {
+							create_bloodline = {
+								type = ancestor_worship_bloodline_03
+								religion = event_target:saint_person
+							}
+						}
+						if = {
+							limit = {
+								can_apply_average_nickname_trigger = yes
+							}
+							give_nickname = nick_the_guide
+						}
+					}
+					20 = {
+						trigger = {
+							government = nomadic_government
+						}
+						modifier = {
+							factor = 0.1
+							any_owned_bloodline = {
+								has_bloodline_flag = bloodline_mercenary_traditions
+							}
+						}
+						if = {
+							limit = {
+								is_female = yes
+							}
+							create_bloodline = {
+								type = ancestor_worship_bloodline_04
+								religion = event_target:saint_person
+								inheritance = matrilineal
+							}
+						}
+						else = {
+							create_bloodline = {
+								type = ancestor_worship_bloodline_04
+								religion = event_target:saint_person
+							}
+						}
+						if = {
+							limit = {
+								can_apply_cool_nickname_trigger = yes
+							}
+							give_nickname = nick_the_scourge
+						}
+					}
+					30 = {
+						trigger = {
+							has_law = succ_tanistry
+						}
+						modifier = {
+							factor = 0.1
+							any_owned_bloodline = {
+								has_bloodline_flag = bloodline_tanistry
+							}
+						}
+						if = {
+							limit = {
+								is_female = yes
+							}
+							create_bloodline = {
+								type = ancestor_worship_bloodline_05
+								religion = event_target:saint_person
+								inheritance = matrilineal
+							}
+						}
+						else = {
+							create_bloodline = {
+								type = ancestor_worship_bloodline_05
+								religion = event_target:saint_person
+							}
+						}
+						if = {
+							limit = {
+								can_apply_cool_nickname_trigger = yes
+							}
+							give_nickname = nick_the_lawgiver
+						}
+					}
+					30 = {
+						trigger = {
+							OR = {
+								trait = pirate
+								trait = viking
+								trait = ravager
+								trait = sea_queen
+								trait = seaking
+							}
+						}
+						modifier = {
+							factor = 0.1
+							any_owned_bloodline = {
+								has_bloodline_flag = more_raiders_bloodline
+								bloodline_is_active_for = PREV
+							}
+						}
+						if = {
+							limit = {
+								is_female = yes
+							}
+							create_bloodline = {
+								type = ancestor_worship_bloodline_06
+								religion = event_target:saint_person
+								inheritance = matrilineal
+							}
+						}
+						else = {
+							create_bloodline = {
+								type = ancestor_worship_bloodline_06
+								religion = event_target:saint_person
+							}
+						}
+						if = {
+							limit = {
+								can_apply_cool_nickname_trigger = yes
+								is_female = yes
+							}
+							give_nickname = nick_the_valkyrie
+						}
+						if = {
+							limit = {
+								can_apply_cool_nickname_trigger = yes
+								is_female = no
+							}
+							give_nickname = the_unrestrained
+						}
+					}
+					20 = {
+						trigger = {
+							trait = duelist 
+						}
+						modifier = {
+							factor = 0.1
+							any_owned_bloodline = {
+								has_bloodline_flag = duelist_bloodline
+							}
+						}
+						if = {
+							limit = {
+								is_female = yes
+							}
+							create_bloodline = {
+								type = ancestor_worship_bloodline_07
+								religion = event_target:saint_person
+								inheritance = matrilineal
+							}
+						}
+						else = {
+							create_bloodline = {
+								type = ancestor_worship_bloodline_07
+								religion = event_target:saint_person
+							}
+						}
+						if = {
+							limit = {
+								can_apply_average_nickname_trigger = yes
+							}
+							give_nickname = nick_bloodaxe
+						}
+					}
+				}
+				new_bloodline = {
+					set_name = blessed_bloodline_name
+					set_description = blessed_bloodline_description
+				}
+			}
+			hidden_tooltip = {
+				# Messages
+				any_playable_ruler = {
+					limit = {
+						NOT = {
+							family = event_target:saint_person
+						}
+						religion = ROOT
+					}
+					narrative_event = { id = dominion.12 }
+				}
+				event_target:saint_person = {
+					any_dynasty_member = {
+						limit = {
+							religion_group = ROOT
+						}
+						narrative_event = { id = dominion.12 }
+					}
+				}
+				ROOT = {
+					narrative_event = { id = dominion.12 }
+				}
+			}
+		}
+	}
+	option = {	  
+		name = EVTOPTB_HF_40020
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#narrative_event = {
+	id = dominion.12
+	desc = domdesc.12
+	title = domtitle.12
+	portrait = event_target:saint_person
+	picture = GFX_evt_beatification
+	border = GFX_event_narrative_frame_religion
+	is_triggered_only = yes
+	has_dlc = "Holy Fury"
+	
+	immediate = {
+		opinion = {
+			name = opinion_very_grateful_donation
+			who = FROM
+			years = 30
+		}
+	}
+
+	option = {	  
+		name = EVTOPTA_HF_40025
+		show_portrait = FROM
+		custom_tooltip = { text = TT_PAGAN_CANONIZATION_FAMILY}
+	}
+}
+
+# Test Script
+#character_event = {
+	id = dominion.15
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+	
+	}
+
+	immediate = {
+		save_event_target_as = saint_person
+
+		character_event = { id = dominion.11 }
+	}
+}
+
+# Dominionist Prophet
+narrative_event = {
+	id = dominion.20
+	title = domtitle.20
+	desc = domdesc.20
+	picture = GFX_evt_dominionist_uprising
+	border = GFX_event_narrative_frame_religion
+	
+	major = yes
+	
+	only_independent = yes
+	only_playable = yes
+	
+	trigger = {
+		has_global_flag = redcoat_arrival
+		controls_religion = no
+		is_landed = yes
+		is_tribal = no
+		realm_size = 15
+		NOT = { has_global_flag = dominionist_revolt_successful }
+		capital_scope = { region = world_central_canada } #what the hell was with those old requirements 
+		NOT = { religion = dominionist }
+		higher_tier_than = COUNT #DUKE
+		d_dominionist = {
+			has_holder = no
+		}
+		NOT = { has_global_flag = dominionist_revolt_ongoing }
+		any_realm_province = {
+			kingdom = {
+				OR = {
+					has_holder = no
+					holder_scope = {
+						character = ROOT
+					}
+				}
+			}
+		}
+		NOT = { #immersion-breaking
+			has_alternate_start_parameter = { key = religion_names value = random }
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 400
+		modifier = {
+			factor = 0.25
+			OR = {
+				c_ottawa= {
+					holder_scope = {
+						same_realm = ROOT
+					}
+				}
+				c_cap_diamant = {
+					holder_scope = {
+						same_realm = ROOT
+					}
+				}
+				c_winnipeg = {
+					holder_scope = {
+						same_realm = ROOT
+					}
+				}
+				c_annapolis = {
+					holder_scope = {
+						same_realm = ROOT
+					}
+				}
+				c_st_johns = {
+					holder_scope = {
+						same_realm = ROOT
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			year = 2700
+		}
+		modifier = {
+			factor = 0.75
+			year = 2800
+		}
+		modifier = {
+			factor = 10.0
+			ai = no
+		}
+	}
+	
+	immediate = {
+		set_character_flag = dominionist_revolt
+		set_global_flag = dominionist_revolt_ongoing
+		clr_global_event_target = dominionist_prophet
+		
+		random_realm_province = {
+			limit = {
+				kingdom = {
+					OR = {
+						has_holder = no
+						holder_scope = {
+							character = ROOT
+						}
+					}
+				}
+			}
+			ROOT = {
+				create_character = {
+					name="Ricky" #as in Smith
+					dynasty = culture
+					religion = dominionist
+					culture = ROOT
+					female = no
+					age = 35
+					health = 6.5
+					fertility = 0.6
+					trait = genius
+					trait = mastermind_theologian
+					trait = wroth #patient
+					trait = greedy
+					trait = zealous
+					trait = gregarious
+					trait = holy_warrior
+					trait = siege_leader
+					trait = ambitious
+					trait = brave
+					trait = diligent
+					attributes = {
+						learning = 8
+						diplomacy = 6
+						martial = 8
+						stewardship = 6
+						intrigue = 6
+					}
+				}
+				
+				new_character = {
+					random_list = { # Random chance to be given a fitting name
+						10 = {
+							set_dynasty_name = "Mackenzie"
+						}
+						10 = {
+							set_dynasty_name = "Gretzky"
+						}
+						10 = {
+							set_dynasty_name = "Trudeau"
+						}
+						10 = {
+							set_dynasty_name = "Borden"
+						}
+						10 = {
+							set_dynasty_name = "Pearson"
+						}
+						10 = {
+							set_dynasty_name = "Graham-Bell"
+						}
+						10 = {
+							set_dynasty_name = "Richard"
+						}
+						10 = {
+							set_dynasty_name = "Dion"
+						}
+						10 = {
+							set_dynasty_name = "Vancouver"
+						}
+						10 = {
+							set_dynasty_name = "Mercer"
+						}
+					}
+					set_character_flag = dominionist_prophet
+					set_character_flag = dom_prophet # for conversion events
+					save_global_event_target_as = dominionist_prophet
+					give_nickname = nick_the_prophet
+					character_event = { id = misc.3 } # Diversity
+					#Prophet will always be in good shape
+					wealth = 5000
+					prestige = 500
+					create_title = {
+						tier = DUKE
+						landless = yes
+						temporary = yes
+						culture = ROOT
+						name = dominionist_REVOLT
+						holder = THIS
+					}
+					create_random_steward = {
+						random_traits = yes
+						female = yes
+						dynasty = random
+						religion = dominionist
+						culture = PREV
+						age = 18
+						trait = zealous
+						trait = greedy
+					}
+					new_character = {
+						character_event = { id = misc.3 } # Diversity
+						character_event = { id = misc.4 } # Physique
+						add_spouse = PREV
+						impregnate = PREV
+					}
+					create_character = {# Francis Pegahmagabow
+						name="Francis"
+						female = no
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = ojibwe
+						age = 30
+						trait = brilliant_strategist
+						trait = dom_general
+					}
+					new_character = {
+						spawn_unit = {
+							province = PREVPREVPREV
+							home = PREVPREVPREV
+							owner = PREV
+							leader = THIS
+							#match_character = PREVPREV
+							#match_mult = 0.1 #0.058
+							troops = {
+								light_cavalry = { 200 200 }
+								light_infantry = { 600 600 }
+								heavy_infantry = { 300 300 }
+								knights = { 100 100 }
+								pikemen = { 200 200 }
+							}
+							attrition = 0.5
+							maintenance_multiplier = 0.3
+							cannot_inherit = yes
+						}
+						character_event = { id = misc.3 } # Diversity
+						character_event = { id = misc.4 } # Physique
+						create_random_steward = {
+							random_traits = yes
+							female = yes
+							dynasty = random
+							religion = dominionist
+							culture = PREV
+							age = 16
+						}
+						new_character = {
+							character_event = { id = misc.3 } # Diversity
+							character_event = { id = misc.4 } # Physique
+							add_spouse = PREV
+							impregnate = PREV
+						}
+					}
+					create_character = {# Billy Bishop
+						name="Billy"
+						female = no
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						age = 27
+						trait = brilliant_strategist
+						trait = dom_general
+					}
+					new_character = {
+						spawn_unit = {
+							province = PREVPREVPREV
+							home = PREVPREVPREV
+							owner = PREV
+							leader = THIS
+							#match_character = PREVPREV
+							#match_mult = 0.1 #0.058
+							troops = {
+								light_cavalry = { 200 200 }
+								light_infantry = { 600 600 }
+								heavy_infantry = { 300 300 }
+								knights = { 100 100 }
+								pikemen = { 200 200 }
+							}
+							attrition = 0.5
+							maintenance_multiplier = 0.3
+							cannot_inherit = yes
+						}
+						character_event = { id = misc.3 } # Diversity
+						character_event = { id = misc.4 } # Physique
+						create_random_steward = {
+							random_traits = yes
+							female = yes
+							dynasty = random
+							religion = dominionist
+							culture = PREV
+							age = 16
+						}
+						new_character = {
+							character_event = { id = misc.3 } # Diversity
+							character_event = { id = misc.4 } # Physique
+							add_spouse = PREV
+							impregnate = PREV
+						}
+					}
+					create_character = {# Leo Major
+						name="Leo"
+						female = no
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = quebecois
+						age = 25
+						trait = skilled_tactician
+						trait = dom_general
+					}
+					new_character = {
+						spawn_unit = {
+							province = PREVPREVPREV
+							home = PREVPREVPREV
+							owner = PREV
+							leader = THIS
+							#match_character = PREVPREV
+							#match_mult = 0.1 #0.058
+							troops = {
+								light_cavalry = { 200 200 }
+								light_infantry = { 600 600 }
+								heavy_infantry = { 300 300 }
+								knights = { 100 100 }
+								pikemen = { 200 200 }
+							}
+							attrition = 0.5
+							maintenance_multiplier = 0.3
+							cannot_inherit = yes
+						}
+						character_event = { id = misc.3 } # Diversity
+						character_event = { id = misc.4 } # Physique
+						create_random_steward = {
+							random_traits = yes
+							female = yes
+							dynasty = random
+							religion = dominionist
+							culture = PREV
+							age = 16
+						}
+						new_character = {
+							character_event = { id = misc.3 } # Diversity
+							character_event = { id = misc.4 } # Physique
+							add_spouse = PREV
+							impregnate = PREV
+						}
+					}
+					create_character = { #Arthur Currie
+						name="Arthur"
+						female = no
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						age = 23
+						trait = skilled_tactician
+						trait = dom_general
+					}
+					new_character = {
+						spawn_unit = {
+							province = PREVPREVPREV
+							home = PREVPREVPREV
+							owner = PREV
+							leader = THIS
+							#match_character = PREVPREV
+							#match_mult = 0.1 #0.058
+							troops = {
+								light_cavalry = { 200 200 }
+								light_infantry = { 600 600 }
+								heavy_infantry = { 300 300 }
+								knights = { 100 100 }
+								pikemen = { 200 200 }
+							}
+							attrition = 0.5
+							maintenance_multiplier = 0.3
+							cannot_inherit = yes
+						}
+						character_event = { id = misc.3 } # Diversity
+						character_event = { id = misc.4 } # Physique
+						create_random_steward = {
+							random_traits = yes
+							female = yes
+							dynasty = random
+							religion = dominionist
+							culture = PREV
+							age = 16
+						}
+						new_character = {
+							character_event = { id = misc.3 } # Diversity
+							character_event = { id = misc.4 } # Physique
+							add_spouse = PREV
+							impregnate = PREV
+						}
+					}
+					create_character = { #Tommy Prince
+						name="Tommy"
+						female = no
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = ojibwe
+						age = 27
+						trait = skilled_tactician
+						trait = dom_general
+					}
+					new_character = {
+						spawn_unit = {
+							province = PREVPREVPREV
+							home = PREVPREVPREV
+							owner = PREV
+							leader = THIS
+							#match_character = PREVPREV
+							#match_mult = 0.1 #0.058
+							troops = {
+								light_cavalry = { 200 200 }
+								light_infantry = { 600 600 }
+								heavy_infantry = { 300 300 }
+								knights = { 100 100 }
+								pikemen = { 200 200 }
+							}
+							attrition = 0.5
+							maintenance_multiplier = 0.3
+							cannot_inherit = yes
+						}
+						character_event = { id = misc.3 } # Diversity
+						character_event = { id = misc.4 } # Physique
+						create_random_steward = {
+							random_traits = yes
+							female = yes
+							dynasty = random
+							religion = dominionist
+							culture = PREV
+							age = 16
+						}
+						new_character = {
+							character_event = { id = misc.3 } # Diversity
+							character_event = { id = misc.4 } # Physique
+							add_spouse = PREV
+							impregnate = PREV
+						}
+					}
+					create_character = { #Ernest Smith
+						name="Ernest"
+						female = no
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = canuck
+						age = 24
+						trait = skilled_tactician
+						trait = dom_general
+					}
+					new_character = {
+						spawn_unit = {
+							province = PREVPREVPREV
+							home = PREVPREVPREV
+							owner = PREV
+							leader = THIS
+							#match_character = PREVPREV
+							#match_mult = 0.1 #0.058
+							troops = {
+								light_cavalry = { 200 200 }
+								light_infantry = { 600 600 }
+								heavy_infantry = { 300 300 }
+								knights = { 100 100 }
+								pikemen = { 200 200 }
+							}
+							attrition = 0.5
+							maintenance_multiplier = 0.3
+							cannot_inherit = yes
+						}
+						character_event = { id = misc.3 } # Diversity
+						character_event = { id = misc.4 } # Physique
+						create_random_steward = {
+							random_traits = yes
+							female = yes
+							dynasty = random
+							religion = dominionist
+							culture = PREV
+							age = 16
+						}
+						new_character = {
+							character_event = { id = misc.3 } # Diversity
+							character_event = { id = misc.4 } # Physique
+							add_spouse = PREV
+							impregnate = PREV
+						}
+					}
+					create_character = { #Frederick Hobson
+						name="Frederick"
+						female = no
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = canuck
+						age = 32
+						trait = brilliant_strategist
+						trait = dom_general
+					}
+					new_character = {
+						spawn_unit = {
+							province = PREVPREVPREV
+							home = PREVPREVPREV
+							owner = PREV
+							leader = THIS
+							#match_character = PREVPREV
+							#match_mult = 0.3 #0.15
+							troops = {
+								light_cavalry = { 100 100 }
+								light_infantry = { 300 300 }
+								heavy_infantry = { 200 200 }
+								knights = { 50 50 }
+								pikemen = { 200 200 }
+							}
+							attrition = 0.0
+							maintenance_multiplier = 0.3
+							cannot_inherit = yes
+							disband_on_peace = yes
+						}
+						character_event = { id = misc.3 } # Diversity
+						character_event = { id = misc.4 } # Physique
+						create_random_steward = {
+							random_traits = yes
+							female = yes
+							dynasty = random
+							religion = dominionist
+							culture = PREV
+							age = 16
+						}
+						new_character = {
+							character_event = { id = misc.3 } # Diversity
+							character_event = { id = misc.4 } # Physique
+							add_spouse = PREV
+							impregnate = PREV
+						}
+					}
+					create_character = { #James Cleland Richardson
+						name="James"
+						female = no
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						age = 25
+						trait = skilled_tactician
+						trait = dom_general
+					}
+					new_character = {
+						spawn_unit = {
+							province = PREVPREVPREV
+							home = PREVPREVPREV
+							owner = PREV
+							leader = THIS
+							#match_character = PREVPREV
+							#match_mult = 0.3 #0.15
+							troops = {
+								light_cavalry = { 100 100 }
+								light_infantry = { 300 300 }
+								heavy_infantry = { 200 200 }
+								knights = { 50 50 }
+								pikemen = { 200 200 }
+							}
+							attrition = 0.0
+							maintenance_multiplier = 0.3
+							cannot_inherit = yes
+							disband_on_peace = yes
+						}
+						character_event = { id = misc.3 } # Diversity
+						character_event = { id = misc.4 } # Physique
+						create_random_steward = {
+							random_traits = yes
+							female = yes
+							dynasty = random
+							religion = dominionist
+							culture = PREV
+							age = 16
+						}
+						new_character = {
+							character_event = { id = misc.3 } # Diversity
+							character_event = { id = misc.4 } # Physique
+							add_spouse = PREV
+							impregnate = PREV
+						}
+					}
+					create_character = { #Charles Smith Rutherford
+						name="Charles"
+						female = no
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						age = 28
+						trait = skilled_tactician
+						trait = dom_general
+					}
+					new_character = {
+						spawn_unit = {
+							province = PREVPREVPREV
+							home = PREVPREVPREV
+							owner = PREV
+							leader = THIS
+							#match_character = PREVPREV
+							#match_mult = 0.3 #0.15
+							troops = {
+								light_cavalry = { 100 100 }
+								light_infantry = { 300 300 }
+								heavy_infantry = { 200 200 }
+								knights = { 50 50 }
+								pikemen = { 200 200 }
+							}
+							attrition = 0.0
+							maintenance_multiplier = 0.3
+							cannot_inherit = yes
+							disband_on_peace = yes
+						}
+						character_event = { id = misc.3 } # Diversity
+						character_event = { id = misc.4 } # Physique
+						create_random_steward = {
+							random_traits = yes
+							female = yes
+							dynasty = random
+							religion = dominionist
+							culture = PREV
+							age = 16
+						}
+						new_character = {
+							character_event = { id = misc.3 } # Diversity
+							character_event = { id = misc.4 } # Physique
+							add_spouse = PREV
+							impregnate = PREV
+						}
+					}
+					war = {
+						target = ROOT
+						casus_belli = dominionist_rising
+						thirdparty_title = PREVPREV
+						tier = KING
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "domoptA.20"
+		trigger = {
+			has_character_flag = dominionist_revolt 
+		}
+		clr_character_flag = dominionist_revolt
+	}
+	
+	option = {
+		name = "domoptB.20"
+		trigger = {
+			NOT = { has_character_flag = dominionist_revolt } 
+		}
+	}
+}
+
+# Prophet converts province to dominionism
+province_event = {
+	id = dominion.21
+	desc = domdesc.21
+	picture = GFX_evt_bishop
+	border = GFX_event_normal_frame_religion
+	
+	trigger = {
+		NOT = { religion = dominionist }	
+		holder_scope = {
+			OR = {
+				any_liege = {
+					religion = dominionist
+					has_nickname = nick_the_prophet
+				}
+				AND = {
+					religion = dominionist
+					has_nickname = nick_the_prophet
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = domoptA.21
+		trigger = { holder_scope = { religion = dominionist } }
+		religion = dominionist
+	}
+	
+	option = {
+		name = domoptB.21
+		trigger = { holder_scope = { NOT = { religion = dominionist } } }
+		religion = dominionist
+	}
+}
+
+# Prophet gives title to dom_general
+character_event = {
+	id = dominion.23
+	desc = domdesc.23
+	picture = GFX_evt_council
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		random_demesne_title = {
+			limit = {
+				tier = count
+				can_be_given_away = yes
+				NOT = {
+					location = {
+						is_capital = yes
+					}
+				}
+			}
+			save_event_target_as = saved_title
+		}
+	}
+	
+	option = {
+		name = EVTOPT_dominion_give_county
+		piety = 25
+		event_target:saved_title = {
+			grant_title = FROM
+			location = {
+				any_province_holding = {
+					limit = {
+						holder_scope = { character = ROOT }
+					}
+					grant_title = FROM
+				}
+			}
+		}
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 0.1
+				event_target:saved_title = { port = yes }
+			}
+			modifier = {
+				factor = 0.2
+				event_target:saved_title = { num_of_settlements = 3 }
+			}
+			modifier = {
+				factor = 0.2
+				event_target:saved_title = { num_of_settlements = 4 }
+			}
+			modifier = {
+				factor = 0
+				event_target:saved_title = { num_of_settlements = 5 }
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPT_dominion_give_nothing
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+# Death of the Prophet
+narrative_event = {
+	id = dominion.24 # He's dead
+	title = domtitle.24
+	picture = GFX_evt_death
+	border = GFX_event_narrative_frame_religion
+	desc = {
+		trigger = { religion = dominionist }
+		text = domdescA.24 #"Our Holy Prophet has died! /sad noises"
+	}
+	desc = {
+		trigger = {
+			religion_group = oldworld
+			NOT = { religion = dominionist }
+		}
+		text = domdescB.24 # "Their Prophet has died. Will the Dollar Protect them?"
+	}
+	desc = {
+		trigger = {
+			NOT = { religion_group = oldworld }
+		}
+		text = domdescC.24 # "The demonic infidel false prophet has died! /happy noises"
+	}
+	
+	major = yes
+	show_root = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = dom_prophet
+		NOT = { has_global_flag = dominionist_prophet_dead } # this should do it
+	}
+	major_trigger = {
+		capital_scope = { region = custom_canada }
+	}
+	
+	immediate = {
+		lyonist = {
+			c_ottawa = { set_holy_site = PREV}
+			c_toronto = { set_holy_site = PREV }
+			c_hochelaga = { set_holy_site = PREV }
+			c_halifax = { set_holy_site = PREV }
+			c_winnipeg = { set_holy_site = PREV }
+			set_parent_religion = { religion = THIS parent = dominionist }
+		}
+		three_mothers = {
+			c_ottawa = { set_holy_site = PREV }
+			c_hochelaga = { set_holy_site = PREV }
+			c_palisades = { set_holy_site = PREV }
+			c_boston = { set_holy_site = PREV }
+			c_cap_diamant = { set_holy_site = PREV }
+			set_parent_religion = { religion = THIS parent = dominionist }
+		}
+		set_global_flag = dominionist_prophet_dead
+	}
+	
+	option = {
+		name = domoptA.24 # "He left no instructions, just a legacy to protect."
+		trigger = { religion = dominionist }
+	}
+	option = {
+		name = domoptB.24 # "Will the Dollar protect them? Or will the join the true fold?"
+		trigger = {
+			religion_group = oldworld
+			NOT = { religion = dominionist }
+		}
+	}
+	option = {
+		name = domoptC.24 # "Who cares what those heathens do next?"
+		trigger = {
+			NOT = { religion_group = oldworld }
+		}
+	}
+	
+	after = {
+		set_global_flag = dom_splint
+	}
+}
+
+#Tagging Provinces
+province_event = {
+	id = dominion.25
+	hide_window = yes
+	
+	trigger = {
+		NOR = { 
+			has_province_modifier = dominionist_faithful
+			has_province_modifier = lyonist_conversions
+			has_province_modifier = three_mothers_conversions
+			has_province_modifier = rinkite_conversions
+		}
+		has_global_flag = dom_splint
+		religion = dominionist
+	}
+
+	mean_time_to_happen = {
+		days = 10
+	}
+	
+	immediate = {
+		random_list = {
+			100 = {
+				modifier = {
+					factor = 0
+					NOR = { 
+						de_jure_liege_or_above = k_quebec 
+						de_jure_liege_or_above = k_cote_nord
+					}
+				}
+				modifier = {
+					factor = 10
+					religion_group = christian
+				}
+				add_province_modifier = {
+					name = three_mothers_conversions
+					duration = -1
+				}
+			}
+			100 = {
+				modifier = {
+					factor = 0
+					OR = {
+						de_jure_liege_or_above = k_quebec
+						de_jure_liege_or_above = k_cote_nord
+					}
+				}
+				modifier = {
+					factor = 0.5
+					de_jure_liege_or_above = k_maritimes
+				}
+				add_province_modifier = {
+					name = lyonist_conversions
+					duration = -1
+				}
+			}
+			100 = {
+				modifier = {
+					factor = 2
+					de_jure_liege_or_above = k_maritimes
+				}
+				add_province_modifier = {
+					name = dominionist_faithful
+					duration = -1
+				}
+			}
+			50 = {
+				modifier = {
+					factor = 0.2
+					NOT = { climate = severe_winter }
+				}
+				modifier = {
+					factor = 4
+					OR = {
+						de_jure_liege_or_above = k_manitoba
+						de_jure_liege_or_above = k_prairieland
+						de_jure_liege_or_above = k_alberta
+						de_jure_liege_or_above = k_saskatchewan
+						de_jure_liege_or_above = k_caledonia
+					}
+				}
+				add_province_modifier = {
+					name = rinkite_conversions
+					duration = -1
+				}
+			}
+		}
+	}
+	
+}
+
+# Relgious Splintering
+narrative_event = {
+	id = dominion.26 # He's dead
+	title = domtitle.26
+	picture = GFX_evt_death
+	border = GFX_event_narrative_frame_religion
+	desc = {
+		trigger = {
+			OR = {
+				religion = dominionist
+				religion = lyonist
+				religion = three_mothers
+				religion = rinkite
+			}
+		}
+		text = domdescA.26
+	}
+	desc = {
+		trigger = {
+			religion_group = oldworld
+			NOR = { 
+				religion = dominionist 
+				religion = lyonist
+				religion = three_mothers
+				religion = rinkite
+			}
+		}
+		text = domdescB.26 # "Their Prophet has died. Will the Dollar Protect them?"
+	}
+	desc = {
+		trigger = {
+			NOT = { religion_group = oldworld }
+		}
+		text = domdescCs.26 # "The demonic infidel false prophet has died! /happy noises"
+	}
+	
+	major = yes
+	only_playable = yes
+
+	trigger = {
+		has_global_flag = dom_splint
+		OR = {
+			religion = dominionist
+			religion = lyonist
+			religion = three_mothers
+			religion = rinkite
+		}
+		higher_tier_than = COUNT
+		independent = yes
+	}
+	mean_time_to_happen = {
+		months = 8
+	}
+	major_trigger = {
+		capital_scope = { region = custom_canada }
+	}
+
+
+	
+	
+	option = {
+		name = domoptA.26
+		trigger = { religion = dominionist }
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				dominionist = {
+					authority = 0.5
+				}
+			}
+		}
+	}
+	option = {
+		name = domoptB.26
+		trigger = { 
+			OR = {
+				religion = dominionist 
+				religion = lyonist
+			}
+		}
+		religion = lyonist
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 0
+				NOT = {
+					any_demesne_province = {
+						has_province_modifier = lyonist_conversions
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = domoptC.26
+		trigger = {
+			OR = {
+				religion = dominionist
+				religion = three_mothers
+			}
+		}
+		religion = three_mothers
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 0
+				NOT = {
+					any_demesne_province = {
+						has_province_modifier = three_mothers_conversions
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = domoptD.26
+		trigger = {
+			OR = {
+				religion = dominionist
+				religion = rinkite
+			}
+		}
+		religion = rinkite
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor =  0
+				NOT = {
+					any_demesne_province = {
+						has_province_modifier = rinkite_conversions
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = domoptE.26
+		trigger = {
+			religion_group = oldworld
+			NOT = { religion = dominionist }
+		}
+	}
+	option = {
+		name = domoptF.26
+		trigger = {
+			NOT = { religion_group = oldworld }
+		}
+	}
+	
+	after = {
+		clr_global_flag = dom_splint
+	}
+}
+
+#Flipping Provinces
+province_event = {
+	id = dominion.27
+	hide_window = yes
+	
+	trigger = {
+		OR = { 
+			has_province_modifier = dominionist_faithful
+			has_province_modifier = lyonist_conversions
+			has_province_modifier = rinkite_conversions
+			has_province_modifier = three_mothers_conversions
+		}
+		NOT = {has_global_flag = dom_splint}
+		has_global_flag = dominionist_prophet_dead
+	}
+
+	mean_time_to_happen = {
+		days = 10
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				has_province_modifier = lyonist_conversions
+			}
+			religion = lyonist
+			add_province_modifier = {
+				name = religious_tension
+				duration = 90
+			}	
+			remove_province_modifier = { lyonist_conversions}
+		}
+		if = {
+			limit = {
+				has_province_modifier = three_mothers_conversions
+			}
+			religion = three_mothers
+			add_province_modifier = {
+				name = religious_tension
+				duration = 90
+			}	
+			remove_province_modifier = three_mothers_conversions
+		}
+		if = {
+			limit = {
+				has_province_modifier = rinkite_conversions
+			}
+			religion = rinkite
+			add_province_modifier = {
+				name = religious_tension
+				duration = 90
+			}
+			remove_province_modifier = rinkite_conversions
+		}
+		if = {
+			limit ={
+				has_province_modifier = dominionist_faithful
+			}
+			remove_province_modifier = dominionist_faithful
+		}
+	}
+	
+}
+
+
+# Player Controlled Uprising
+narrative_event = {
+	id = dominion.30
+	title = domtitle.30
+	desc = domdesc.30
+	picture = GFX_evt_dominionist_uprising
+	
+	trigger = {
+		ai = no
+		higher_tier_than = duke
+		religion = dominionist
+		capital_scope = {
+			region = world_central_canada
+		}
+		is_feudal = yes
+		independent = yes
+		NOT = { is_title_active = d_dominionist }
+		NOT = { has_global_flag = dominionist_revolt_successful }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = domoptA.30
+		piety = 2000
+		wealth = 500
+		give_nickname = nick_the_prophet
+		set_character_flag = dom_prophet
+		capital_scope = {
+			religion = ROOT
+			create_character = {
+				name="Nash"
+				random_traits = yes
+				dynasty = random
+				religion = dominionist
+				culture = ROOT
+				female = no
+				age = 30
+				trait = brilliant_strategist
+				trait = dom_general
+			}
+			new_character = {
+				character_event = { id = misc.3 } # Diversity
+				character_event = { id = misc.4 } # Physique
+				spawn_unit = {
+					province = PREV
+						troops = {
+							light_cavalry = { 300 300 }
+							light_infantry = { 900 900 }
+							heavy_infantry = { 600 600 }
+							knights = { 150 150 }
+							pikemen = { 600 600 }
+						}
+						attrition = 0.0
+						maintenance_multiplier = 0.3
+						cannot_inherit = yes
+				}
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = dominionist
+				culture = ROOT
+				female = no
+				age = 30
+				trait = grey_eminence
+				trait = dom_general
+			}
+			new_character = {
+				character_event = { id = misc.3 } # Diversity
+				character_event = { id = misc.4 } # Physique
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = dominionist
+				culture = ROOT
+				female = no
+				age = 30
+				trait = midas_touched
+				trait = dom_general
+			}
+			new_character = {
+				character_event = { id = misc.3 } # Diversity
+				character_event = { id = misc.4 } # Physique
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = dominionist
+				culture = ROOT
+				female = no
+				age = 30
+				trait = elusive_shadow
+				trait = dom_general
+			}
+			new_character = {
+				character_event = { id = misc.3 } # Diversity
+				character_event = { id = misc.4 } # Physique
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = dominionist
+				culture = ROOT
+				female = no
+				age = 30
+				trait = mastermind_theologian
+				trait = dom_general
+			}
+			new_character = {
+				character_event = { id = misc.3 } # Diversity
+				character_event = { id = misc.4 } # Physique
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = dominionist
+				culture = ROOT
+				female = no
+				age = 30
+				trait = charismatic_negotiator
+				trait = dom_general
+			}
+			new_character = {
+				character_event = { id = misc.3 } # Diversity
+				character_event = { id = misc.4 } # Physique
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = dominionist
+				culture = ROOT
+				female = no
+				age = 30
+				trait = skilled_tactician
+				trait = dom_general
+			}
+			new_character = {
+				character_event = { id = misc.3 } # Diversity
+				character_event = { id = misc.4 } # Physique
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = dominionist
+				culture = ROOT
+				female = no
+				age = 30
+				trait = fortune_builder
+				trait = dom_general
+			}
+			new_character = {
+				character_event = { id = misc.3 } # Diversity
+				character_event = { id = misc.4 } # Physique
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = dominionist
+				culture = ROOT
+				female = no
+				age = 30
+				trait = intricate_webweaver
+				trait = dom_general
+			}
+			new_character = {
+				character_event = { id = misc.3 } # Diversity
+				character_event = { id = misc.4 } # Physique
+			}
+		}
+		random_realm_province = {
+			limit = {
+				de_jure_liege_or_above = PREVPREV
+				NOT = { religion = ROOT }
+			}
+			religion = ROOT
+		}
+		random_realm_province = {
+			limit = {
+				de_jure_liege_or_above = PREVPREV
+				NOT = { religion = ROOT }
+			}
+			religion = ROOT
+		}
+		random_realm_province = {
+			limit = {
+				de_jure_liege_or_above = PREVPREV
+				NOT = { religion = ROOT }
+			}
+			religion = ROOT
+		}
+		random_realm_province = {
+			limit = {
+				de_jure_liege_or_above = PREVPREV
+				NOT = { religion = ROOT }
+			}
+			religion = ROOT
+		}
+		random_realm_province = {
+			limit = {
+				de_jure_liege_or_above = PREVPREV
+				NOT = { religion = ROOT }
+			}
+			religion = ROOT
+		}
+		set_global_flag = dominionist_revolt_successful
+	}
+}

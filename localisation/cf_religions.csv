@@ -1,0 +1,185 @@
+CAN_CONFEDERATION_WARS_UNLOCKED;The age of confederation has begun;;;;;;;;;;;;;x,,
+CONFEDERATION;Confederation War;;;;;;;;;;;;;x,,
+united;United;;;;;;;;;;;;;x
+united_full;United Church of Canada;;;;;;;;;;;;;x
+united_opinion;[united.GetName] Opinion;;;;;;;;;;;;;x,,
+united_DESC;Named after a pre-event protestant order, the United Church of Canada was formed from the unification of many protestant and non-denominational groups who were presucuted by the Anglicans and Ursuline. There is no formal head of the church, nor any central doctrine other than to unite the warring canadian states under faith in God.;;;;;;;;;;;;;x,,
+
+ALT_UNITED;The [united.GetName] Paparchy;Paparchie [united.GetName];Die [united.GetName]e Paparchie;;El papado [united.GetName];;;;;;;;;x,,
+ALT_UNITED_ADJ;[united.GetName] Paparchy;Paparchie [united.GetName];[united.GetName]e Tempel;;temple[united.GetName];;;;;;;;;x,,
+
+secret_religious_society_united;[GetReligiousCommunityName_united];[GetReligiousCommunityName_united];[GetReligiousCommunityName_united];;[GetReligiousCommunityName_united];;;;;;;;;x,,
+secret_religious_society_united;[GetReligiousCommunityName_united];[GetReligiousCommunityName_united];[GetReligiousCommunityName_united];;[GetReligiousCommunityName_united];;;;;;;;;x,,
+alt_start_community_name_united;The [united.GetName] Faithful;;;;;;;;;;;;;x,,
+secret_religious_society_united_desc;[GetReligiousSocietyDesc_united];[GetReligiousSocietyDesc_united];[GetReligiousSocietyDesc_united];;[GetReligiousSocietyDesc_united];;;;;;;;;x,,
+secret_religious_society_united_desc_REAL;Ever since its humble roots Christians have marked themselves by their refusal to abandon their faith in the face of no matter what they are outwardly forced to profess. To each other they can profess their true faith in God  and their God is love.;;;;;;;;x,,
+secretly_convert_to_united_holy_site;Secretly Convert to united;;;;;;;;;;;;;x,,
+secretly_convert_to_united_holy_site_desc;The §Yunited§! pilgrims that flock to the holy site in §Y[Root.Location.GetName]§! impress me with the depth and passion of their faith. I am tempted to convert in secrecy...;;;;;;;;;;;;;x,,
+secret_religious_society_united_currency;Devotion;Dévotion;Hingabe;;Devoción;;;;;;;;;x,,
+secret_religious_society_united_rank_1_female;Faithful;Fidèle;Getreue;;Fiel;;;;x,,
+secret_religious_society_united_rank_2_female;Adherent;Adhérente;Anhängerin;;Seguidora;;;;x,,
+secret_religious_society_united_rank_3_female;Preacher;Prêcheuse;Predigerin;;Predicadora;;;;x,,
+secret_religious_society_united_rank_4_female;Herald;Messagère;Herold;;Mensajera;;;;x,,
+secret_religious_society_united_rank_1_male;Faithful;Fidèle;Getreuer;;Fiel;;;;x,,
+secret_religious_society_united_rank_2_male;Adherent;Adhérent;Anhänger;;Seguidor;;;;x,,
+secret_religious_society_united_rank_3_male;Preacher;Prêcheur;Prediger;;Predicador;;;;x,,
+secret_religious_society_united_rank_4_male;Herald;Messager;Herold;;Mensajero;;;;x,,
+secret_religious_community_united;Secret united Community;;;;;;;;;;;;;x,,
+secret_united_community;Secret united Community;;;;;;;;;;;;;x,,
+secret_united_community_desc;In secret united faithful have organized themselves as a community in this province. From there it converts others grows and protects their own.;En secret les fidèles se sont organisés en tant que communauté dans cette province. De là la commaunauté convertit d'autres personnes grandit et protège les siens.;;;;;;;;;;;;x,,
+secret_religious_society_united_leader_desc;The Prime Minister leading the international effort of bringing more people into the fold.;Le grand prêtre dirige l'effort mondial visant à réunir davantage de personnes dans les rangs de sa société.;Der Hohepriester des $SOCIETY|Y$-Zirkels der die internationalen Bemühungen leitet mehr Menschen in den Schoß der Familie zu führen.;;El Sumo sacerdote que dirige la misión a escala internacional para atraer a más fieles.;;;;;;;;;x,,
+
+dominionist;Dominionist;;;;;;;;;;;;;x
+dominionist_opinion;[dominionist.GetName] Opinion;;;;;;;;;;;;;x,,
+dominionist_DESC;Dominionists get their name from the belief that all of old Canada was the holy "Dominion" of The Queen. The Queen from a heavenly land to the east and would appoint a Govenor General to act as both her messenger and as the primary means to enforce her will. However, each province of the mighty empire would have their own Lieutenant Govenor to arbitrate local disputes. They hold that Canada was a unique entity due to the Queens continued dominion and that the scourge which was ancient America was responsible for the event.;;;;;;;;;;;;;x,,
+lyonist;Lyonite;;;;;;;;;;;;;x
+lyonist_opinion;[lyonist.GetName] Opinion;;;;;;;;;;;;;x,,
+lyonist_DESC;Lyonites take the position that the queen was a Demonic overloard of the lands of Canada, untill a great hero known as "The Lyon" slew her and her scheming Govenor General, before crossing an ocean to regain the founding documents of Canada. They go against the previously dominant view in Dominionist theology by proclaiming the Prime Minister's as not merely secular leader, but as religious leaders and gods in their own right; with the Lyon being chief among them.;;;;;;;;;;;;;x,,
+three_mothers;Three Mothers;;;;;;;;;;;;;x
+three_mothers_long;Church of the Three Mothers;;;;;;;;;;;;;x
+three_mothers_opinion;[three_mothers.GetName] Opinion;;;;;;;;;;;;;x,,
+three_mothers_DESC;Inspired by documents of ancient Canada, members of the Church of Three Mothers worship the trinity of the Queen, Lady Liberty, and the Virgin Mary. Citing how vertain influential groups within Canadian society seemed to worship both Queen and cross while documents show the startling similarities to a Canadian "charter" and the American "constitution", Three Mothers worshipers insits that these three are manifestations of one god. However, followers tend to favour one above the others. More traditional Dominionists offer to the queen, those who favour an Americanist way of thinking offer to Lady Liberty, and those who prefer the cross offer to Mother Mary.;;;;;;;;;;;;;x,,
+rinkite;Rinkite;;;;;;;;;;;;;x
+rinkite_opinion;[rinkite.GetName] Opinion;;;;;;;;;;;;;x,,
+rinkite_DESC;The Rinkites are the most divergent of any faith which worships Old Canada. Eschewing ideas of Queen or Prime Minister, they believe that the popular game of hockey is not just a passtime but a way of life, a game emulating how the gods wage an eternal war against the forces of evil. Rinkites believe that by playing hockey they gave their gods the strength to continue their fight. Furthermore, mortals of particular skill will be summoned to play for the gods upon their death.;;;;;;;;;;;;;x,,
+
+GOD_THE_COACH;The Coach;;;;;;;;;;;;;x
+GOD_LYON;Lyon the Queen Slayer;;;;;;;;;;;;;x
+GOD_TRINITY;The Trinity;;;;;;;;;;;;;x
+GOD_BYNG;Lord Byng;;;;;;;;;;;;;x
+GOD_CARNARVON;Lord Carnarvon;;;;;;;;;;;;;x
+GOD_LAURIER;Saint Wilfred the Uniter;;;;;;;;;;;;;x
+GOD_TRUDEAU;Saint Trudeau the Reclaimer;;;;;;;;;;;;;x
+GOD_JOHN;Saint John;;;;;;;;;;;;;x
+GOD_JOHN_VAR;Saint John the Founder;;;;;;;;;;;;;x
+THE_ACT;The Act;;;;;;;;;;;;;x
+THE_CHARTER;The Charter;;;;;;;;;;;;;x
+THE_RULES;The Rules;;;;;;;;;;;;;x
+GOD_THE_TRAITORS;The Traitors;;;;;;;;;;;;;x
+GOD_ROCKET;The Rocket;;;;;;;;;;;;;x
+GOD_KEEPER;The Keeper;;;;;;;;;;;;;x
+GOD_DIVER;The Diver;;;;;;;;;;;;;x
+GOD_GOON;The Goon;;;;;;;;;;;;;x
+GOD_PLAYMAKER;The Playmaker;;;;;;;;;;;;;x
+GOD_AWAY_TEAM;The Away Team;;;;;;;;;;;;;x
+GOD_MOTHER_QUEEN;The Mother Queen;;;;;;;;;;;;;x
+GOD_MOTHER_MARY;The Mother Mary;;;;;;;;;;;;;x
+GOD_MOTHER_LIBERTY;The Mother Liberty;;;;;;;;;;;;;x
+
+GOVENOR;Govenor;;;;;;;;;;;;;x
+MINISTER;Minister;;;;;;;;;;;;;x
+OWNER;Owner;;;;;;;;;;;;;x
+
+GOVENOR_GENERAL;Govenor General;;;;;;;;;;;;;x
+PRIME_MINISTER;Prime Minister;;;;;;;;;;;;;x
+
+patriarch_dominionist;Lieutenant Govenor;;;;;;;;;;;;;x
+job_spiritual_dominionist;Lieutenant Govenor;;;;;;;;;;;;;x
+temple_barony_of_dominionist;Court of;;;;;;;;;;;;;x
+temple_baron_dominionist;Judge;;;;;;;;;;;;;x
+temple_baron_female_dominionist;Judge;;;;;;;;;;;;;x
+temple_baron_dominionists;Judges;;;;;;;;;;;;;x
+temple_county_of_dominionist;County Govenorship of;;;;;;;;;;;;;x
+temple_count_dominionist;Govenor;;;;;;;;;;;;;x
+temple_count_female_dominionist;Govenor;;;;;;;;;;;;;x
+temple_duchy_of_dominionist;Regional Govenorship of;;;;;;;;;;;;;x
+temple_duke_dominionist;Regional Govenor;;;;;;;;;;;;;x
+temple_duke_female_dominionist;Regional Govenor;;;;;;;;;;;;;x
+temple_kingdom_of_dominionist;Province of;;;;;;;;;;;;;x
+temple_king_dominionist;Lieutenant Govenor;;;;;;;;;;;;;x
+temple_king_female_dominionist;Lieutenant Govenor;;;;;;;;;;;;;x
+temple_empire_of_dominionist;Govenor Generalship of;;;;;;;;;;;;;x
+temple_emperor_dominionist;Govenor General;;;;;;;;;;;;;x
+temple_emperor_female_dominionist;Govenor General;;;;;;;;;;;;;x
+job_spiritual_lyonist;Lieutenant Govenor;;;;;;;;;;;;;x
+temple_barony_of_lyonist;Court of;;;;;;;;;;;;;x
+temple_baron_lyonist;Judge;;;;;;;;;;;;;x
+temple_baron_female_lyonist;Judge;;;;;;;;;;;;;x
+temple_baron_lyonists;Judges;;;;;;;;;;;;;x
+temple_county_of_lyonist;County Ministership of;;;;;;;;;;;;;x
+temple_count_lyonist;Minister;;;;;;;;;;;;;x
+temple_count_female_lyonist;Minister;;;;;;;;;;;;;x
+temple_duchy_of_lyonist;Regional Ministership of;;;;;;;;;;;;;x
+temple_duke_lyonist;Regional Minister;;;;;;;;;;;;;x
+temple_duke_female_lyonist;Regional Minister;;;;;;;;;;;;;x
+temple_kingdom_of_lyonist;Province of;;;;;;;;;;;;;x
+temple_king_lyonist;Premier;;;;;;;;;;;;;x
+temple_king_female_lyonist;Premier;;;;;;;;;;;;;x
+temple_empire_of_lyonist;Dominion of;;;;;;;;;;;;;x
+temple_emperor_lyonist;Prime Minister;;;;;;;;;;;;;x
+temple_emperor_female_lyonist;Prime Minister;;;;;;;;;;;;;x
+job_spiritual_three_mothers;Lieutenant Govenor;;;;;;;;;;;;;x
+temple_barony_of_three_mothers;Court of;;;;;;;;;;;;;x
+temple_baron_three_mothers;Judge;;;;;;;;;;;;;x
+temple_baron_female_three_mothers;Judge;;;;;;;;;;;;;x
+temple_baron_three_motherss;Judges;;;;;;;;;;;;;x
+temple_county_of_three_mothers;County Ministership;;;;;;;;;;;;;x
+temple_count_three_mothers;Minister;;;;;;;;;;;;;x
+temple_count_female_three_mothers;Minister;;;;;;;;;;;;;x
+temple_duchy_of_three_mothers;Regional Ministership;;;;;;;;;;;;;x
+temple_duke_three_mothers;Regional Minister;;;;;;;;;;;;;x
+temple_duke_female_three_mothers;Regional Minister;;;;;;;;;;;;;x
+temple_kingdom_of_three_mothers;Province of;;;;;;;;;;;;;x
+temple_king_three_mothers;Premier;;;;;;;;;;;;;x
+temple_king_female_three_mothers;Premier;;;;;;;;;;;;;x
+temple_empire_of_three_mothers;Dominion of;;;;;;;;;;;;;x
+temple_emperor_three_mothers;Prime Minister;;;;;;;;;;;;;x
+temple_emperor_female_three_mothers;Prime Minister;;;;;;;;;;;;;x
+job_spiritual_rinkite;Trainer;;;;;;;;;;;;;x
+temple_barony_of_rinkite;Rink of;;;;;;;;;;;;;x
+temple_baron_rinkite;Owner;;;;;;;;;;;;;x
+temple_baron_female_rinkite;Owner;;;;;;;;;;;;;x
+temple_baron_rinkites;Owners;;;;;;;;;;;;;x
+temple_county_of_rinkite;Club of;;;;;;;;;;;;;x
+temple_count_rinkite;Club Owner;;;;;;;;;;;;;x
+temple_count_female_rinkite;Club Owner;;;;;;;;;;;;;x
+temple_duchy_of_rinkite;Regional League of;;;;;;;;;;;;;x
+temple_duke_rinkite;League President;;;;;;;;;;;;;x
+temple_duke_female_rinkite;League President;;;;;;;;;;;;;x
+temple_kingdom_of_rinkite;Federation of;;;;;;;;;;;;;x
+temple_king_rinkite;Federation President;;;;;;;;;;;;;x
+temple_king_female_rinkite;Federation President;;;;;;;;;;;;;x
+temple_empire_of_rinkite;National League of;;;;;;;;;;;;;x
+temple_emperor_rinkite;Commissioner;;;;;;;;;;;;;x
+temple_emperor_female_rinkite;Commissioner;;;;;;;;;;;;;x
+
+
+STAT_PIETY_POLITENESS;Politeness;;;;;;;;;;;;;x
+STAT_PIETY_DESC_POLITENESS;Caandians are measured based off of their politeness.;;;;;;;;;;;;;x
+STAT_PIETY_MENU_POLITENESS;Politeness;;;;;;;;;;;;x
+
+INTERVENTION;Intervention;;;;;;;;;;;;;x,,
+
+dominionist_meritocratic;Orthodox Dominionism;;;;;;;;;;;;;x
+dominionist_meritocratic_desc;Description;;;;;;;;;;;;;x
+dominionist_matriarchal;Full Church Authority;;;;;;;;;;;;;x
+dominionist_matriarchal_desc;Description;;;;;;;;;;;;;x
+dominionist_hockey;Hockey Primacy;;;;;;;;;;;;;x
+dominionist_hockey_desc;Description;;;;;;;;;;;;;x
+dominionist_americanist_syncretic;Americanist Syncretism;;;;;;;;;;;;;x
+dominionist_americanist_syncretic_desc;Description;;;;;;;;;;;;;x
+dominionist_christian_syncretic;The Three Mothers;;;;;;;;;;;;;x
+dominionist_christian_syncretic_desc;As more and more documents of ancient Canada are discovered it seems that they may have had more in common with other religions than was once believed. Certain influential groups within Canadian society seemed to worship the Queen and the Cross, while documents show the atartling similarities to a Canadian "charter" and the Americain "constitution". As such the trinity of the the Lady Liberty, Mother Mary, and the Queen has become ver popular amond the Dominionist community. While all considered different manifestations of one god, followers tend to favour one above the others. More traditional Dominionists offer to the Queen, those who facour an Americanist way of thinking offer to Lady Liberty, and those who prefer the cross offer to Mother Mary.;;;;;;;;;;;;;x
+dominionist_monastic;Monasticism;;;;;;;;;;;;;x
+dominionist_monastic_desc;Description;;;;;;;;;;;;;x
+dominionist_beatification;Idol Worship;;;;;;;;;;;;;x
+dominionist_beatification_desc;Communing with the spirits of the dead has always been a part of Canadian culture! The great Lyon would speak to his ancestors during trying times for guidance and wisdom. Hockey players know that across ancient Canada people would drink from mugs dedicated to a great player. It has always been a Canadian's duty to respect the figures of the past, and we shall uphold that tradition.;;;;;;;;;;;;;x
+dominionist_reconquest;Sea to Shinning Sea;;;;;;;;;;;;;x
+dominionist_reconquest_desc;In the days of yore Canada is said to have controlled territory from the Atlantic to the Pacific, uniting disparate lands under a common identity. In the days since the event, however, many of these lands have unfortunately fallen into the hands of heathens and those who would deny the greatness of Canada. There is now a consensus among the Dominionist community that efforts should be taken to reclaim what is rightfully theirs, and that Canada should once more cover such a territory. It is the destiny of Canada to stretch from sea ot sea!;;;;;;;;;;;;;x
+
+lyonist_conversions;Lyonite Stronghold;;;;;;;;;;;;;x
+three_mothers_conversions;Three Mothers Stronghold;;;;;;;;;;;;;x
+rinkite_conversions;Rinkite Stronghold;;;;;;;;;;;;;x
+dominionist_faithful;Dominionist Stronghold;;;;;;;;;;;;;x
+
+EVTDESC_canada_pilgrim_prep;The time has come for you to undertake an epic pilgramage to the five great Lyonite holy cities: Winnipeg, Toronto, Ottawa, Montreal and Halifax.\n\n But first, you must prepare for the journey;;;;;;;;;;;;;x
+EVTNAME_pilgrim_winnipeg;Pilgrimage to Winnipeg;;;;;;;;;;;;;x
+EVTDESC_pilgrim_winnipeg;In ancient times Winnipeg was the gate to the western frontier, where Canada streched on the the west. It is remembered as a place were animals and people roamed free. If you seek to expand your realm into this frontier, surely Saint John would look favorably upon you if you honor the Ministers here.;;;;;;;;;;;;;x
+EVTNAME_pilgrim_toronto;Pilgrimage to Toronto;;;;;;;;;;;;;x
+EVTDESC_pilgrim_toronto;The trade hub of the Canadian dominion, Toronto was once home to a myriad a traders. Many people still flock to Toronto to find refuge in its cities. If you seek wealth, surely the Lyon would smile upon if you visit the six.;;;;;;;;;;;;;x
+EVTNAME_pilgrim_ottawa;Pilgrimage to Ottawa;;;;;;;;;;;;;x
+EVTDESC_pilgrim_ottawa;The holy ancient capital Ottawa once was home ot prime ministers. There is still much to be learned of the in the libraries and buildings scatered around. Surely if you seek to learn of their important you should visit the capitol.;;;;;;;;;;;;;x
+EVTNAME_pilgrim_montreal;Pilgrimage to Montreal;;;;;;;;;;;;;x
+EVTDESC_pilgrim_montreal;Once a melting pot of Canadian culture, montreal has maintined it's place at the forefront of cultural devleopments in Canadian society. If you wish to maintain a benevolent image, Lyon would favour you to visit la vielle ville.;;;;;;;;;;;;;x
+EVTNAME_pilgrim_halifax;Pilgrimage to Halifax;;;;;;;;;;;;;x
+EVTDESC_pilgrim_halifax;Many a scheming and powerful once lived in Halifax, controling atlantic trade and scouting Canada's southern enemies. If you seeek to be shrowed in shadows, a visit to Haligonia is not amiss.;;;;;;;;;;;;;x

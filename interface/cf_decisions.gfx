@@ -1,0 +1,81 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_form_the_empire_of_bc"
+		texturefile = "gfx/interface/form_the_empire_of_bc.dds"
+	}
+
+	spriteType = {
+		name = "GFX_form_the_empire_of_quebec"
+		texturefile = "gfx/interface/form_the_empire_of_quebec.dds"
+	}
+
+	spriteType = {
+		name = "GFX_organize_saskatchewan"
+		texturefile = "gfx/interface/organize_saskatchewan.dds"
+	}
+
+	spriteType = {
+		name = "GFX_organize_alberta"
+		texturefile = "gfx/interface/organize_alberta.dds"
+	}
+
+	spriteType = {
+		name = "GFX_organize_greater_ontario"
+		texturefile = "gfx/interface/organize_greater_ontario.dds"
+	}
+
+	spriteType = {
+		name = "GFX_organize_greater_quebec"
+		texturefile = "gfx/interface/form_the_empire_of_quebec.dds"
+	}
+
+	spriteType = {
+		name = "GFX_organize_greater_newf_lab"
+		texturefile = "gfx/interface/organize_greater_newf_lab.dds"
+	}
+
+	spriteType = {
+		name = "GFX_organize_manitoba"
+		texturefile = "gfx/interface/organize_manitoba.dds"
+	}
+
+	spriteType = {
+		name = "GFX_canadian_renaissance"
+		texturefile = "gfx/interface/canadian_renaissance.dds"
+	}
+
+	spriteType = {
+		name = "GFX_embrace_canadian_culture"
+		texturefile = "gfx/interface/canadian_renaissance.dds"
+	}
+
+	spriteType = {
+		name = "GFX_warrior_lodge_rinkite_position"
+		texturefile = "gfx/interface/warrior_lodge_rinkite_position.dds"
+	}
+
+	spriteType = {
+		name = "GFX_choose_mother_saint"
+		texturefile = "gfx/interface/choose_mother_saint.dds"
+	}
+
+	spriteType = {
+		name = "GFX_dominionist_pilgrimage"
+		texturefile = "gfx/interface/canadian_renaissance.dds"
+	}
+
+	spriteType = {
+		name = "GFX_restore_govenor_general_in_gelbe"
+		texturefile = "gfx/interface/govenor_general.dds"
+	}
+
+	spriteType = {
+		name = "GFX_establish_motherhood_in_cap"
+		texturefile = "gfx/interface/establish_motherhood.dds"
+	}
+
+	spriteType = {
+		name = "GFX_become_prime_minister"
+		texturefile = "gfx/interface/canadian_renaissance.dds"
+	}
+}

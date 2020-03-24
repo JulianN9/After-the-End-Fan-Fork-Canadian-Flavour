@@ -1,0 +1,45 @@
+domdesc.1;Now that you have gained enough experience it is time to choose a formal hockey position.;;;;;;;;;;;;;x
+domoptA.1;With strength I will emulate the Goon.;;;;;;;;;;;;;x
+domoptB.1;With tact I will emulate the Rocket.;;;;;;;;;;;;;x
+domoptC.1;I will protect the realm like the Goalkeeper.;;;;;;;;;;;;;x
+domoptD.1;I will choose another position.;;;;;;;;;;;;;x
+domoptA.2;I will learn every play like the Playmaker.;;;;;;;;;;;;;x
+domoptB.2;With cunning I will emulate the Diver.;;;;;;;;;;;;;x
+domoptC.2;I've changed my mind.;;;;;;;;;;;;;x
+
+domdesc.3;Members of the Three Mothers' Church make their offerings to one of the three aspects of the Holy Mother.;;;;;;;;;;;;;x
+domoptA.3;I will make my offerings to the wise Queen.;;;;;;;;;;;;;x
+domoptB.3;I will make my offerings to the frugal Lady.;;;;;;;;;;;;;x
+domoptC.3;I will make my offerings to the young virgin.;;;;;;;;;;;;;x
+
+domtitle.20;The Queen's Prophet;;;;;;;;;;;;;x
+domdesc.20;In lieu of the recent arrival of the redcoat and their queen-worship, many canadian scholars to rediscover the links between ancient Canada and a Queen. This has inspired many to rediscover the faith of the Domninionism. Once such man with a silver tounge, who claims that the redcoats serve as a messenger from the Queen to punish those who have staryed from her light, has been proclaimed a prophet by his followers. After inspiring many peasents, and some key commanders, this new band of Dominionists have began to march on [Root.GetFullBaseName].;;;;;;;;;;;;;x
+domoptA.20;Why did this lunatic have to come here.;;;;;;;;;;;;;x
+domoptB.20;We will watch the situation closely.;;;;;;;;;;;;;x
+
+domdesc.21;A local province has converted to Dominionism following the impressive feats of the prophet.;;;;;;;;;;;;;x
+domoptA.21;Glory to the Queen!;;;;;;;;;;;;;x
+domoptB.21;More heathens follow that raving lunatic.;;;;;;;;;;;;;x
+
+domtitle.24;The Prophet is Dead!;;;;;;;;;;;;;x
+domdescA.24;The Great and Noble Prophet is dead! From his teaching the Dominionist faith has been returned to its rightful place in Canada. May he rest easy in the East! \n Many are proclaiming him the reincarnation of the ancient prime ministers. This has begun a great theological split in the Dominionist community! A section of followers have begun preaching that on his deathbed, the prophet not only died but ascended to godhood. This goes against established Dominionist doctrine that the Prime Minister is merely a messenger for the Queen, not truly divine. Many leaders within the Dominionist community including the prophets appointed successor, have already condemned this line of thinking, but despite that it is still becoming increasingly popular. \n Already many peasents are rejecting the authority of the Dominionists.;;;;;;;;;;;;;x
+domdescB.24;The Great Prophet is dead! After spending his years establishing the Dominionist faith, the first legitimate Prime Minister in hundreds of years has finally moved on from the mortal world.\n A great theological split has begun in the Dominionist community! A section of followers have begun preaching that on his deathbed, the prophet not only died but ascended to godhood. This goes against established Dominionist doctrine that the Prime Minister is merely a messenger for the Queen, not truly divine. Many leaders within the Dominionist community including the prophets appointed successor, have already condemned this line of thinking, but despite that it is still becoming increasingly popular.;;;;;;;;;;;;;x
+domdescC.24;The Cursed Prophet is Dead! Glory to [Root.GetHighGodName]! After spending his year terrorizing the Canadian lands this vile scourge has been banished from this earthly realm. \n Already a great schism has begun wiht the heathenous community! A section of followers have begun preaching that on his deathbed, the prophet not only died but ascended to godhood. This goes against established Dominionist doctrine that the Prime Minister is merely a messenger for the Queen, not truly divine. Many leaders within the Dominionist community including the prophets appointed successor, have already condemned this line of thinking, but despite that it is still becoming increasingly popular. ;;;;;;;;;;;;;x
+domoptA.24;The Queen will still prevail!;;;;;;;;;;;;;x
+domoptB.24;Will their Queen protect them?;;;;;;;;;;;;;x
+domoptC.24;May the heathens tear eachotehr apart!;;;;;;;;;;;;;x
+
+domtitle.26;Dominionist Hegemony Shatters;;;;;;;;;;;;;x
+domdescA.26;The theological split in the Dominionist faith has begun to rapidly spiral out of control. Fights are breaking out between families, friends, and even within of the priesthood. In order to prevent full on chaos and a complete destruction of this young community the current Prime Minister has convened a council between the great theological minds on both sides in order to try and solve this. \n Days into the council it appears to be going well and that orthodox Dominionist views are gaining the upper hand. However just as it seems the final supporters of the heretical view are going to switch sides, a late delegation bursts through the doors. With them is a young man, who begins to reveal pre-event documents speaking of a man known as "The Lion", who successfully fought against the power of the Queen and the terror of the Governor General. Not only did this man fight against the Queen, records also show he was a Prime Minister, with that revelation murmurs of discontent begin among the crowd.\n Chaos is the only word that can describe the council floor, fights break out regularly and order has broken down to the point that the theological arguments of guardsmen are being seriously considered. All sides have begun to radicalize, Dominionists have begun to downplay the importance of the individual Prime Minister while the so called "Lyonites" have begun to deny the divinity of the Queen all together, proposing that not only is the prophet divine but that the prime ministers are the true gods.;;;;;;;;;;;;;x
+domdescB.26;The theological split in the Dominionist faith has begun to rapidly spiral out of control. Fights are breaking out between families, friends, and even within of the priesthood. In order to prevent full on chaos and a complete destruction of this young community the current Prime Minister has convened a council between the great theological minds on both sides in order to try and solve this. \n Unfortunately this has not seemed to help the fracturing religious community, and the firm grip of the dominionists has shattered.;;;;;;;;;;;;;x
+domdescC.26;The theological split in the Dominionist faith has begun to rapidly spiral out of control. The filthy heathens have begun tearing their realm apart over petty squables. As more and more pretenders claim to be the true followers of the Prophet's will, his lands only become riper for the picking.;;;;;;;;;;;;;x
+domoptA.26;For the Queen, I will not falter!;;;;;;;;;;;;;x
+domoptB.26;Perhaps these Lyonites have a point.;;;;;;;;;;;;;x
+domoptC.26;We must uphold the trinity.;;;;;;;;;;;;;x
+domoptD.26;Hockey was indeed the most important ritual in Canada;;;;;;;;;;;;;x
+domoptE.26;Who will prevail?;;;;;;;;;;;;;x
+domoptF.26;May [Root.GetHighGodName] deliver them.;;;;;;;;;;;;;x
+
+domtitle.30;[Root.GetDynName] proclaimed Prophet!;;;;;;;;;;;;;x
+domdesc.30;With [Root.GetHerHis] great success in reclaiming integral canadian land, [Root.GetTitledName] has been proclaimed the prophet of the Queen by [Root.GetHerHis] followers. This has caused a great influx of gold and soldiers, who truely believe that the Prophet will restore Canada to it's ancient glory.;;;;;;;;;;;;;x
+domoptA.30;I will bring Her message to all of Canada!;;;;;;;;;;;;;x

@@ -1,0 +1,400 @@
+targetted_decisions = {
+	dominionist_reward_decision = {
+		filter = court
+		ai_target_filter = court
+		ai_check_interval = 24
+		
+		from_potential = {
+			religion = consumerist
+			NOT = { is_incapable = yes }
+			prisoner = no
+			over_max_demesne_size = 1
+			has_nickname = nick_the_prophet
+			has_character_flag = dom_prophet
+		}
+
+		potential = {
+			host = { character = FROM }
+			trait = dom_general
+			age = 16
+			NOT = { is_landed = yes }
+		}
+		allow = {
+			prisoner = no
+		}
+		effect = {
+			FROM = { character_event = { id = consumer.3 } }
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
+decisions = {
+	
+	#choose_hockey_position = {
+	#	only_playable = yes
+	#	is_high_prio = yes
+	#	potential = {
+	#		is_playable = yes
+	#		religion = rinkite
+	#		NOR = { 
+	#			has_trait = goon 
+	#			has_trait = rocket
+	#			has_trait = goalkeeper
+	#			has_trait = diver
+	#			has_trait = playmaker
+	#			has_trait = coach	
+	#			has_character_flag = chose_hockey
+	#		}
+	#		age = 16
+	#	}
+	#	allow = {
+	#		war = no
+	#		NOT = {
+	#			has_trait = incapable
+	#		}
+	#		NOT = { has_character_flag = chose_hockey }
+	#	}
+	#	effect = {
+	#		custom_tooltip = {
+	#			text = tooltip_choose_hockey
+	#			hidden_tooltip = {
+	#				character_event = { id = dominion.2 }
+	#				set_character_flag = chose_hockey
+	#			}
+	#		}
+	#	}
+	#	revoke_allowed = {
+	#		always = no
+	#	}
+	#	ai_will_do = {
+	#		factor = 1
+	#	}
+	#}
+
+	choose_mother_saint = {
+		only_playable = yes
+		is_high_prio = yes
+		potential = {
+			is_playable = yes
+			religion = three_mothers
+			NOR = { 
+				has_trait = dom_queen 
+				has_trait = dom_lady
+				has_trait = dom_mary
+				has_character_flag = chose_dom_mother
+			}
+			age = 16
+		}
+		allow = {
+			war = no
+			NOT = {
+				has_trait = incapable
+			}
+			NOT = { has_character_flag = chose_dom_mother }
+		}
+		effect = {
+			custom_tooltip = {
+				text = tooltip_choose_mother
+				hidden_tooltip = {
+					character_event = { id = dominion.3 }
+					set_character_flag = chose_dom_mother
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	dominionist_pilgrimage = {
+		is_high_prio = yes
+		potential = {
+			is_ruler = yes
+			religion = lyonist
+			age = 16
+			prisoner = no
+			in_seclusion = no
+			NOT = { is_incapable = yes }
+			NOT = { trait = pilgrim }
+			NOT = { trait = on_pilgrimage }
+			NOT = { has_character_flag = failed_pilgrim }
+			NOT = { trait = legendary }
+		}
+		allow = {
+			war = no
+			piety = 100
+			wealth = 50
+		}
+		effect = {
+			add_trait = on_pilgrimage
+			wealth = -50
+			hidden_tooltip = {
+				character_event = {
+					id = dominion_pilgrim.1
+				}
+			}
+			if = {
+				limit = {
+					has_dlc = "Reapers"
+				}
+				custom_tooltip = {
+					text = capital_prospers_custom_tooltip
+					hidden_tooltip = {
+						capital_scope = {
+							change_variable = { which = prosperity_value value = 8 }
+						}
+					}
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 0.001 }
+			modifier = { factor = 10 num_of_count_titles = 1 }
+			modifier = { factor = 2	trait = zealous }
+			modifier = { factor = 2	trait = brave }
+			modifier = { factor = 2	trait = ambitious }
+			modifier = { factor = 0 trait = cynical }
+			modifier = { factor = 0 trait = craven }
+			modifier = { factor = 0 trait = content }
+			modifier = { factor = 0 NOT = { wealth = 250 } }
+		}
+	}
+
+	restore_govenor_general_in_gelbe = {
+		only_independent = yes
+		is_high_prio = yes
+		ai_check_interval = 36
+
+		potential = {
+			is_playable = yes
+			independent = yes
+			has_dlc = "Sons of Abraham"
+			
+			religion = dominionist
+			is_heretic = no
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+			has_global_flag = dominionist_prophet_dead
+			NOT = { has_global_flag = dom_splint }
+			NOR = {
+				has_global_flag = dominionist_dominance
+				has_global_flag = lyonist_dominance
+				has_global_flag = three_mothers_dominance
+			}
+		}
+		
+		allow = {
+			has_landed_title = e_canada
+			completely_controls = c_ottawa
+			religion_authority = 0.5
+		}
+
+		effect = {		
+			activate_title = { title = d_dominionist status = yes}
+			create_random_priest = {
+				random_traits = yes
+				learning = 8
+				religion = dominionist
+				culture = ROOT
+				dynasty = random
+				age = 41
+			}
+			new_character = {
+				succession = open_elective
+				character_event = { id = misc.3 } # Diversity
+				character_event = { id = misc.4 } # Physique
+				d_dominionist = { gain_title = PREV }
+			}
+			d_dominionist = {
+				holder_scope = {
+					b_the_glebe_ON = {
+						grant_title = PREV
+					}
+				}
+				set_defacto_liege = ROOT
+			}
+			set_global_flag = dominionist_dominance
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					any_demesne_province = {
+						NOT = { province_id = 1297 }
+					}
+				}
+			}
+		}
+	}
+
+	establish_motherhood_in_cap = {
+		only_independent = yes
+		is_high_prio = yes
+		ai_check_interval = 36
+
+		potential = {
+			independent = yes
+			is_playable = yes
+			independent = yes
+			has_dlc = "Sons of Abraham"
+			
+			religion = three_mothers
+			is_heretic = no
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+			controls_religion = no
+			NOT = { has_global_flag = dom_splint }
+			NOR = {
+				has_global_flag = dominionist_dominance
+				has_global_flag = lyonist_dominance
+				has_global_flag = three_mothers_dominance
+			}
+		}
+
+		allow = {
+			has_landed_title = e_canada
+			completely_controls = c_cap_diamant
+			religion_authority = 0.5
+		}
+		
+		effect = {		
+			activate_title = { title = k_three_mothers status = yes }
+			create_random_priest = {
+				random_traits = yes
+				learning = 8
+				religion = three_mothers
+				culture = ROOT
+				female = yes
+				dynasty = random
+				age = 35
+			}
+			new_character = {
+				succession = open_elective
+				gender_succ = enatic
+				character_event = { id = misc.3 } # Diversity
+				character_event = { id = misc.4 } # Physique
+				c_cap_diamant = { gain_title = PREV }
+				k_three_mothers = { gain_title = PREV }
+				set_defacto_liege = THIS
+				primary_title = {
+					add_law = enatic_succession
+				}
+			}
+			if = {
+				limit = {
+					completely_controls = d_quebec
+				}
+				destroy_landed_title = d_quebec
+				k_three_mothers = {
+					grant_title = c_portneuf
+					grant_title = c_cartier
+					grant_title = c_charlevoix
+				}
+			}
+			set_global_flag = three_mothers_dominance
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					any_demesne_province = {
+						NOT = { province_id = 1199 }
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				c_cap_diamant= {
+					holder_scope = {
+						OR = {
+							ai = no
+							any_liege = { ai = no }  # AI will never take Rome province away from a player
+						}
+					}
+				}
+			}
+		}
+	}
+
+	become_prime_minister = { #Decision to claim the Lyonist religious head title
+		only_playable = yes
+		is_high_prio = yes
+		ai_check_interval = 24
+		
+		potential = {
+			independent = yes
+			religion = lyonist
+			d_lyonist = { has_holder = no }
+			is_heretic = no
+			NOR = {
+				has_global_flag = dominionist_dominance
+				has_global_flag = lyonist_dominance
+				has_global_flag = three_mothers_dominance
+			}
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+			NOT = { has_global_flag = dom_splint }
+			primary_title = { higher_tier_than = COUNT } #only dukes and above can see this one
+		}
+		
+		allow = {
+			has_landed_title = e_canada
+			num_of_holy_sites = 3 #personally controls 3 holy sites
+			completely_controls = c_ottawa
+			prestige = 250
+			OR = {
+				AND = {
+					piety = 500
+					NOT = { trait = zealous }
+				}
+				AND = {
+					piety = 250
+					trait = zealous
+				}
+			}
+			religion_authority = 0.5
+		}
+		
+		effect = {
+			activate_title = { title = d_lyonist status = yes }
+			piety = -250
+			d_lyonist = { 
+				activate_title = { title = THIS status = yes }
+				grant_title = ROOT 
+			}
+			set_global_flag = lyonist_dominance
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

@@ -1,0 +1,11 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_evt_hockey_position"
+		texturefile = "gfx/cf_events/hockey_position.tga"
+	}
+
+    spriteType = {
+		name = "GFX_evt_mother_saint"
+		texturefile = "gfx/cf_events/mother_saint.tga"
+	}
+}

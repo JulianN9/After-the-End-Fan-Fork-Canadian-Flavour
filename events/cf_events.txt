@@ -1,0 +1,358 @@
+narrative_event = { #Start of confederation wars
+	id = canada.101
+	title = confedtitle.1
+	desc = confeddisc.1
+	
+	picture = GFX_evt_canada_confederation
+	border = GFX_event_narrative_frame_religion
+
+	major = yes
+
+	show_ROOT = yes
+	hide_new = yes
+	
+	only_playable = yes
+	min_age = 16
+	
+	trigger = {
+		NOT = { #immersion-breaking
+			has_alternate_start_parameter = { key = religion_names value = random }
+		}
+		religion = confederated
+		controls_religion = yes
+		has_global_flag = canadian_church_unified
+		e_canada = {
+			holder_scope = { religion = confederated }
+		}
+		
+		NOT = { has_global_flag = confederation_wars_unlocked }
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	immediate = {
+		set_global_flag = confederation_wars_unlocked
+	}
+	
+	option = {
+		name = confedopta.1
+		trigger = {
+			and = {
+				religion_group = christian
+				not = { religion = confederated }
+			}
+		}
+	}
+
+	option = {
+		name = confedoptb.1
+		trigger = {
+			religion = confederated
+		}
+	}
+	
+	option = {
+		name = EVTOPTB39660
+		trigger = {
+			NOT = { religion_group = christian }
+		}
+	}
+}
+
+narrative_event = { # Confederation Wars holy site fallen
+	id = canada.102
+	title = confedtitle.1
+	desc = confeddisc.2
+	
+	picture = GFX_evt_canada_confederation
+	border = GFX_event_narrative_frame_religion
+
+	
+	major = yes
+	
+	show_ROOT = yes
+	hide_new = yes
+	
+	only_playable = yes
+	min_age = 16
+	
+	trigger = {
+		NOT = { #immersion-breaking
+			has_alternate_start_parameter = { key = religion_names value = random }
+		}
+		religion = confederated
+		controls_religion = yes
+		has_global_flag = canadian_church_unified
+		NOR = { 
+			has_global_flag = confederation_wars_unlocked 
+			e_canada = {
+				holder_scope = { 
+					religion = united
+				}
+			}
+		}
+		
+		or = {
+			1297 = { # Ottawa
+				owner = {
+					NOT = { relegion_group = christian }
+				}
+			}
+			1271 = { # Toronto
+				owner = {
+					NOT = { relegion_group = christian }
+				}
+			}
+			1199 = { # Quebec
+				owner = {
+					NOT = { relegion_group = christian }
+				}
+			}
+			1217 = { # Hochelaga
+				owner = {
+					NOT = { relegion_group = christian }
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	immediate = {
+		set_global_flag = confederation_wars_unlocked
+	}
+	
+	option = {
+		name = confedopta.1
+		trigger = {
+			and = {
+				religion_group = christian
+				not = { religion = confederated }
+			}
+		}
+	}
+
+	option = {
+		name = confedoptb.1
+		trigger = {
+			religion = confederated
+		}
+	}
+	
+	option = {
+		name = EVTOPTB39660
+		trigger = {
+			NOT = { religion_group = christian }
+		}
+	}
+}
+
+narrative_event = {
+	id = canada.103
+	title = confedtitle.3
+	desc = confeddisc.3
+	
+	picture = GFX_evt_canada_confederation
+	border = GFX_event_narrative_frame_diplomacy
+
+	min_age = 16
+
+	trigger ={
+		completely_controls = k_ontario		
+		AND = {
+			has_landed_title = k_ontario
+			has_landed_title = k_quebec
+		}
+		dynasty = 1867015 #Laurier
+		NOT = {
+			any_owned_bloodline ={
+				has_bloodline_flag = laurier_blood
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 3
+	}
+
+	option = {
+		name = confedopta.2
+		create_bloodline = {
+			type = laurier
+		}
+		new_bloodline = {
+			set_description = "bloodline_desc_lau"
+		}	
+		sound_effect = bloodline_added	
+	}
+}
+
+
+# Confederation Wars
+# Called from 'on_crusade_creation'
+# new_character is the targeted enemy
+# ROOT is the religious head
+# FROM is the attacked kingdom title
+narrative_event = {
+	id = canada.104
+	title = EVTNAME200
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_war
+	
+	desc = {
+		text = confeddisc.4
+		trigger = {
+			new_character = {
+				NOT = { 
+					religion_group = christian 
+					religion_group = oldworld
+					religion_group = muslim 
+				}
+			}
+		}
+	}
+	desc = {
+		text = confeddisc.4_oldworld
+		trigger = {
+			new_character = {
+				OR = {
+					religion_group = oldworld
+					religion_group = muslim
+				}
+			}
+		}
+	}
+	desc = {
+		text = confeddisc.4_christian
+		trigger = {
+			new_character = {
+				religion_group = christian
+			}
+		}
+	}
+	
+	is_triggered_only = yes
+	major = yes
+	show_ROOT = yes
+	hide_new = yes
+	
+	trigger = {
+		can_call_crusade = yes
+		ROOT = { religion = confederated }
+	}
+	
+	option = {
+		name = confedopta.4 # United under the Leaf!
+		trigger = { religion = ROOT }
+	}
+	option = {
+		name = EVTOPTB200 # No concern of ours
+		trigger = {
+			NOT = { religion = ROOT }
+			new_character = {
+				NOT = { religion = PREV }
+				NOT = { character = PREV }
+			}
+		}
+	}
+	option = {
+		name = EVTOPTD200 # To Arms!
+		trigger = {
+			new_character = {
+				character = PREV
+			}
+		}
+	}
+	option = {
+		name = EVTOPTE200 # Terrible News!
+		trigger = {
+			new_character = {
+				religion = PREV
+				NOT = { character = PREV }
+			}
+		}
+	}
+}
+
+# Convert or Not?
+narrative_event = {
+	id = canada.105
+	title = EVTNAMEcanada.1
+	desc = EVTDESCcanada.1
+	
+	picture = GFX_evt_canada_confederation
+	
+	is_triggered_only = yes
+	
+	option = { # Yes
+		name = EVTOPTAcanada.2
+		if = {
+			limit = {
+				OR = {
+					religion = high_church
+					religion = nonconformist
+				}
+			}
+			religion = united
+			add_trait = english_rites
+		}
+		if = {
+			limit = {
+				OR = {
+					religion = ursuline
+					religion = angeline
+				}
+			}
+			religion = united
+			add_trait = french_rites
+		}
+		any_courtier = {
+			if = {
+				limit = {
+					OR = {
+						religion = high_church
+						religion = nonconformist
+					}
+				}
+				religion = united
+				add_trait = english_rites
+			}
+			if = {
+				limit = {
+					OR = {
+						religion = ursuline
+						religion = angeline
+					}
+				}
+				religion = united
+				add_trait = french_rites
+			}
+		}
+		capital_scope = {
+			religion = united
+		}
+		ai_chance = {
+			factor = 75
+			modifier = {
+				factor = 0.25
+				government = theocracy_government
+			}
+			modifier = {
+				factor = 0
+				government = order_government
+			}
+			modifier = {
+				factor = 0
+				trait = zealous
+			}
+		}
+	}
+	option = { # No
+		name = EVTOPTBcanada.2
+		ai_chance = { factor = 25 }
+	}
+}

@@ -1,0 +1,72 @@
+can_unif_male = {
+	monthly_character_piety = 2
+	monthly_character_prestige = 0.5
+	christian_opinion = 5
+	confederated_opinion = 5
+	church_opinion = 5
+	inheritance = patrilineal
+	allow_bastards = no
+	flags = { created_bloodline canada_uniter }
+	picture = GFX_bloodlines_symbol_roman
+	active = {
+		religion = confederated
+	}
+}
+
+can_unif_female = {
+	monthly_character_piety = 2
+	christian_opinion = 5
+	confederated_opinion = 5 
+	church_opinion = 5
+	monthly_character_prestige = 0.5
+	inheritance = matrilineal
+	allow_bastards = no
+	flags = { created_bloodline canada_uniter }
+	picture = GFX_bloodlines_symbol_roman
+	active = {
+		religion = confederated
+	}
+}
+
+can_unite_male = {
+	monthly_character_piety = 2
+	monthly_character_prestige = 0.5
+	vassal_opinion = 5
+	united_opinion = 5
+	town_opinion = 5
+	inheritance = patrilineal
+	allow_bastards = no
+	flags = { created_bloodline canada_uniter }
+	picture = GFX_bloodlines_symbol_roman
+	active = {
+		religion = united
+	}
+}
+
+can_unite_female = {
+	monthly_character_piety = 2
+	vassal_opinion = 5
+	united_opinion = 5 
+	town_opinion = 5
+	monthly_character_prestige = 0.5
+	inheritance = matrilineal
+	allow_bastards = no
+	flags = { created_bloodline canada_uniter }
+	picture = GFX_bloodlines_symbol_roman
+	active = {
+		religion = united
+	}
+}
+
+laurier = {
+	diplomacy = 2
+	ontarian_opinion = 5
+	quebecois_opinion = 5
+	canadian_opinion = 5
+	saintly_cultural_bloodline = 1
+	inheritance = patrilineal
+	allow_bastards = no
+	flags = { pre_event_bloodline historical_bloodline laurier_blood cultural_saintly_bloodline }
+	picture = GFX_bloodlines_placeholder_symbol_2
+}
+

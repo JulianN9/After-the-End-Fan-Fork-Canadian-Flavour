@@ -1,0 +1,989 @@
+decisions = {
+
+	form_the_empire_of_quebec = {
+		is_high_prio = yes
+		potential = {
+			NOT = {
+				has_game_rule = {
+					name = empire_decisions
+					value = off
+				}
+			}
+			NOT = { has_global_flag = qbc_formed }
+			NOT = { has_global_flag = canadian_church_unified }
+			independent = yes
+			OR = {
+				culture = quebecois
+				culture = acadien
+				culture = yiddish
+			}
+			higher_tier_than = DUKE
+			e_canada = {
+				has_holder = no
+			}
+			OR = { 
+				religion = ursuline
+				religion = angeline
+				religion = three_mothers
+				relgion_group = jewish
+			}
+		}
+		allow = {
+			is_adult = yes
+			prisoner = no
+			NOT = { is_incapable = yes }
+			prestige = 1500
+			scaled_wealth = 2
+			war = no
+			realm_size = 100
+			has_landed_title = k_quebec
+			has_landed_title = k_cote_nord
+			completely_controls = k_cote_nord
+			completely_controls = d_noranda
+			completely_controls = d_eeyou_istchee
+		}
+		effect = {
+			activate_title = { title = e_qbc status = yes }
+			primary_title = {
+				e_qbc = {
+					grant_title = ROOT
+					copy_title_laws = PREV
+				}
+			}
+			scaled_wealth = -2
+			prestige = -1500
+			if = {
+				limit = { has_nickname = no }
+				give_nickname = nick_the_great
+			}
+			k_quebec = {
+				de_jure_liege = e_qbc
+			}
+			k_cote_nord = {
+				de_jure_liege = e_qbc
+			}
+			d_noranda = {
+				de_jure_liege = k_cote_nord
+			}
+			d_eeyou_istchee = {
+				de_jure_liege = k_cote_nord
+			}
+			any_demesne_title = {
+				limit = { 
+					tier = KING
+				}
+				de_jure_liege = e_qbc
+			}
+			any_demesne_title = {
+				limit = {
+					tier = EMPEROR
+					NOT = { title = e_qbc }
+				}
+				destroy_landed_title = THIS
+				hidden_tooltip = { 
+					activate_title = { title = THIS status = no } 
+				}
+			}
+			e_arctica = {
+				destroy_landed_title = THIS
+				hidden_tooltip = { 
+					activate_title = { title = THIS status = no } 
+				}
+			}
+			custom_tooltip = { #If the duchies of Baie James and Mushkegowuk are controlled, make them de jure under the Kingdom of Cote Nord
+				text = form_the_empire_of_quebec_1
+				hidden_tooltip = {
+					if = {
+						limit = { 
+							completely_controls = d_baie_james
+							completely_controls = d_mushkegowuk
+						}
+						d_baie_james = {
+							de_jure_liege = k_cote_nord
+						}
+						d_mushkegowuk = {
+							de_jure_liege = k_cote_nord
+						}
+					}
+				}
+			}
+			custom_tooltip = { #If the duchies of Baie James and Mushkegowuk are controlled, make them de jure under the Kingdom of Cote Nord
+				text = form_the_empire_of_quebec_2
+				hidden_tooltip = {
+					if = {
+						limit = { 
+							completely_controls = k_maritimies
+						}
+						k_maritimies = {
+							de_jure_liege = e_qbc
+						}
+					}
+				}
+			}
+			custom_tooltip = { #If the duchies of Baie James and Mushkegowuk are controlled, make them de jure under the Kingdom of Cote Nord
+				text = form_the_empire_of_quebec_3
+				hidden_tooltip = {
+					if = {
+						limit = { 
+							completely_controls = k_nunavik
+						}
+						k_nunavik = {
+							de_jure_liege = e_qbc
+						}
+					}
+				}
+			}
+			custom_tooltip = { #If the duchies of Baie James and Mushkegowuk are controlled, make them de jure under the Kingdom of Cote Nord
+				text = form_the_empire_of_quebec_4
+				hidden_tooltip = {
+					if = {
+						limit = { 
+							completely_controls = k_newfoundland
+						}
+						k_newfoundland = {
+							de_jure_liege = e_qbc
+						}
+					}
+				}
+			}
+			set_global_flag = qbc_formed
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	form_the_empire_of_bc = {
+		is_high_prio = yes
+		potential = {
+			NOT = {
+				has_game_rule = {
+					name = empire_decisions
+					value = off
+				}
+			}
+			NOT = { has_global_flag = bc_formed }
+			independent = yes
+			OR = {
+				culture = canuck	
+				religion = rinkite
+			}
+			capital_scope = {
+				region = world_western_canada
+			}
+			higher_tier_than = DUKE
+		}
+		allow = {
+			is_adult = yes
+			prisoner = no
+			NOT = { is_incapable = yes }
+			prestige = 1500
+			scaled_wealth = 2
+			war = no
+			realm_size = 80
+			has_landed_title = k_vancouver
+			has_landed_title = k_caledonia
+			completely_controls = k_vancouver
+			completely_controls = k_caledonia
+			completely_controls = d_the_coast
+			completely_controls = d_stikine
+			completely_controls = d_liard
+			completely_controls = c_dawson_creek
+			completely_controls = c_fort_st_john
+		}
+		effect = {
+			activate_title = { title = e_bc status = yes }
+			activate_title = { title = k_up_north status = yes }
+			primary_title = {
+				e_bc = {
+					grant_title = ROOT
+					copy_title_laws = PREV
+				}
+			}
+			scaled_wealth = -2
+			prestige = -1500
+			if = {
+				limit = { has_nickname = no }
+				give_nickname = nick_the_great
+			}
+			k_vancouver = {
+				de_jure_liege = e_bc
+			}
+			k_caledonia = {
+				de_jure_liege = e_bc
+			}
+
+			custom_tooltip = {
+				text = form_the_empire_of_bc_1
+				hidden_tooltip = {
+					k_up_north = {
+						de_jure_liege = e_bc
+					}
+					d_the_coast = {
+						de_jure_liege = k_up_north
+					}
+					d_stikine = {
+						de_jure_liege = k_up_north
+					}
+					d_liard = {
+						de_jure_liege = k_up_north
+					}
+					c_fort_st_john = {
+						de_jure_liege = d_liard
+					}
+					c_dawson_creek ={
+						de_jure_liege = d_liard
+					}
+				}
+			}
+
+			any_demesne_title = {
+				limit = {
+					tier = EMPEROR
+					NOT = { title = e_bc }
+				}
+				destroy_landed_title = THIS
+				hidden_tooltip = { activate_title = { title = THIS status = no } }
+			}
+			custom_tooltip = { #If the duchies of Baie James and Mushkegowuk are controlled, make them de jure under the Kingdom of Cote Nord
+				text = form_the_empire_of_bc_2
+				hidden_tooltip = {
+					if = {
+						limit = { 
+							completely_controls = d_haida_gwaii
+						}
+						d_haida_gwaii = {
+							de_jure_liege = k_up_north
+						}
+					}
+				}
+			}
+			custom_tooltip = { #If the duchies of Baie James and Mushkegowuk are controlled, make them de jure under the Kingdom of Cote Nord
+				text = form_the_empire_of_bc_3
+				hidden_tooltip = {
+					if = {
+						limit = { 
+							completely_controls = d_alexander
+							completely_controls = d_juneau
+							completely_controls = d_yukon
+							OR = {
+								has_landed_title = k_klondike
+								k_klondike = {
+									has_holder = no
+								}
+							}
+						}
+						activate_title = { title = k_yukon status = yes }
+						primary_title = {
+							k_yukon = {
+								grant_title = ROOT
+								copy_title_laws = PREV
+							}
+						}
+						k_yukon = {
+							de_jure_liege = e_bc
+						}
+						d_alexander = {
+							de_jure_liege = k_yukon
+						}
+						d_juneau = {
+							de_jure_liege = k_yukon
+						}
+						d_yukon = {
+							de_jure_liege =k_yukon
+						}
+						k_klondike = {
+							destroy_landed_title = THIS
+							activate_title = { title = THIS status = no }
+						}
+					}
+				}
+			}
+			set_global_flag = bc_formed
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	organize_saskatchewan = {
+		is_high_prio = yes
+		potential = {
+			NAND = {
+				has_game_rule = {
+					name = empire_decisions
+					value = off
+				}
+				has_game_rule = {
+					name = canadian_province_decisions
+					value = off
+				}
+			}
+			NOT = { has_global_flag = org_sas }
+			independent = yes
+			OR = {
+				AND = {
+					OR = {
+						has_global_flag = canadian_church_unified
+						religion = dominionist
+						religion = rinkite
+						religion = lyonist
+						culture = prairielander
+					}
+					has_landed_title = e_canada
+					has_global_flag = org_man
+				}
+				AND = {
+					has_landed_title = e_bc
+					has_global_flag = org_alb
+				}
+				AND = {
+					OR = {
+						religion = dominionist
+						religion = rinkite
+						religion = lyonist
+					}
+					capital_scope = {
+						de_jure_liege_or_above = k_prairieland
+					}
+				}
+			}
+			higher_tier_than = COUNT
+		}
+		allow = {
+			is_adult = yes
+			prisoner = no
+			NOT = { is_incapable = yes }
+			prestige = 500
+			scaled_wealth = 1
+			war = no
+			completely_controls = d_assiniboia
+			completely_controls = d_saskatchewan
+			completely_controls = d_missinipi
+			completely_controls = c_battleford
+			completely_controls = c_kindersley
+			completely_controls = c_la_ronge
+			completely_controls = c_cannington
+			OR = {
+				has_landed_title = k_prairieland
+				k_prairieland = {
+					has_holder = no
+				}
+			}
+		}
+		effect = {
+			activate_title = { title = k_saskatchewan status = yes }
+			activate_title = { title = d_battleford status = yes }
+			scaled_wealth = -1
+			prestige = -500
+			primary_title = {
+				k_saskatchewan = {
+					grant_title = ROOT
+					copy_title_laws = PREV
+				}
+			}
+			primary_title = {
+				d_battleford = {
+					grant_title = ROOT
+					copy_title_laws = PREV
+				}
+			}
+			d_assiniboia = {
+				de_jure_liege = k_saskatchewan
+			}
+			d_saskatchewan = {
+				de_jure_liege = k_saskatchewan
+			}
+			d_missinipi = {
+				de_jure_liege = k_saskatchewan
+			}
+			d_chinook = {
+				de_jure_liege = k_saskatchewan
+			}
+			d_battleford = {
+				de_jure_liege = k_saskatchewan
+			}
+			c_battleford = {
+				de_jure_liege = d_battleford
+			}
+			c_kindersley = {
+				de_jure_liege = d_battleford
+			}
+			c_cypress_hills = {
+				de_jure_liege = d_battleford
+			}
+			c_la_ronge = {
+				de_jure_liege = d_missinipi
+			}
+			c_cannington = {
+				de_jure_liege = d_assiniboia
+			}
+			if = {
+				limit = {
+					ROOT = {
+						any_demesne_title = { title = e_canada }
+					}
+				}
+				k_saskatchewan = {
+					de_jure_liege = e_canada
+				}
+			}
+			else_if = {
+				limit = {
+					ROOT = {
+						any_demesne_title = { title = e_bc } 
+					}
+				}
+				k_saskatchewan = {
+					de_jure_liege = e_bc
+				}
+			}
+			else = {
+				k_alberta = {
+					de_jure_liege = e_thunderland
+				}
+			}
+			hidden_tooltip = {
+				k_prairieland = {
+					destroy_landed_title = THIS
+					if = {
+						limit = { has_global_flag = org_alb }
+						activate_title = { title = THIS status = no }
+					}
+				}
+			}
+			set_global_flag = org_sas
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	organize_alberta = {
+		is_high_prio = yes
+		potential = {
+			NAND = {
+				has_game_rule = {
+					name = empire_decisions
+					value = off
+				}
+				has_game_rule = {
+					name = canadian_province_decisions
+					value = off
+				}
+			}
+			NOT = { has_global_flag = org_alb }
+			independent = yes
+			OR = {
+				AND = {
+					OR = {
+						has_global_flag = canadian_church_unified
+						religion = dominionist
+						religion = rinkite
+						religion = lyonist
+					}
+					has_landed_title = e_canada
+					has_global_flag = org_sas
+				}
+				has_landed_title = e_bc
+				AND = {
+					OR = {
+						religion = dominionist
+						religion = rinkite
+						religion = lyonist
+					}
+					capital_scope = {
+						de_jure_liege_or_above = k_prairieland
+					}
+				}
+
+			}
+			higher_tier_than = COUNT
+		}
+		allow = {
+			is_adult = yes
+			prisoner = no
+			NOT = { is_incapable = yes }
+			prestige = 500
+			scaled_wealth = 1
+			war = no
+			completely_controls = d_palliser
+			completely_controls = d_great_bow
+			completely_controls = d_alberta
+			completely_controls = d_lesser_slave
+			completely_controls = d_great_slave
+			completely_controls = c_grande_prairie
+			completely_controls = c_peace_river
+			completely_controls = c_northern_lights
+			completely_controls = c_wainwright
+			completely_controls = c_lloydminster
+			OR = {
+				has_landed_title = k_prairieland
+				k_prairieland = {
+					has_holder = no
+				}
+			}
+			OR = {
+				has_landed_title = k_peace
+				k_peace = {
+					has_holder = no
+				}
+			}
+		}
+		effect = {
+			activate_title = { title = k_alberta status = yes }
+			scaled_wealth = -1
+			prestige = -500
+			primary_title = {
+				k_alberta = {
+					grant_title = ROOT
+					copy_title_laws = PREV
+				}
+			}
+			d_palliser = {
+				de_jure_liege = k_alberta
+			}
+			d_great_bow = {
+				de_jure_liege = k_alberta
+			}
+			d_alberta = {
+				de_jure_liege = k_alberta
+			}
+			d_lesser_slave = {
+				de_jure_liege = k_alberta
+			}
+			d_great_slave = {
+				de_jure_liege = k_alberta
+			}
+			d_athabasca = {
+				de_jure_liege =k_alberta
+			}
+			c_grande_prairie = {
+				de_jure_liege = d_lesser_slave
+			}
+			c_peace_river = {
+				de_jure_liege = d_lesser_slave
+			}
+			c_northern_lights = {
+				de_jure_liege = d_lesser_slave
+			}
+			c_wainwright = {
+				de_jure_liege = d_alberta
+			}
+			c_lloydminster = {
+				de_jure_liege = d_alberta
+			}
+			if = {
+				limit = {
+					ROOT = {
+						any_demesne_title = { title = e_canada } 
+					}
+				}
+				k_alberta = {
+					de_jure_liege = e_canada
+				}
+			}
+			else_if = {
+				limit = {
+					ROOT = {
+						any_demesne_title = { title = e_bc } 
+					}
+				}
+				k_alberta = {
+					de_jure_liege = e_bc
+				}
+			}
+			else = {
+				k_alberta = {
+					de_jure_liege = e_thunderland
+				}
+			}
+			hidden_tooltip = {
+				k_prairieland = {
+					destroy_landed_title = THIS
+					if = {
+						limit = { has_global_flag = org_sas }
+						activate_title = { title = THIS status = no }
+					}
+				}
+				k_peace = {
+					destroy_landed_title = THIS
+					if = {
+						limit = { has_global_flag = org_sas }
+						activate_title = { title = THIS status = no }
+					}
+				}
+				e_borealia = {
+					if = {
+						limit = {
+							has_global_flag = bc_formed
+							OR = {
+								ROOT = {
+									has_landed_title = e_borealia
+								}
+								e_borealia = {
+									has_holder = no
+								}
+							}
+						}
+						destroy_landed_title = THIS
+						activate_title = { title = THIS status = no}
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_global_flag = bc_formed }
+					}
+					c_fort_st_john = {
+						de_jure_liege = d_liard
+					}
+					c_dawson_creek ={
+						de_jure_liege = d_liard
+					}
+					activate_title = { title = d_peace status = no }
+				}
+			}
+			set_global_flag = org_alb
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	organize_greater_ontario = {
+		is_high_prio = yes
+		potential = {
+			NOR = {
+				has_game_rule = {
+					name = canadian_province_decisions
+					value = off
+				}
+				has_global_flag = org_qbc
+				has_global_flag = org_grt_ont
+			}
+			independent = yes
+			has_landed_title = e_canada
+			OR = {
+				religion = confederated
+				religion = united
+				religion = dominionist
+				religion = lyonist
+				religion = three_mothers
+				religion = rinkite
+			}
+			higher_tier_than = DUKE
+		}
+		allow = {
+			is_adult = yes
+			prisoner = no
+			NOT = { is_incapable = yes }
+			prestige = 500
+			scaled_wealth = 1
+			war = no
+			completely_controls = k_ontario
+			completely_controls = k_aurora
+			completely_controls = d_mushkegowuk
+			completely_controls = c_cochrane
+			completely_controls = c_abitibi
+			completely_controls = d_kenora
+			completely_controls = d_keewatin
+		}
+		effect = {
+			scaled_wealth = -1
+			prestige = -500
+			d_mushkegowuk = {
+				de_jure_liege = k_aurora
+			}
+			c_cochrane = {
+				de_jure_liege = d_mushkegowuk
+			}
+			c_abitibi = {
+				de_jure_liege = d_mushkegowuk
+			}
+			d_kenora = {
+				de_jure_liege = k_aurora
+			}
+			d_keewatin = {
+				de_jure_liege = k_aurora
+			}
+			hidden_tooltip = {
+				k_jamesie = {
+					if = {
+						limit = { has_global_flag = org_grt_qbc }
+						destroy_landed_title = THIS
+						activate_title = { title = THIS status = no }
+					}
+				}
+				d_noranda = {
+					if = {
+						limit = { has_global_flag = org_grt_qbc }
+						destroy_landed_title = THIS
+						activate_title = { title = THIS status = no }
+					}
+				}
+			}
+			set_global_flag = org_grt_ont
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	organize_greater_quebec = {
+		is_high_prio = yes
+		potential = {
+			NOR = {
+				has_game_rule = {
+					name = canadian_province_decisions
+					value = off
+				}
+				has_global_flag = org_qbc
+				has_global_flag = org_grt_qbc
+			}
+			independent = yes
+			has_landed_title = e_canada
+			OR = {
+				religion = confederated
+				religion = united
+				religion = dominionist
+				religion = lyonist
+				religion = three_mothers
+				religion = rinkite
+			}
+			higher_tier_than = DUKE
+		}
+		allow = {
+			is_adult = yes
+			prisoner = no
+			NOT = { is_incapable = yes }
+			prestige = 500
+			scaled_wealth = 1
+			war = no
+			completely_controls = k_quebec
+			completely_controls = k_cote_nord
+			completely_controls = d_eeyou_istchee
+			completely_controls = c_gouin
+			completely_controls = c_vallee_de_lor
+			completely_controls = d_baie_james
+			completely_controls = d_kativik
+			OR = {
+				has_landed_title = k_jamesie
+				k_jamesie = {
+					has_holder = no
+				}
+			}
+		}
+		effect = {
+			scaled_wealth = -1
+			prestige = -500
+			k_cote_nord = {
+				de_jure_liege = e_canada
+			}
+			d_eeyou_istchee = {
+				de_jure_liege = k_cote_nord
+			}
+			c_gouin = {
+				de_jure_liege = d_eeyou_istchee
+			}
+			c_vallee_de_lor = {
+				de_jure_liege = d_eeyou_istchee
+			}
+			d_baie_james = {
+				de_jure_liege = k_cote_nord
+			}
+			d_kativik = {
+				de_jure_liege =k_cote_nord
+			}
+			hidden_tooltip = {
+				k_jamesie = {
+					if = {
+						limit = { has_global_flag = org_sas }
+						destroy_landed_title = THIS
+						activate_title = { title = THIS status = no }
+					}
+				}
+			}
+			hidden_tooltip = {
+				d_noranda = {
+					if = {
+						limit = { has_global_flag = org_sas }
+						destroy_landed_title = THIS
+						activate_title = { title = THIS status = no }
+					}
+				}
+			}
+			set_global_flag = org_grt_qbc
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	organize_greater_newf_lab = {
+		is_high_prio = yes
+		potential = {
+			NOR = {
+				has_game_rule = {
+					name = canadian_province_decisions
+					value = off
+				}
+				has_global_flag = org_newf_lab
+			}
+			independent = yes
+			has_landed_title = e_canada
+			OR = {
+				religion = confederated
+				religion = united
+				religion = dominionist
+				religion = lyonist
+				religion = three_mothers
+				religion = rinkite
+			}
+			higher_tier_than = DUKE
+			has_global_flag = org_grt_qbc
+		}
+		allow = {
+			is_adult = yes
+			prisoner = no
+			NOT = { is_incapable = yes }
+			prestige = 500
+			scaled_wealth = 1
+			war = no
+			completely_controls = k_newfoundland
+			completely_controls = d_labrador
+			completely_controls = d_torngat
+			OR = {
+				has_landed_title = k_nunavik
+				k_nunavik = {
+					has_holder = no
+				}
+			}
+			OR = {
+				has_landed_title = k_newfoundland
+				k_newfoundland ={
+					has_holder = no
+				}
+			}
+		}
+		effect = {
+			scaled_wealth = -1
+			prestige = -500
+			primary_title = {
+				k_newfoundland = {
+					grant_title = ROOT
+					copy_title_laws = PREV
+				}
+			}
+			k_newfoundland = {
+				de_jure_liege = e_canada
+			}
+			d_labrador = {
+				de_jure_liege = k_newfoundland
+			}
+			d_torngat = {
+				de_jure_liege = k_newfoundland
+			}
+			hidden_tooltip = {
+				k_nunavik = {
+					destroy_landed_title = THIS
+					activate_title = { title = THIS status = no }
+				}
+			}
+			hidden_tooltip = {
+				e_arctica = {
+					if = {
+						limit = { has_global_flag = org_sas }
+						destroy_landed_title = THIS
+						activate_title = { title = THIS status = no }
+					}
+				}
+			}
+			set_global_flag = org_newf_lab
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	organize_manitoba = {
+		is_high_prio = yes
+		potential = {
+			NOR = {
+				has_game_rule = {
+					name = canadian_province_decisions
+					value = off
+				}
+				has_global_flag = org_man
+			}
+			independent = yes
+			has_landed_title = e_canada
+			OR = {
+				religion = confederated
+				religion = united
+				religion = dominionist
+				religion = lyonist
+				religion = three_mothers
+				religion = rinkite
+			}
+			higher_tier_than = DUKE
+			has_global_flag = org_grt_ont
+		}
+		allow = {
+			is_adult = yes
+			prisoner = no
+			NOT = { is_incapable = yes }
+			prestige = 500
+			scaled_wealth = 1
+			war = no
+			completely_controls = k_manitoba
+			OR = {
+				has_landed_title = k_manitoba
+				k_manitoba = {
+					has_holder = no
+				}
+			}
+		}
+		effect = {
+			scaled_wealth = -1
+			prestige = -500
+			primary_title = {
+				k_manitoba = {
+					grant_title = ROOT
+					copy_title_laws = PREV
+				}
+			}
+			k_manitoba = {
+				de_jure_liege = e_canada
+			}
+			set_global_flag = org_man
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

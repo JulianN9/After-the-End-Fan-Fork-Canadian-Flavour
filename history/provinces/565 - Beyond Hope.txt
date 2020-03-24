@@ -1,0 +1,15 @@
+# County Title
+title=c_beyond_hope
+
+# Settlements
+max_settlements=3
+
+b_hope_BC=castle
+
+
+# Misc
+culture=canuck
+religion=rinkite
+terrain=forest
+
+#History

@@ -1,0 +1,13 @@
+religion_openly_rinkite_or_heresy_trigger = {
+	custom_tooltip = {
+		text = religion_openly_americanist_or_heresy_tooltip
+		hidden_trigger = {
+			OR = {
+				religion = dominionist
+				religion = lyonist
+				religion = three_mothers
+				religion = rinkite
+			}
+		}
+	}
+}

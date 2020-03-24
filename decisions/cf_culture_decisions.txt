@@ -1,0 +1,286 @@
+decisions = {
+	
+	canadian_renaissance = {
+		only_playable = yes
+		is_high_prio = yes
+		
+		potential = {
+			is_playable = yes
+			has_landed_title = e_canada
+			NOT = { has_global_flag = flag_started_canadian_renaissance }
+			#NOT = { has_alternate_start_parameter = { key = culture_names value = random } }
+		}
+		allow = {
+			#show_only_failed_conditions = yes
+			capital_scope = { province = 1297 }
+			or ={ 
+				religion = confederated
+				religion = united
+			}
+			culture = ontarian
+			ruled_years = 10
+			war = no
+		}
+		effect = {
+			set_global_flag = flag_started_canadian_renaissance
+			culture = canadian
+			hidden_tooltip = {
+				any_courtier_or_vassal = { 
+					limit = { lower_tier_than = COUNT }
+					culture = canadian
+				}
+			}
+			capital_scope = { culture = canadian }
+			custom_tooltip = {
+				text = tooltip_canadian_culture_starts_spreading
+				hidden_tooltip = {
+					any_realm_province = {
+						if = {
+							limit = { any_neighbor_province = { province = 1297 } }
+							culture = canadian
+						}
+						if = {
+							limit = { 
+								culture = ontarian
+								NOT = { distance = { where = 1297 distance = 100 } } 
+							}
+							random = { 
+								chance = 40 
+								culture = canadian 
+							}
+						}
+						if = {
+							limit = { 
+								or = {
+									culture_group = north_atlantic
+									culture_group = north_pacific
+									culture_group = gallomerican
+									culture = ontarian
+								}
+								NOR = { distance = { where = 1297 distance = 200 } } 
+							}
+							random = { 
+								chance = 20 
+								culture = canadian 
+							}
+						}
+						if = {
+							limit = { 
+								or = {
+									culture_group = north_atlantic
+									culture_group = north_pacific
+									culture_group = gallomerican
+									culture = ontarian
+								}
+								NOT = { distance = { where = 1297 distance = 400 } } 
+							}
+							random = { 
+								chance = 5
+								culture = canadian 
+							}
+						}
+					}
+				}
+			}
+			hidden_tooltip = {
+				if = { 
+					limit = { 
+						OR = { 
+							religion = confederated
+							religion_group = christian
+						} 
+					}
+					any_realm_province = {
+						if = {
+							limit = { any_neighbor_province = { province = 1297 } }
+							religion = ROOT
+						}
+						if = {
+							limit = { 
+								culture = canadian
+								NOT = { distance = { where = 1297 distance = 100 } } 
+							}
+							random = { 
+								chance = 10 
+								religion = ROOT
+							}
+						}
+						if = {
+							limit = { 
+								culture = canadian
+								NOT = { distance = { where = 1297 distance = 200 } } 
+							}
+							random = { 
+								chance = 5 
+								religion = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = .3
+			modifier = {
+				factor = .2
+				religion = confederated
+			}
+			modifier = {
+				factor = 0 #Would consider it a step down.
+				culture = quebecois
+			}
+		}
+	}
+	
+	embrace_canadian_culture = {
+		ai_check_interval = 120 #check only once every 120 months.
+		only_playable = yes
+		
+		potential = {
+			is_playable = yes
+			NOT = { culture = canadian }
+			OR = { 
+				culture = ontarian
+				culture_group = gallomerican
+				culture_group = north_atlantic
+				culture_group = north_pacific
+				culture_group = rockland
+			}
+			NOT = { government = chinese_imperial_government }
+			has_global_flag = flag_started_canadian_renaissance
+			NOT = {
+				has_alternate_start_parameter = { key = culture_names value = random }
+			}
+			top_liege = { has_landed_title = e_canada }
+		}
+		allow = {
+			#show_only_failed_conditions = yes
+			OR = { 
+				culture = ontarian
+				culture_group = gallomerican
+				culture_group = north_atlantic
+				culture_group = north_pacific
+				culture_group = rockland
+			}
+		}
+		effect = {
+			culture = canadian
+			hidden_tooltip = {
+				any_courtier_or_vassal = { 
+					limit = { lower_tier_than = COUNT }
+					culture = canadian
+				}
+			}
+			capital_scope = { culture = canadian }
+			custom_tooltip = {
+				text = tooltip_canadian_culture_spreads
+				hidden_tooltip = {
+					any_demesne_province = {
+						if = {
+							limit = { any_neighbor_province = { province = 1297 } }
+							culture = canadian
+						}
+						if = {
+							limit = { 
+								culture = ontarian
+								capital_scope = { NOT = { distance = { where = PREV distance = 100 } } } 
+							}
+							random = { 
+								chance = 40 
+								culture = canadian 
+							}
+						}
+						if = {
+							limit = { 
+								or = {
+									culture_group = north_atlantic
+									culture_group = north_pacific
+									culture_group = gallomerican
+									culture = ontarian
+								}
+								capital_scope = { NOT = { distance = { where = PREV distance = 200 } } } 
+							}
+							random = { 
+								chance = 20 
+								culture = canadian 
+							}
+						}
+						if = {
+							limit = { 
+								or = {
+									culture_group = north_atlantic
+									culture_group = north_pacific
+									culture_group = gallomerican
+									culture = ontarian
+								}
+								capital_scope = { NOT = { distance = { where = PREV distance = 400 } } } 
+							}
+							random = { 
+								chance = 5
+								culture = canadian 
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = { 
+					OR = { 
+						religion = confederated 
+						religion_group = christian 
+					}
+				}
+				hidden_tooltip = {
+					any_demesne_province = {
+						if = {
+							limit = { any_neighbor_province = { province = 63 } }
+							religion = ROOT
+						}
+						if = {
+							limit = { 
+								culture = canadian
+								capital_scope = { NOT = { distance = { where = PREV distance = 100 } } } 
+							}
+							random = { 
+								chance = 10 
+								religion = ROOT
+							}
+						}
+						if = {
+							limit = { 
+								culture = canadian
+								capital_scope = { NOT = { distance = { where = PREV distance = 200 } } } 
+							}
+							random = { 
+								chance = 5 
+								religion = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = .3
+			modifier = {
+				factor = .2
+				religion = confederated
+			}
+			modifier = {
+				factor = .2
+				capital_scope = { culture = canadian } 
+			}
+			modifier = {
+				factor = 0 #Would consider it a step down.
+				culture = quebecois
+			}
+		}
+	}
+	
+}
