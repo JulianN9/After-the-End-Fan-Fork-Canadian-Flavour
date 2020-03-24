@@ -4,7 +4,7 @@ narrative_event = {
     id = castart.1
 	desc = castartdesc.1
 	picture = GFX_evt_lunatic_arabic
-	border = GFX_event_normal_frame_intrigue
+	border = GFX_event_narrative_frame_diplomacy
 	prisoner = no
 	only_independent = yes
 	has_character_flag = vancouver_king
@@ -24,7 +24,7 @@ narrative_event = {
             abdicate_to = c_1200048
             c_1200048 = {
                 wealth = PREV
-                set_charcter_flag = vancouver_king
+                set_character_flag = vancouver_king
             }
 		}
         ai_chance = {
@@ -39,7 +39,7 @@ narrative_event = {
 			death = { death_reason = death_murder_unknown }
 			set_global_flag = tsaacanuck
             c_1200046 = {
-                set_charcter_flag = vancouver_king
+                set_character_flag = vancouver_king
             }
 		}	
         ai_chance = {
@@ -52,7 +52,7 @@ narrative_event = {
     id = castart.2
 	desc = castartdesc.2
 	picture = GFX_evt_lunatic_arabic
-	border = GFX_event_normal_frame_intrigue
+	border = GFX_event_narrative_frame_diplomacy
 	prisoner = no
 	only_independent = yes
     has_global_flag = tsaacanuck
@@ -64,7 +64,7 @@ narrative_event = {
 	}	
 
     immediate = {
-        c_victoria = {
+        capital_scope = {
             religion = raven_tales
         }
         any_demesne_province = {
@@ -75,6 +75,7 @@ narrative_event = {
 
 	option = {
 		name = castartopA.2
+        culture = haisla
 	}
 }
 
@@ -118,7 +119,7 @@ narrative_event = {
     id = castart.11
 	desc = castartdesc.11
 	picture = GFX_evt_lunatic_arabic
-	border = GFX_event_normal_frame_intrigue
+	border = GFX_event_narrative_frame_diplomacy
 	prisoner = no
 	only_independent = yes
     has_global_flag = tsaahaida
@@ -131,39 +132,53 @@ narrative_event = {
 
     immediate = {
         c_victoria = {
-            religion = raven_tales
-            culture = haida
+            location = {
+                religion = raven_tales
+                culture = haida
+            }
         }
         c_cowichan = {
-            religion = raven_tales
-            culture = haida
+            location= {
+                religion = raven_tales
+                culture = haida
+            }
         }
         c_san_juan_islands = {
-            religion = raven_tales
-            culture = haida
+            location = {
+                religion = raven_tales
+                culture = haida
+            }
         }
         c_vancouver = {
-            add_province_modifier = {
-                name = religious_tension
-				duration = 180
+            location = {
+                add_province_modifier = {
+                    name = religious_tension
+				    duration = 180
+                }
             }
         }
         c_bellingham_bay = {
-            add_province_modifier = {
-            	name = religious_tension
-				duration = 90
+            location = {
+                add_province_modifier = {
+            	    name = religious_tension
+				    duration = 90
+                }
             }
         }
         c_camano = {
-            add_province_modifier = {
-            	name = religious_tension
-				duration = 90
+            location = {
+                add_province_modifier = {
+                	name = religious_tension
+			    	duration = 90
+                }
             }
         }
         c_snohomish = {
-            add_province_modifier = {
-                name = religious_tension
-                duration = 90
+            location ={
+                add_province_modifier = {
+                    name = religious_tension
+                    duration = 90
+                }
             }
         }
         c_1845081 = {
@@ -192,7 +207,7 @@ narrative_event = {
     id = castart.12
 	desc = castartdesc.12
 	picture = GFX_evt_lunatic_arabic
-	border = GFX_event_normal_frame_intrigue
+	border = GFX_event_narrative_frame_diplomacy
     is_triggered_only = yes
 	only_playable = yes
 
@@ -205,7 +220,7 @@ narrative_event = {
     id = castart.13
 	desc = castartdesc.13
 	picture = GFX_evt_lunatic_arabic
-	border = GFX_event_normal_frame_intrigue
+	border = GFX_event_narrative_frame_diplomacy
     is_triggered_only = yes
 	only_playable = yes
 
