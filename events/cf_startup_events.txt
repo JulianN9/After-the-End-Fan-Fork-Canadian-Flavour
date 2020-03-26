@@ -1,11 +1,11 @@
 namespace = castart
 
 character_event = {
-    id.castart.1
+    id = castart.1
     hide_window = yes
     prisoner = no
     only_independent = yes
-    has_character_flag =vancouver_king
+    has_character_flag = vancouver_king
     only_playable = yes
     is_triggered_only = yes
 
@@ -96,8 +96,10 @@ narrative_event = {
                     culture = musqueam
                 }
             }
-            character_event = {
-                id = castart.5 days = 30
+            ROOT ={
+                character_event = {
+                    id = castart.5 days = 30
+                }
             }
         }
         custom_tooltip = {
@@ -219,10 +221,12 @@ narrative_event = {
                     set_character_flag = homosexual_married
                 }                    
             }
-            character_event = {
-                name = adoption.2 days = 2
+            ROOT = {
+                character_event = {
+                    name = adoption.2 days = 2
+                }
             }
-            c_1200046 = {
+            c_1200048 = {
                 character_event = {
                     name = castart.6 days = 10
                 }
@@ -235,7 +239,6 @@ narrative_event = {
         hidden_tooltip = {
             create_random_steward = {
                 random_traits = yes
-                female = yes
                 dynasty = random
                 religion = dominionist
                 culture = PREV
@@ -267,16 +270,21 @@ narrative_event = {
 	only_playable = yes
     is_triggered_only = yes
 
+    immediate = {
+        add_claim = {
+            k_vancouver
+        }
+    }
 
 	option = {
 		name = castartopA.6
         hidden_tooltip = {
             k_vancouver = {
                 holder_scope = {
-                    war = {
+                    reverse_war = {
                         target = ROOT
                         casus_belli = claim
-                        thirdparty = PREV
+                        thirdparty_title = PREVPREV
                     }
                 }
             }
