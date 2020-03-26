@@ -96,10 +96,8 @@ narrative_event = {
                     culture = musqueam
                 }
             }
-            ROOT ={
-                character_event = {
-                    id = castart.5 days = 30
-                }
+            narrative_event = {
+                id = castart.5 days = 30
             }
         }
         custom_tooltip = {
@@ -188,8 +186,6 @@ narrative_event = {
 	desc = castartdesc.5
 	picture = GFX_evt_lunatic_arabic
 	border = GFX_event_narrative_frame_diplomacy
-	prisoner = no
-	only_independent = yes
     has_global_flag = tsaacanuck
 	has_character_flag = vancouver_king
 	only_playable = yes
@@ -204,9 +200,8 @@ narrative_event = {
         hidden_tooltip = {
             create_random_steward = {
                 random_traits = yes
-                female = yes
                 dynasty = random
-                religion = dominionist
+                religion = PREV
                 culture = PREV
                 age = 26
                 trait = zealous
@@ -221,13 +216,11 @@ narrative_event = {
                     set_character_flag = homosexual_married
                 }                    
             }
-            ROOT = {
-                character_event = {
-                    name = adoption.2 days = 2
-                }
+            character_event = {
+                name = adoption.2 days = 2
             }
             c_1200048 = {
-                character_event = {
+                narrative_event = {
                     name = castart.6 days = 10
                 }
             }
@@ -240,7 +233,7 @@ narrative_event = {
             create_random_steward = {
                 random_traits = yes
                 dynasty = random
-                religion = dominionist
+                religion = PREV
                 culture = PREV
                 age = 26
                 trait = zealous
@@ -265,14 +258,15 @@ narrative_event = {
 	picture = GFX_evt_lunatic_arabic
 	border = GFX_event_narrative_frame_diplomacy
 	prisoner = no
-	only_independent = yes
     has_global_flag = tsaacanuck
 	only_playable = yes
     is_triggered_only = yes
 
     immediate = {
-        add_claim = {
-            k_vancouver
+        ROOT = {
+            add_claim = {
+                k_vancouver
+            }
         }
     }
 
@@ -360,7 +354,7 @@ narrative_event = {
             }
         }
         c_1845081 = {
-            character_event = { id = castart.12 days = 7 }
+            narrative_event = { id = castart.12 days = 7 }
         }
         clr_character_flag = vancouver_king
     }
@@ -371,7 +365,7 @@ narrative_event = {
         hidden_tooltip = {
             k_great_coast = {
                 holder_scope = {
-                    character_event = { id = castart.13 days = 7 }
+                    narrative_event = { id = castart.13 days = 7 }
                 }
             }
         }
