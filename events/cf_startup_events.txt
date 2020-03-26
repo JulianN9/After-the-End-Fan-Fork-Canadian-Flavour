@@ -1,13 +1,29 @@
 namespace = castart
 
+character_event = {
+    id.castart.1
+    hide_window = yes
+    prisoner = no
+    only_independent = yes
+    has_character_flag =vancouver_king
+    only_playable = yes
+    is_triggered_only = yes
+
+    immediate = {
+        character_event = {
+            id = castart.2 days = 30
+        }
+        clr_character_flag = vancouver_king
+    }
+}
+
 narrative_event = {
-    id = castart.1
-	desc = castartdesc.1
+    id = castart.2
+	desc = castartdesc.2
 	picture = GFX_evt_lunatic_arabic
 	border = GFX_event_narrative_frame_diplomacy
 	prisoner = no
 	only_independent = yes
-	has_character_flag = vancouver_king
 	only_playable = yes
     is_triggered_only = yes
 
@@ -16,10 +32,10 @@ narrative_event = {
 	}	
 
     option = {
-        name = castartoptA.1
+        name = castartoptA.2
      	hidden_tooltip = {
             clr_character_flag = vancouver_king
-			death = { death_reason = death_murder_unknown }
+			death = { death_reason = death_natural }
 			set_global_flag = tsaahaida
             abdicate_to = c_1200048
             c_1200048 = {
@@ -33,10 +49,10 @@ narrative_event = {
     }
 
 	option = {
-		name = castartopB.1
+		name = castartopB.2
 		hidden_tooltip = {
             clr_character_flag = vancouver_king
-			death = { death_reason = death_murder_unknown }
+			death = { death_reason = death_natural }
 			set_global_flag = tsaacanuck
             c_1200046 = {
                 set_character_flag = vancouver_king
@@ -49,8 +65,8 @@ narrative_event = {
 }
 
 narrative_event = {
-    id = castart.2
-	desc = castartdesc.2
+    id = castart.3
+	desc = castartdesc.3
 	picture = GFX_evt_lunatic_arabic
 	border = GFX_event_narrative_frame_diplomacy
 	prisoner = no
@@ -60,27 +76,60 @@ narrative_event = {
 	only_playable = yes
 
 	mean_time_to_happen = {
-		days = 10
+		days = 30
 	}	
 
     immediate = {
-        capital_scope = {
-            religion = raven_tales
-        }
-        any_demesne_province = {
-            culture = haisla
-        }
         clr_character_flag = vancouver_king
+        culture = cowichan
     }
 
 	option = {
-		name = castartopA.2
-        culture = haisla
+		name = castartopA.3
+        hidden_tooltip = {
+            any_courtier_or_vassal = {
+                limit = { lower_tier_than = COUNT }
+                culture = cowichan
+            }
+            d_fraser = {
+                holder_scope = {
+                    culture = musqueam
+                }
+            }
+            character_event = {
+                id = castart.5 days = 30
+            }
+        }
+        custom_tooltip = {
+            text = tooltip_coast_salish_cultute
+            hidden_tooltip = {
+                any_realm_province = {
+                    if = {
+                        limit = { de_jure_liege_or_above = d_victoria }
+                        culture = cowichan
+                    }
+                    if = {
+                        limit = {
+                            culture = haida
+                        }
+                        culture = komoks
+                    }
+                    if = {
+                        limit = { de_jure_liege_or_above = d_fraser }
+                        culture = musqueam
+                    }
+                    if = {
+                        limit = { de_jure_liege_or_above = k_cascadia }
+                        culture = tulalip
+                    }
+                }
+            }
+        }
 	}
 }
 
 province_event = {
-    id = castart.3
+    id = castart.4
     hide_window = yes
     has_global_flag = tsaacanuck
 
@@ -90,29 +139,150 @@ province_event = {
 
     trigger = {
         OR = {
-            AND = {
-                culture_group = northwest_coast
-                NOT = { culture = haisla } 
-            }
+            culture_group = northwest_coast
             culture = canuck
         }
         owner = {
             OR = {
-                culture = haisla
+                culture_group = coast_salish
                 any_liege = {
-                    culture = haisla
+                    culture_group = coast_salish
                 }
             }
         }
     }
 
     immediate = {
-        culture = haisla
-        add_province_modifier = {
-            name = cultural_tension
-            duration = 90
+        if = {
+            limit = { de_jure_liege_or_above = d_victoria }
+            culture = cowichan
+        }
+        if = {
+            limit = {
+                culture = haida
+            }
+            culture = komoks
+        }
+        if = {
+            limit = { de_jure_liege_or_above = d_fraser }
+            culture = musqueam
+        }
+        if = {
+            limit = { 
+                de_jure_liege_or_above = {
+                    OR = {
+                        d_puget
+                        d_olympus
+                    } 
+                }
+            }
+            culture = tulalip
         }
     }
+}
+
+narrative_event = {
+    id = castart.5
+	desc = castartdesc.5
+	picture = GFX_evt_lunatic_arabic
+	border = GFX_event_narrative_frame_diplomacy
+	prisoner = no
+	only_independent = yes
+    has_global_flag = tsaacanuck
+	has_character_flag = vancouver_king
+	only_playable = yes
+    is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 30
+	}	
+
+	option = {
+		name = castartopA.5
+        hidden_tooltip = {
+            create_random_steward = {
+                random_traits = yes
+                female = yes
+                dynasty = random
+                religion = dominionist
+                culture = PREV
+                age = 26
+                trait = zealous
+                trait = greedy
+            }
+            new_character = {
+                add_spouse = ROOT
+                add_trait = homosexualmarried_ff
+                set_character_flag = homosexual_married
+                ROOT = { 
+                    add_trait = homosexualmarried_fp
+                    set_character_flag = homosexual_married
+                }                    
+            }
+            character_event = {
+                name = adoption.2 days = 2
+            }
+            c_1200046 = {
+                character_event = {
+                    name = castart.6 days = 10
+                }
+            }
+        }
+	}
+
+    option = {
+		name = castartopB.5
+        hidden_tooltip = {
+            create_random_steward = {
+                random_traits = yes
+                female = yes
+                dynasty = random
+                religion = dominionist
+                culture = PREV
+                age = 26
+                trait = zealous
+                trait = greedy
+            }
+            new_character = {
+                add_spouse = ROOT
+                add_trait = homosexualmarried_ff
+                set_character_flag = homosexual_married
+                ROOT = { 
+                    add_trait = homosexualmarried_fp
+                    set_character_flag = homosexual_married
+                }                    
+            }
+        }
+	}
+}
+
+narrative_event = {
+    id = castart.6
+	desc = castartdesc.6
+	picture = GFX_evt_lunatic_arabic
+	border = GFX_event_narrative_frame_diplomacy
+	prisoner = no
+	only_independent = yes
+    has_global_flag = tsaacanuck
+	only_playable = yes
+    is_triggered_only = yes
+
+
+	option = {
+		name = castartopA.6
+        hidden_tooltip = {
+            k_vancouver = {
+                holder_scope = {
+                    war = {
+                        target = ROOT
+                        casus_belli = claim
+                        thirdparty = PREV
+                    }
+                }
+            }
+        }
+	}
+
 }
 
 narrative_event = {
@@ -127,7 +297,7 @@ narrative_event = {
 	only_playable = yes
 
 	mean_time_to_happen = {
-		days = 10
+		days = 30
 	}	
 
     immediate = {

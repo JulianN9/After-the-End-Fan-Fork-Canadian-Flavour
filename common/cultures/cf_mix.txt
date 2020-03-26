@@ -1,5 +1,177 @@
-northwest_coast = {
-	haisla = {
+coast_salish = {
+    graphical_cultures = { northernnativegfx canadiangfx whitepacificgfx }
+
+	musqueam = { #Vancouver
+		graphical_cultures = { northernnativegfx }
+		secondary_event_pictures = bedouin_arabic
+
+		color = { 148 0 211 }
+
+		male_names = {
+			Atewaas 
+			Cha'atl "Chee Xial Taaiixou" Chiin Cuneah 
+			Dayaang 
+			Gaahlaa Gaahlaay Ganiihlaas Ghaltsaakw Gidansda Gidkun Ginaawaan Giteewans Gitkinjuuwaas Gogiid Guujaaw Guulaas Guusk'an "Gwaay Guu Ganhlin" Gya'awhlans Gyaahlans 
+			Haina Hidansuu Hiellan Hiidangsaa Hiidangsdaa Hiitl'daa Hiljuuwaas Hlgitun Hluunaagad Hluuwee Howkan 
+			Ihldiinii 
+			Jaahguhl 
+			K'ap Kaat Kagan Kayung "Kilsdlaa Xidguns" Kithlaigaa Kiusta Klinkwan Koya Kun Kung 
+			Masset 
+			"Nang Jingwas" "Nang Kilsdlaas" 
+			S'gana Sdiithldaa Sgaal Sgaana "Sgaann Hiwhwaans" Siigee Skaaxwad Skaay Skedans Skidegate "Skil Hiilans" "Skil Tiis" Skilhlang Skilkaadgan Skilkingaans Skilkwiitlaas "Skuujgee Gong" "Stuut Jubgaab" Sukkwan 
+			"T'lajung Nung Kingaas" Taan Tahaygen Tanu Thasi "Tl'aagaang Quna" "Tsaa Hamjuuwee" Tsaak Tsahtsaa Tsinni 
+			Wigaanad Wiiaa 
+			Xa Xunts Xuut 
+			Yahguaas Yahl "Yahl Gwaawaas" "Yahl Hinku" "Yahl Kangwaas" "Yahl Naaw" "Yahl Sgoansins"
+			Abel Adam Adolf Adrien Ahmed Aidan Aikam Ajay Alan Alexander_Alexander Alpin Amir Amuro Anders Antony Arran Arthur Attila Avan 
+			Balraj Barry Begbie Benedict Bennett Benson Bert Blackburn Blamire Brendan Brett Brian Bronson Bryan Bjarni
+			Caius Cameron Capilano Carson Charlie_Charles Chartres Chase Chit Chris Clevin Conner Cory Couper Cumberland
+			Damien Darien Davis Daya Devon Douglas Drake
+			Eason Easton Eckhart Edison Elmore Evander Ezra
+			Fadi Filip_Phillip Finnley Flynn Ford Francis Frank Fuller
+			Gage Galt Gary George Giuseppe_Joseph Gordon Graham Gregory Greyson
+			Hampden Harrison Hassan Hayden Heath Hendrix Herb Holden Hugh Hussain Hy 
+			Ian Ikey Ingemar Innell Ire Ivan
+			Jacob_Jacob James Jaxon Jayson Jazzy Jean-Luc Joel Jonah Jonathan Jordan Jorgito Joshua Justin
+			Kaden Kaleb Keaton Keefer Kellan Kenneth Kevin Klem Knox Kristian_Christian
+			Lance Landon Layne Lee Leith Lewis Liam Linwood Loki Louis Luke_Lucas Lynden Leif
+			Mac Mackenzie Madden Malakai Marc_Marcus Mario_Marius Masen Matthew Michael Milan Mohamed Moore
+			Nelson Nicholas Nigel Nixon Nkwala Nolan
+			Odin Olivier_Oliver Oren Orkin Osric
+			Pasquale_Pascal Percy Peter Picard Pybus
+			Quimper 
+			Rafe Ray Raymond Reece Rhett Rhys Rocky Rodney Roger Ronin Ross Russell Ryan
+			Sage Salvador Santa Sawyer Scott Seth Shane Sheldon Sherwood Shinzo Smith Spider Stan Stephen Sukhman Sullivan Suzuki Svend
+			Tanner Terry Trent Trevor Tristan Trutch Tyler Tyson
+			Ujjal 
+			Victor
+			Walker Wallace Wayne Wesley
+			Yannick 
+		}
+
+		female_names = {
+			Aleshanee Atewaas 
+			Cha'atl Chiin Cumshewa 
+			"Daa Heeigan" Dzalarhons 
+			Elvamox 
+			Ginaaskilaas Guubii Guulaas Guusk'an Gyhldeptis Haina Haiwee "Hlgan Hiildaans" Hlgitun "Hlk'yah Gaawga" Hluunaagad Hluuwee Howkan 
+			Jaadaa 
+			K'ap Kaat Kagan Kaisun Kasaan Kayung Kikisoblu Kimama Kimana Kimani Kit Kiusta Klinkwan Kung "Kwaa Hiiwans" Kwoiyang 
+			Ladalia 
+			Masset Naani Ninstints 
+			Olahl 
+			Quootis-hooi 
+			S'gana Sandlenee Sgaal Sgaana "Sgaana Guujaanga" "Sgaana Hiiwans" Sguii Shada Sholeetsa Siigee Skedans Skidegate "Skil Tiis" Skilkaadgan "Stuut Jubgaab" Sukkwan 
+			Taan "Taawga Halaa Leyga" Tanu Tsaak Tsahtsaa Tsang 
+			Waawga Wah-Kah-Nee Wewick 
+			Xa Xanj Xhalkuts 
+			Yaahl Yaanans Yahl "Yahl Gwaawaas" "Yahl Hinku" "Yahl Kangwaas" "Yahl Naaw" "Yahl Sgoansins" Yan 
+			Aaliyah Abbie Acacia Adelaide Adrianna Alaina Alexz Alicia Aliyah Amanda Angela Anne Arielle Ariya Ashleigh Aspyn Audrey Ayla
+			Beverley Bianca Blake Brenna Briar Brittney Brooklynn Brynna
+			Calla Camille Carina Carmen Carrie Carrie-Anne Cassidy Charlene Christina Claire Colette Cristina Cynthia
+			Daniela Dayana Destiny Devyn Diane
+			Edith Eliana Eliza Elliana Elva Emery Emily Emmeline Erica Erin Evangeline Evelyn Everlee
+			Farrah Felicity
+			Gabriella Geneva Grimes
+			Hadley Harriet Haven Hayley Helen Helena Holle
+			Iona Iris Isabelle
+			Jennifer Jessica Jewel Jillian Jodelle Joyce Jude Julianne June
+			Kaia Kailey Karen Kathryn Kayi Kendall Kenzie Khloe Kiara Kim Kinsella Kirsten Kristin Kyla
+			Laura Linda Linden Livia Lucille Luna Lydia
+			Mabel Margaret Maryam Maxine Mckenna Meghan Melissa Merrie Milania Missy Monique Moss
+			Nancy Nelle Nora Norma Nyah
+			Paisley Pamela Parke Patricia Penelope Peregrin Phaedra
+			Rachel Raven Reet Ridley Robin Rochelle Rose_Rose Ryder Ryleigh
+			Sandra Sarah Saskia Serenity Shanaya Shay Sierra Simran Sofia Sonia Stephanie
+			Tapping Taylor Teaga Tenley Teryl Tiffany
+			Vienna
+			Willow
+			Ying Yvonne
+			Zainab Zara Zoie_Zoe 
+		}
+		
+		#from_dynasty_prefix = "of "
+		#founder_named_dynasties = yes
+		
+
+		pat_grf_name_chance = 20
+		mat_grf_name_chance = 5
+		father_name_chance = 40
+		
+
+		pat_grm_name_chance = 25
+		mat_grm_name_chance = 25
+		mother_name_chance = 25
+
+		modifier = default_culture_modifier
+
+		feminist = yes
+		allow_looting = yes
+	}
+
+    komoks = { #Desolation Sound
+		graphical_cultures = { northernnativegfx }
+		secondary_event_pictures = bedouin_arabic
+
+		color = { 148 0 211 }
+
+		male_names = {
+			Atewaas 
+			Cha'atl "Chee Xial Taaiixou" Chiin Cuneah 
+			Dayaang 
+			Gaahlaa Gaahlaay Ganiihlaas Ghaltsaakw Gidansda Gidkun Ginaawaan Giteewans Gitkinjuuwaas Gogiid Guujaaw Guulaas Guusk'an "Gwaay Guu Ganhlin" Gya'awhlans Gyaahlans 
+			Haina Hidansuu Hiellan Hiidangsaa Hiidangsdaa Hiitl'daa Hiljuuwaas Hlgitun Hluunaagad Hluuwee Howkan 
+			Ihldiinii 
+			Jaahguhl 
+			K'ap Kaat Kagan Kayung "Kilsdlaa Xidguns" Kithlaigaa Kiusta Klinkwan Koya Kun Kung 
+			Masset 
+			"Nang Jingwas" "Nang Kilsdlaas" 
+			S'gana Sdiithldaa Sgaal Sgaana "Sgaann Hiwhwaans" Siigee Skaaxwad Skaay Skedans Skidegate "Skil Hiilans" "Skil Tiis" Skilhlang Skilkaadgan Skilkingaans Skilkwiitlaas "Skuujgee Gong" "Stuut Jubgaab" Sukkwan 
+			"T'lajung Nung Kingaas" Taan Tahaygen Tanu Thasi "Tl'aagaang Quna" "Tsaa Hamjuuwee" Tsaak Tsahtsaa Tsinni 
+			Wigaanad Wiiaa 
+			Xa Xunts Xuut 
+			Yahguaas Yahl "Yahl Gwaawaas" "Yahl Hinku" "Yahl Kangwaas" "Yahl Naaw" "Yahl Sgoansins"
+		}
+
+		female_names = {
+			Aleshanee Atewaas 
+			Cha'atl Chiin Cumshewa 
+			"Daa Heeigan" Dzalarhons 
+			Elvamox 
+			Ginaaskilaas Guubii Guulaas Guusk'an Gyhldeptis Haina Haiwee "Hlgan Hiildaans" Hlgitun "Hlk'yah Gaawga" Hluunaagad Hluuwee Howkan 
+			Jaadaa 
+			K'ap Kaat Kagan Kaisun Kasaan Kayung Kikisoblu Kimama Kimana Kimani Kit Kiusta Klinkwan Kung "Kwaa Hiiwans" Kwoiyang 
+			Ladalia 
+			Masset Naani Ninstints 
+			Olahl 
+			Quootis-hooi 
+			S'gana Sandlenee Sgaal Sgaana "Sgaana Guujaanga" "Sgaana Hiiwans" Sguii Shada Sholeetsa Siigee Skedans Skidegate "Skil Tiis" Skilkaadgan "Stuut Jubgaab" Sukkwan 
+			Taan "Taawga Halaa Leyga" Tanu Tsaak Tsahtsaa Tsang 
+			Waawga Wah-Kah-Nee Wewick 
+			Xa Xanj Xhalkuts 
+			Yaahl Yaanans Yahl "Yahl Gwaawaas" "Yahl Hinku" "Yahl Kangwaas" "Yahl Naaw" "Yahl Sgoansins" Yan 
+		}
+		
+		#from_dynasty_prefix = "of "
+		#founder_named_dynasties = yes
+		
+
+		pat_grf_name_chance = 20
+		mat_grf_name_chance = 5
+		father_name_chance = 40
+		
+
+		pat_grm_name_chance = 25
+		mat_grm_name_chance = 25
+		mother_name_chance = 25
+
+		modifier = default_culture_modifier
+
+		allow_looting = yes
+        seafarer = yes
+	}
+
+    cowichan = { #Victoria
 		graphical_cultures = { northernnativegfx canadiangfx whitepacificgfx }
 		secondary_event_pictures = bedouin_arabic
 
@@ -106,5 +278,113 @@ northwest_coast = {
 		feminist = yes
 		allow_looting = yes
 		seafarer = yes
+	}
+    
+    tulalip = { #washington
+		graphical_cultures = { northernnativegfx canadiangfx whitepacificgfx }
+		secondary_event_pictures = bedouin_arabic
+
+		color = { 148 0 211 }
+
+		male_names = {
+			Atewaas 
+			Cha'atl "Chee Xial Taaiixou" Chiin Cuneah 
+			Dayaang 
+			Gaahlaa Gaahlaay Ganiihlaas Ghaltsaakw Gidansda Gidkun Ginaawaan Giteewans Gitkinjuuwaas Gogiid Guujaaw Guulaas Guusk'an "Gwaay Guu Ganhlin" Gya'awhlans Gyaahlans 
+			Haina Hidansuu Hiellan Hiidangsaa Hiidangsdaa Hiitl'daa Hiljuuwaas Hlgitun Hluunaagad Hluuwee Howkan 
+			Ihldiinii 
+			Jaahguhl 
+			K'ap Kaat Kagan Kayung "Kilsdlaa Xidguns" Kithlaigaa Kiusta Klinkwan Koya Kun Kung 
+			Masset 
+			"Nang Jingwas" "Nang Kilsdlaas" 
+			S'gana Sdiithldaa Sgaal Sgaana "Sgaann Hiwhwaans" Siigee Skaaxwad Skaay Skedans Skidegate "Skil Hiilans" "Skil Tiis" Skilhlang Skilkaadgan Skilkingaans Skilkwiitlaas "Skuujgee Gong" "Stuut Jubgaab" Sukkwan 
+			"T'lajung Nung Kingaas" Taan Tahaygen Tanu Thasi "Tl'aagaang Quna" "Tsaa Hamjuuwee" Tsaak Tsahtsaa Tsinni 
+			Wigaanad Wiiaa 
+			Xa Xunts Xuut 
+			Yahguaas Yahl "Yahl Gwaawaas" "Yahl Hinku" "Yahl Kangwaas" "Yahl Naaw" "Yahl Sgoansins"
+			Abel Adam Adolf Adrien Ahmed Aidan Aikam Ajay Alan Alexander_Alexander Alpin Amir Amuro Anders Antony Arran Arthur Attila Avan 
+			Balraj Barry Begbie Benedict Bennett Benson Bert Blackburn Blamire Brendan Brett Brian Bronson Bryan Bjarni
+			Caius Cameron Capilano Carson Charlie_Charles Chartres Chase Chit Chris Clevin Conner Cory Couper Cumberland
+			Damien Darien Davis Daya Devon Douglas Drake
+			Eason Easton Eckhart Edison Elmore Evander Ezra
+			Fadi Filip_Phillip Finnley Flynn Ford Francis Frank Fuller
+			Gage Galt Gary George Giuseppe_Joseph Gordon Graham Gregory Greyson
+			Hampden Harrison Hassan Hayden Heath Hendrix Herb Holden Hugh Hussain Hy 
+			Ian Ikey Ingemar Innell Ire Ivan
+			Jacob_Jacob James Jaxon Jayson Jazzy Jean-Luc Joel Jonah Jonathan Jordan Jorgito Joshua Justin
+			Kaden Kaleb Keaton Keefer Kellan Kenneth Kevin Klem Knox Kristian_Christian
+			Lance Landon Layne Lee Leith Lewis Liam Linwood Loki Louis Luke_Lucas Lynden Leif
+			Mac Mackenzie Madden Malakai Marc_Marcus Mario_Marius Masen Matthew Michael Milan Mohamed Moore
+			Nelson Nicholas Nigel Nixon Nkwala Nolan
+			Odin Olivier_Oliver Oren Orkin Osric
+			Pasquale_Pascal Percy Peter Picard Pybus
+			Quimper 
+			Rafe Ray Raymond Reece Rhett Rhys Rocky Rodney Roger Ronin Ross Russell Ryan
+			Sage Salvador Santa Sawyer Scott Seth Shane Sheldon Sherwood Shinzo Smith Spider Stan Stephen Sukhman Sullivan Suzuki Svend
+			Tanner Terry Trent Trevor Tristan Trutch Tyler Tyson
+			Ujjal 
+			Victor
+			Walker Wallace Wayne Wesley
+			Yannick 
+		}
+
+		female_names = {
+			Aleshanee Atewaas 
+			Cha'atl Chiin Cumshewa 
+			"Daa Heeigan" Dzalarhons 
+			Elvamox 
+			Ginaaskilaas Guubii Guulaas Guusk'an Gyhldeptis Haina Haiwee "Hlgan Hiildaans" Hlgitun "Hlk'yah Gaawga" Hluunaagad Hluuwee Howkan 
+			Jaadaa 
+			K'ap Kaat Kagan Kaisun Kasaan Kayung Kikisoblu Kimama Kimana Kimani Kit Kiusta Klinkwan Kung "Kwaa Hiiwans" Kwoiyang 
+			Ladalia 
+			Masset Naani Ninstints 
+			Olahl 
+			Quootis-hooi 
+			S'gana Sandlenee Sgaal Sgaana "Sgaana Guujaanga" "Sgaana Hiiwans" Sguii Shada Sholeetsa Siigee Skedans Skidegate "Skil Tiis" Skilkaadgan "Stuut Jubgaab" Sukkwan 
+			Taan "Taawga Halaa Leyga" Tanu Tsaak Tsahtsaa Tsang 
+			Waawga Wah-Kah-Nee Wewick 
+			Xa Xanj Xhalkuts 
+			Yaahl Yaanans Yahl "Yahl Gwaawaas" "Yahl Hinku" "Yahl Kangwaas" "Yahl Naaw" "Yahl Sgoansins" Yan 
+			Aaliyah Abbie Acacia Adelaide Adrianna Alaina Alexz Alicia Aliyah Amanda Angela Anne Arielle Ariya Ashleigh Aspyn Audrey Ayla
+			Beverley Bianca Blake Brenna Briar Brittney Brooklynn Brynna
+			Calla Camille Carina Carmen Carrie Carrie-Anne Cassidy Charlene Christina Claire Colette Cristina Cynthia
+			Daniela Dayana Destiny Devyn Diane
+			Edith Eliana Eliza Elliana Elva Emery Emily Emmeline Erica Erin Evangeline Evelyn Everlee
+			Farrah Felicity
+			Gabriella Geneva Grimes
+			Hadley Harriet Haven Hayley Helen Helena Holle
+			Iona Iris Isabelle
+			Jennifer Jessica Jewel Jillian Jodelle Joyce Jude Julianne June
+			Kaia Kailey Karen Kathryn Kayi Kendall Kenzie Khloe Kiara Kim Kinsella Kirsten Kristin Kyla
+			Laura Linda Linden Livia Lucille Luna Lydia
+			Mabel Margaret Maryam Maxine Mckenna Meghan Melissa Merrie Milania Missy Monique Moss
+			Nancy Nelle Nora Norma Nyah
+			Paisley Pamela Parke Patricia Penelope Peregrin Phaedra
+			Rachel Raven Reet Ridley Robin Rochelle Rose_Rose Ryder Ryleigh
+			Sandra Sarah Saskia Serenity Shanaya Shay Sierra Simran Sofia Sonia Stephanie
+			Tapping Taylor Teaga Tenley Teryl Tiffany
+			Vienna
+			Willow
+			Ying Yvonne
+			Zainab Zara Zoie_Zoe 
+		}
+		
+		#from_dynasty_prefix = "of "
+		#founder_named_dynasties = yes
+		
+
+		pat_grf_name_chance = 20
+		mat_grf_name_chance = 5
+		father_name_chance = 40
+		
+
+		pat_grm_name_chance = 25
+		mat_grm_name_chance = 25
+		mother_name_chance = 25
+
+		modifier = default_culture_modifier
+
+		feminist = yes
+		allow_looting = yes
 	}
 }
