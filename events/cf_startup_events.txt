@@ -292,21 +292,22 @@ narrative_event = {
 	immediate = {
 		add_claim = k_vancouver
 		capital_scope = {
-			spawn_unit = {
-				province = THIS
-				home = THIS
-				owner = ROOT
-				leader = ROOT
-				troops = {
-					light_cavalry = { 100 100 }
-					light_infantry = { 300 300 }
-					heavy_infantry = { 200 200 }
-					knights = { 50 50 }
-					pikemen = { 200 200 }	
+			holder_scope = {
+				spawn_unit = {
+					province = PREV
+					home = PREV
+					owner = THIS
+					troops = {
+						light_cavalry = { 100 100 }
+						light_infantry = { 300 300 }
+						heavy_infantry = { 200 200 }
+						knights = { 50 50 }
+						pikemen = { 200 200 }	
+					}
+					attrition = 0.0
+					maintenance_multiplier = 0.3
+					cannot_inherit = yes
 				}
-				attrition = 0.0
-				maintenance_multiplier = 0.0
-				cannot_inherit = yes
 			}
 		}
 	}
@@ -335,22 +336,24 @@ narrative_event = {
 
 	immediate = {
 		capital_scope = {
-			spawn_unit = {
-				province = THIS
-				home = THIS
-				owner = ROOT
-				leader = ROOT
-				troops = {
-					light_cavalry = { 100 100 }
-					light_infantry = { 300 300 }
-					heavy_infantry = { 200 200 }
-					knights = { 50 50 }
-					pikemen = { 200 200 }	
+			holder_scope ={
+				spawn_unit = {
+					province = PREV
+					home = PREV
+					owner = THIS
+					troops = {
+						light_cavalry = { 100 100 }
+						light_infantry = { 300 300 }
+						heavy_infantry = { 200 200 }
+						knights = { 50 50 }
+						pikemen = { 200 200 }	
+					}
+					attrition = 0.0
+					maintenance_multiplier = 0.3
+					cannot_inherit = yes
 				}
-				attrition = 0.0
-				maintenance_multiplier = 0.0
-				cannot_inherit = yes
 			}
+
 		}
 	}
 
@@ -514,13 +517,12 @@ narrative_event = {
 	desc = castartdesc.12
 	picture = GFX_evt_lunatic_arabic
 	border = GFX_event_narrative_frame_diplomacy
-	is_triggered_only = yes
+	prisoner = no
 	only_playable = yes
+	is_triggered_only = yes
 
 	immediate = {
-		add_claim = {
-			k_vancouver
-		}
+		add_claim = k_vancouver
 	}
 
 	option = {
@@ -533,6 +535,7 @@ narrative_event = {
 			}
 		}
 	}
+
 }
 
 narrative_event = {
