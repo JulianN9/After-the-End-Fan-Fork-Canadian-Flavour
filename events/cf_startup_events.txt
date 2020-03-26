@@ -44,12 +44,12 @@ narrative_event = {
 			}
 		}
 		ai_chance = {
-			factor = 50
+			factor = 1
 		}	   
 	}
 
 	option = {
-		name = castartopB.2
+		name = castartoptB.2
 		hidden_tooltip = {
 			clr_character_flag = vancouver_king
 			death = { death_reason = death_natural }
@@ -59,7 +59,13 @@ narrative_event = {
 			}
 		}	
 		ai_chance = {
-			factor = 50
+			factor = 1
+			modifier = {
+				factor = 0
+				c_1200004 = {
+					ai = no
+				}
+			}
 		}
 	}
 }
@@ -85,7 +91,7 @@ narrative_event = {
 	}
 
 	option = {
-		name = castartopA.3
+		name = castartoptA.3
 		hidden_tooltip = {
 			any_courtier_or_vassal = {
 				limit = { lower_tier_than = COUNT }
@@ -186,13 +192,11 @@ narrative_event = {
 	desc = castartdesc.5
 	picture = GFX_evt_lunatic_arabic
 	border = GFX_event_narrative_frame_diplomacy
-	has_global_flag = tsaacanuck
-	has_character_flag = vancouver_king
 	only_playable = yes
 	is_triggered_only = yes
 
 	option = {
-		name = castartopA.5
+		name = castartoptA.5
 		hidden_tooltip = {
 			create_random_steward = {
 				random_traits = yes
@@ -213,18 +217,37 @@ narrative_event = {
 				}                    
 			}
 			character_event = {
-				id = adoption.2 days = 2
+				id = adoption.2 days = 5
 			}
 			c_1200048 = {
 				narrative_event = {
 					id = castart.6 days = 10
 				}
 			}
+			if = {
+				limit = {
+					c_harrison = {
+						holder_scope = {
+							religion = rinkite
+						}
+					}
+				}
+				c_harrison = {
+					holder_scope = {
+						narrative_event = {
+							id = castart.7 days = 10
+						}
+					}
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
 		}
 	}
 
 	option = {
-		name = castartopB.5
+		name = castartoptB.5
 		hidden_tooltip = {
 			create_random_steward = {
 				random_traits = yes
@@ -245,6 +268,15 @@ narrative_event = {
 				}                    
 			}
 		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				c_1845081 = {
+					ai = no
+				}
+			}
+		}
 	}
 }
 
@@ -258,21 +290,114 @@ narrative_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		ROOT = {
-			add_claim = {
-				k_vancouver
-			}
-			unsafe_war = {
-				target = k_vancouver
-				casus_belli = claim
-				thirdparty_title = k_vancouver
-				tier = king
+		add_claim = k_vancouver
+		capital_scope = {
+			spawn_unit = {
+				province = THIS
+				home = THIS
+				owner = ROOT
+				leader = ROOT
+				troops = {
+					light_cavalry = { 100 100 }
+					light_infantry = { 300 300 }
+					heavy_infantry = { 200 200 }
+					knights = { 50 50 }
+					pikemen = { 200 200 }	
+				}
+				attrition = 0.0
+				maintenance_multiplier = 0.0
+				cannot_inherit = yes
 			}
 		}
 	}
 
 	option = {
-		name = castartopA.6
+		name = castartoptA.6
+		hidden_tooltip = {
+			c_1200046 = {
+				narrative_event = {
+					id = castart.8 days = 10
+				}
+			}
+		}
+	}
+
+}
+
+narrative_event = {
+	id = castart.7
+	desc = castartdesc.7
+	picture = GFX_evt_lunatic_arabic
+	border = GFX_event_narrative_frame_diplomacy
+	prisoner = no
+	only_playable = yes
+	is_triggered_only = yes
+
+	immediate = {
+		capital_scope = {
+			spawn_unit = {
+				province = THIS
+				home = THIS
+				owner = ROOT
+				leader = ROOT
+				troops = {
+					light_cavalry = { 100 100 }
+					light_infantry = { 300 300 }
+					heavy_infantry = { 200 200 }
+					knights = { 50 50 }
+					pikemen = { 200 200 }	
+				}
+				attrition = 0.0
+				maintenance_multiplier = 0.0
+				cannot_inherit = yes
+			}
+		}
+	}
+
+	option = {
+		name = castartoptA.7
+	}
+
+}
+
+narrative_event = {
+	id = castart.8
+	desc = castartdesc.8
+	picture = GFX_evt_lunatic_arabic
+	border = GFX_event_narrative_frame_diplomacy
+	prisoner = no
+	only_playable = yes
+	is_triggered_only = yes
+
+	immediate = {
+		c_1200048 = {
+			unsafe_war = {
+				target = ROOT
+				casus_belli = claim_on_liege
+				thirdparty_title = k_vancouver
+			}
+		}
+		if = {
+			limit = {
+				c_harrison = {
+					holder_scope = {
+						religion = rinkite
+					}
+				}
+			}
+			c_harrison = {
+				holder_scope = {
+					war = {
+						target = ROOT
+						casus_belli = claim_all
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = castartoptA.8
 	}
 
 }
@@ -343,25 +468,44 @@ narrative_event = {
 				}
 			}
 		}
-		c_1845081 = {
-			narrative_event = { id = castart.12 days = 7 }
-		}
 		clr_character_flag = vancouver_king
 	}
 
 	option = {
-		name = castartopA.11
+		name = castartoptA.11
 		add_claim = k_great_coast
 		hidden_tooltip = {
 			k_great_coast = {
 				holder_scope = {
-					narrative_event = { id = castart.13 days = 7 }
+					narrative_event = { id = castart.12 days = 7 }
 				}
 			}
+			if = {
+				limit = {
+					c_harrison = {
+						holder_scope = {
+							religion = rinkite
+						}
+					}
+				}
+				c_harrison = {
+					holder_scope = {
+						narrative_event = {
+							id = castart.7 days = 10
+						}
+					}
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
 		}
 	}
 	option = {
 		name = castartdescB.11
+		ai_chance = {
+			factor = 0
+		}
 	}
 }
 
@@ -373,8 +517,21 @@ narrative_event = {
 	is_triggered_only = yes
 	only_playable = yes
 
+	immediate = {
+		add_claim = {
+			k_vancouver
+		}
+	}
+
 	option = {
-		name = castartopA.12
+		name = castartoptA.12
+		hidden_tooltip = {
+			c_1200048 = {
+				narrative_event = {
+					id = castart.13 days = 10
+				}
+			}
+		}
 	}
 }
 
@@ -387,16 +544,36 @@ narrative_event = {
 	only_playable = yes
 
 	option = {
-		name = castartopA.13
-		ai_chance = {
-			factor = 75
+		name = castartoptA.13
+		hidden_tooltip = {
+			k_great_coast = {
+				holder_scope = {
+					war = {
+						target = ROOT
+						casus_belli = claim
+						thirdparty_title = k_vancouver
+					}	
+				}
+			}
+			limit = {
+				c_harrison = {
+					holder_scope = {
+						religion = rinkite
+					}
+				}
+			}
+			c_harrison = {
+				holder_scope = {
+					war = {
+						target = ROOT
+						casus_belli = claim_all
+					}
+				}
+			}
 		}
 	}
+
 	option = {
-		name = castartopB.13
-		add_claim = k_vancouver
-		ai_chance = {
-			factor = 25
-		}
+		name = castartoptB.13
 	}
 }
