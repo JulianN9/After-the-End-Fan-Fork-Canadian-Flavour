@@ -551,9 +551,9 @@ narrative_event = {
 		hidden_tooltip = {
 			k_great_coast = {
 				holder_scope = {
-					war = {
+					unsafe_war = {
 						target = ROOT
-						casus_belli = claim
+						casus_belli = feather_war
 						thirdparty_title = k_vancouver
 					}	
 				}
@@ -578,5 +578,150 @@ narrative_event = {
 
 	option = {
 		name = castartoptB.13
+	}
+}
+
+narrative_event={ #Unite Haida Tlguug
+	id = castart.14
+	title = castarttitle.14
+	desc = castartdesc.14
+	picture = GFX_EVT_red_river_summer
+	is_triggered_only = yes
+	
+	trigger = {
+		is_playable = yes
+		capital_scope = { region = custom_canada }
+		has_global_flag = haida_proclaimed
+	}
+	
+	option = {
+		name = castartoptA.14
+		trigger = {
+			has_landed_title = e_haida
+		}
+		prestige = 3000
+	}
+	option = {
+		name = EVTOPT_metis_confederacy_coreligionist
+		trigger = {
+			NOT = { has_landed_title = e_usa }
+            NOT = { has_landed_title = e_haida }
+			e_haida = {
+				holder_scope = {
+					culture_group = ROOT
+				}
+			}
+		}
+	}
+	option = {
+		name = EVTOPT_metis_confederacy_bystander
+		trigger = {
+			NOT = { has_landed_title = e_haida }
+			NOT = { has_landed_title = e_canada }
+			e_haida = {
+				holder_scope = {
+					NOT = { religion = ROOT }
+				}
+			}
+		}
+	}
+	option = {
+		name = EVTOPT_metis_confederacy_canadian
+		trigger = {
+			NOT = { has_landed_title = e_haida }
+			has_landed_title = e_canada
+			e_haida = {
+				holder_scope = {
+					NOT = { religion = ROOT }
+				}
+			prestige = -1000
+			}
+		}
+	}
+}
+
+narrative_event={
+	id = castart.15
+	title = castarttitle.15
+	desc = castartdesc.15
+	picture = GFX_EVT_red_river_summer
+	is_triggered_only = yes
+	
+	trigger = {
+		is_playable = yes
+		capital_scope = { region = custom_canada }
+		has_global_flag = haida_proclaimed
+	}
+	
+	option = {
+		name = castartoptA.15
+		trigger = {
+			has_landed_title = e_haida
+		}
+		prestige = 3000
+		give_nickname = nick_the_great
+		if = { #New Imperial Bloodline. (male)
+			limit = { 
+				has_dlc = "Holy Fury" 
+				is_female = no
+			}
+			create_bloodline = {
+				type = metis_confederacy_male
+			}
+			new_bloodline = {
+				set_description = "bloodline_desc_metis_confederacy"
+			}	
+			sound_effect = bloodline_added			
+		}
+		else_if = { #New Imperial Bloodline. (female)
+			limit = { 
+				has_dlc = "Holy Fury" 
+				is_female = yes
+			}
+			create_bloodline = {
+				type = metis_confederacy_female
+			}
+			new_bloodline = {
+				set_description = "bloodline_desc_metis_confederacy"
+			}	
+			sound_effect = bloodline_added			
+		}
+	}
+	option = {
+		name = EVTOPT_metis_confederacy_coreligionist
+		trigger = {
+			NOT = { has_landed_title = e_usa }
+            NOT = { has_landed_title = e_haida }
+			e_haida = {
+				holder_scope = {
+					culture_group = ROOT
+				}
+			}
+		}
+	}
+	option = {
+		name = EVTOPT_metis_confederacy_bystander
+		trigger = {
+			NOT = { has_landed_title = e_haida }
+			NOT = { has_landed_title = e_canada }
+			e_haida = {
+				holder_scope = {
+					NOT = { religion = ROOT }
+				}
+			}
+		}
+	}
+	option = {
+		name = EVTOPT_metis_confederacy_canadian
+		trigger = {
+			NOT = { has_landed_title = e_haida }
+			has_landed_title = e_canada
+			e_haida = {
+				holder_scope = {
+					NOT = { religion = ROOT }
+				}
+			prestige = -1000
+			}
+		}
 	}
 }

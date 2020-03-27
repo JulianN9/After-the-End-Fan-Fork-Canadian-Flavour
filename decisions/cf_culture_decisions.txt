@@ -282,5 +282,65 @@ decisions = {
 			}
 		}
 	}
-	
+
+	form_the_haida_empire = {
+		is_high_prio = yes
+		ai_check_interval = 8
+		potential = {
+			is_alternate_start = no
+			NOT = {
+				has_game_rule = {
+					name = empire_decisions
+					value = off
+				}
+			}
+			is_playable = yes
+			independent = yes
+			culture = haida
+			religion = raven_tales
+			e_haida = {
+				has_holder = no
+			}
+		}
+		allow = {
+			is_adult = yes
+			prisoner = no
+			NOT = { is_incapable = yes }
+			culture = haida
+			prestige = 1000
+			wealth = 300
+			completely_controls = k_vancouver 
+			completely_controls = k_great_coast 
+			any_demesne_title = {
+				tier = KING
+			}
+			religion = raven_tales
+		    OR = {	
+				NOT = { has_global_flag = haida_proclaimed }
+			}
+		}
+		effect = {
+			activate_title = { title = e_haida status = yes }
+			if = {
+				limit = { has_nickname = no }
+				give_nickname = nick_the_great
+			}
+			primary_title = {
+				e_haida = {
+					grant_title = ROOT
+					copy_title_laws = PREV
+				}
+			}
+			wealth = -500
+			set_global_flag = haida_proclaimed
+			narrative_event = { id = castart.15 }
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
 }
