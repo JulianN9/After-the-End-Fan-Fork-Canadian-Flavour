@@ -1,3 +1,4 @@
+# Religious Heads
 d_con_urs = {
 	color={ 198 249 255 }
 	color2={ 220 220 0 }
@@ -145,4 +146,116 @@ d_lyonist = {
 	dignity = 100
 	
 	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
+}
+
+
+# Holy Orders
+d_vancouver_canucks = {
+	color = { 137 191 244 } #
+	color2= { 255 255 255 }
+	
+	graphical_culture = holygfx
+	
+	capital = 548 # Vancouver
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	culture = canuck
+	religion = rinkite
+	
+	landless = yes
+	holy_order = yes
+	primary = yes
+	monthly_income = 6
+
+	mercenary_type = d_knights_of_columbus_composition
+}
+
+d_edmonton_oilers = {
+	color = { 137 191 244 } #
+	color2= { 255 255 255 }
+	
+	graphical_culture = holygfx
+	
+	capital = 2093 # Edmonton
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	culture = prairielander
+	religion = rinkite
+	
+	landless = yes
+	holy_order = yes
+	primary = yes
+	monthly_income = 6
+
+	mercenary_type = d_knights_of_columbus_composition
+}
+
+d_toronto_leafs = {
+	color = { 137 191 244 } #
+	color2= { 255 255 255 }
+	
+	graphical_culture = holygfx
+	
+	capital = 1271 # Quinnipiac
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	culture = ontarian
+	religion = rinkite
+	
+	landless = yes
+	holy_order = yes
+	primary = yes
+	monthly_income = 6
+
+	mercenary_type = d_knights_of_columbus_composition
+}
+
+d_montreal_canadiens = {
+	color = { 137 191 244 } #
+	color2= { 255 255 255 }
+	
+	graphical_culture = holygfx
+	
+	capital = 1217 # Montreal
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	culture = quebecois
+	religion = rinkite
+	
+	landless = yes
+	holy_order = yes
+	primary = yes
+	monthly_income = 6
+
+	mercenary_type = d_knights_of_columbus_composition
+}
+
+d_ottawa_senators = {
+	color = { 137 191 244 } #
+	color2= { 255 255 255 }
+	
+	graphical_culture = holygfx
+	
+	capital = 1217 # Montreal
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	culture = ontarian
+	religion = dominionist
+	
+	landless = yes
+	holy_order = yes
+	primary = yes
+	monthly_income = 6
+
+	mercenary_type = d_knights_of_columbus_composition
 }

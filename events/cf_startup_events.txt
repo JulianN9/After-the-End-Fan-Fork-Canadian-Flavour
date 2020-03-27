@@ -5,15 +5,35 @@ character_event = {
 	hide_window = yes
 	prisoner = no
 	only_independent = yes
-	has_character_flag = vancouver_king
 	only_playable = yes
 	is_triggered_only = yes
 
-	immediate = {
-		character_event = {
-			id = castart.2 days = 30
+	trigger = {
+		OR = {
+			has_character_flag = vancouver_king
+			has_character_flag = ontario_pe
+			has_character_flag = haida_king
+			has_character_flag = chilliwack_count
 		}
-		clr_character_flag = vancouver_king
+	}
+
+	immediate = {
+		if = {
+			limit = { has_character_flag = vancouver_king }
+			narrative_event = {
+				id = castart.2 days = 30
+			}
+			clr_character_flag = vancouver_king
+		}
+		if = {
+			limit = {
+				has_character_flag = ontario_pe
+			}
+			narrative_event = {
+				id = castart.21 days = 30
+			}
+			clr_character_flag = ontario_pe
+		}
 	}
 }
 
@@ -242,7 +262,7 @@ narrative_event = {
 			}
 		}
 		ai_chance = {
-			factor = 1
+			factor = 4
 		}
 	}
 
@@ -269,7 +289,7 @@ narrative_event = {
 			}
 		}
 		ai_chance = {
-			factor = 1
+			factor = 6
 			modifier = {
 				factor = 0
 				c_1845081 = {
@@ -534,6 +554,42 @@ narrative_event = {
 				}
 			}
 		}
+		ai_chance = {
+			factor = 6
+		}
+	}
+
+	option = {
+		name = castartoptB.12
+		hidden_tooltip = {
+			k_vancouver = {
+				holder_scope = {
+					reverse_unsafe_war = {
+						target = ROOT
+						casus_belli = feather_war
+						thirdparty_title = PREV
+					}	
+				}
+			}
+			limit = {
+				c_harrison = {
+					holder_scope = {
+						religion = rinkite
+					}
+				}
+				c_harrison = {
+					holder_scope = {
+						war = {
+							target = ROOT
+							casus_belli = claim_all
+						}
+					}
+				}
+			}
+		}
+		ai_chance = {
+			factor = 4
+		}
 	}
 
 }
@@ -551,10 +607,10 @@ narrative_event = {
 		hidden_tooltip = {
 			k_great_coast = {
 				holder_scope = {
-					unsafe_war = {
+					reverse_unsafe_war = {
 						target = ROOT
 						casus_belli = feather_war
-						thirdparty_title = k_vancouver
+						thirdparty_title = PREV
 					}	
 				}
 			}
@@ -574,10 +630,22 @@ narrative_event = {
 				}
 			}
 		}
+		ai_chance = {
+			factor = 6
+		}
 	}
 
 	option = {
 		name = castartoptB.13
+		ai_chance = {
+			factor = 4
+			modifier = {
+				factor = 0
+				c_1845081 = {
+					ai = no
+				}
+			}
+		}
 	}
 }
 
@@ -724,4 +792,30 @@ narrative_event={
 			}
 		}
 	}
+}
+
+narrative_event = {
+	id = castart.21
+	desc = castartdesc.21
+	picture = GFX_evt_lunatic_arabic
+	border = GFX_event_narrative_frame_diplomacy
+	only_playable = yes
+	is_triggered_only = yes
+
+
+	option = {
+		name = castartoptA.21
+		capital_scope = {
+			build_holding = {
+				title = {
+					title = b_ameliasburgh_ON
+					type = temple
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}	   
+	}
+
 }

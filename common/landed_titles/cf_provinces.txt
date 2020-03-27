@@ -1,5 +1,5 @@
 e_qbc = {
-	color = { 0 31 151 }
+	color = {  255 179 71  }
 	color2 = { 220 220 0}
 	short_name = yes
 	capital = 1217 #Hochelaga

@@ -185,7 +185,6 @@ decisions = {
 			war = no
 			realm_size = 80
 			has_landed_title = k_vancouver
-			has_landed_title = k_caledonia
 			completely_controls = k_vancouver
 			completely_controls = k_caledonia
 			completely_controls = d_the_coast
@@ -212,13 +211,23 @@ decisions = {
 			k_vancouver = {
 				de_jure_liege = e_bc
 			}
-			k_caledonia = {
-				de_jure_liege = e_bc
-			}
 
 			custom_tooltip = {
 				text = form_the_empire_of_bc_1
 				hidden_tooltip = {
+					k_caledonia = {
+						destroy_landed_title = THIS
+						activate_title = { title = THIS status = NO}
+					}
+					d_cariboo = {
+						de_jure_liege = k_vancouver
+					}
+					d_okanagan = {
+						de_jure_liege = k_vancouver
+					}
+					d_kootenay = {
+						de_jure_liege = k_vancouver
+					}
 					k_up_north = {
 						de_jure_liege = e_bc
 					}
@@ -229,6 +238,9 @@ decisions = {
 						de_jure_liege = k_up_north
 					}
 					d_liard = {
+						de_jure_liege = k_up_north
+					}
+					d_omineca = {
 						de_jure_liege = k_up_north
 					}
 					c_fort_st_john = {
@@ -977,6 +989,173 @@ decisions = {
 				de_jure_liege = e_canada
 			}
 			set_global_flag = org_man
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	organize_south_bc = {
+		is_high_prio = yes
+		potential = {
+			NOR = {
+				has_game_rule = {
+					name = canadian_province_decisions
+					value = off
+				}
+				has_global_flag = org_sou_bc
+				has_global_flag = bc_formed
+			}
+			independent = yes
+			has_landed_title = e_canada
+			OR = {
+				religion = confederated
+				religion = united
+				religion = dominionist
+				religion = lyonist
+				religion = three_mothers
+				religion = rinkite
+			}
+			higher_tier_than = DUKE
+			has_global_flag = org_alb
+		}
+		allow = {
+			is_adult = yes
+			prisoner = no
+			NOT = { is_incapable = yes }
+			prestige = 500
+			scaled_wealth = 1
+			war = no
+			completely_controls = k_vancouver
+			completely_controls = d_kootenay
+			completely_controls = d_cariboo
+			completely_controls = c_kelowna
+			completely_controls = c_similkameen
+			completely_controls = c_kamloops
+			completely_controls = c_shuswap
+			OR = {
+				has_landed_title = k_vancouver
+				k_vancouver = {
+					has_holder = no
+				}
+			}
+			OR = {
+				has_landed_title = k_caledonia
+				k_caledonia = {
+					has_holder = no
+				}
+			}
+		}
+		effect = {
+			scaled_wealth = -1
+			prestige = -500
+			primary_title = {
+				k_vancouver = {
+					grant_title = ROOT
+					copy_title_laws = PREV
+				}
+			}
+			custom_tooltip = {
+				text = 
+				hidden_tooltip = {
+					k_caledonia = {
+						destroy_landed_title = THIS
+						activate_title = { title = THIS status = no }
+					}
+					d_cariboo = {
+						de_jure_liege = k_vancouver
+					}
+					d_okanagan = {
+						de_jure_liege = k_vancouver
+					}
+					d_kootenay = {
+						de_jure_liege = k_vancouver
+					}
+					c_okanogan = {
+						de_jure_liege = d_horse_heaven
+					}
+				}
+			}
+			k_vancouver = {
+				de_jure_liege = e_canada
+			}
+			set_global_flag = org_sou_bc
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	organize_north_bc = {
+		is_high_prio = yes
+		potential = {
+			NOR = {
+				has_game_rule = {
+					name = canadian_province_decisions
+					value = off
+				}
+				has_global_flag = org_nor_bc
+				has_global_flag = bc_formed
+			}
+			independent = yes
+			has_landed_title = e_canada
+			OR = {
+				religion = confederated
+				religion = united
+				religion = dominionist
+				religion = lyonist
+				religion = three_mothers
+				religion = rinkite
+			}
+			higher_tier_than = DUKE
+			has_global_flag = org_alb
+		}
+		allow = {
+			is_adult = yes
+			prisoner = no
+			NOT = { is_incapable = yes }
+			prestige = 500
+			scaled_wealth = 1
+			war = no
+			completely_controls = k_klondike
+			completely_controls = d_omineca
+			completely_controls = d_the_coast
+			completely_controls = d_haida_gwaii
+			OR = {
+				has_landed_title = k_klondike
+				k_klondike = {
+					has_holder = no
+				}
+			}
+		}
+		effect = {
+			scaled_wealth = -1
+			prestige = -500
+			primary_title = {
+				k_klondike = {
+					grant_title = ROOT
+					copy_title_laws = PREV
+				}
+			}
+			d_omineca = {
+				de_jure_liege = k_klondike
+			}
+			d_the_coast = {
+				de_jure_liege = k_klondike
+			}
+			d_haida_gwaii = {
+				de_jure_liege = k_klondike
+			}
+			k_klondike = {
+				de_jure_liege = e_canada
+			}
+			set_global_flag = org_nor_bc
 		}
 		revoke_allowed = {
 			always = no

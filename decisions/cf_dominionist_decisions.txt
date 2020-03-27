@@ -36,47 +36,6 @@ targetted_decisions = {
 
 decisions = {
 	
-	#choose_hockey_position = {
-	#	only_playable = yes
-	#	is_high_prio = yes
-	#	potential = {
-	#		is_playable = yes
-	#		religion = rinkite
-	#		NOR = { 
-	#			has_trait = goon 
-	#			has_trait = rocket
-	#			has_trait = goalkeeper
-	#			has_trait = diver
-	#			has_trait = playmaker
-	#			has_trait = coach	
-	#			has_character_flag = chose_hockey
-	#		}
-	#		age = 16
-	#	}
-	#	allow = {
-	#		war = no
-	#		NOT = {
-	#			has_trait = incapable
-	#		}
-	#		NOT = { has_character_flag = chose_hockey }
-	#	}
-	#	effect = {
-	#		custom_tooltip = {
-	#			text = tooltip_choose_hockey
-	#			hidden_tooltip = {
-	#				character_event = { id = dominion.2 }
-	#				set_character_flag = chose_hockey
-	#			}
-	#		}
-	#	}
-	#	revoke_allowed = {
-	#		always = no
-	#	}
-	#	ai_will_do = {
-	#		factor = 1
-	#	}
-	#}
-
 	choose_mother_saint = {
 		only_playable = yes
 		is_high_prio = yes
@@ -170,6 +129,142 @@ decisions = {
 			modifier = { factor = 0 trait = craven }
 			modifier = { factor = 0 trait = content }
 			modifier = { factor = 0 NOT = { wealth = 250 } }
+		}
+	}
+
+	form_van_nucks = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 60
+
+		potential = {
+			has_dlc = "Sons of Abraham"
+			religion = rinkite
+			NOR = { 
+				is_title_active = d_vancouver_canucks 
+				is_title_active = d_edmonton_oilers	
+			}
+			is_heretic = no
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+			capital_scope = { region = world_western_canada } #what the hell was with those old requirements 
+		}
+		allow = {
+			piety = 1000
+			wealth = 500
+			completely_controls = c_vancouver
+			religion_authority = 0.4
+		}
+		effect = {
+			piety = -1000
+			wealth = -500
+			narrative_event = { id = dominion.11 tooltip = dominion_11_TT }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	form_edm_oil = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 60
+
+		potential = {
+			has_dlc = "Sons of Abraham"
+			religion = rinkite
+			NOR = { 
+				is_title_active = d_vancouver_canucks 
+				is_title_active = d_edmonton_oilers	
+			}
+			is_heretic = no
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+			capital_scope = { region = world_western_canada } #what the hell was with those old requirements 
+		}
+		allow = {
+			piety = 1000
+			wealth = 500
+			completely_controls = c_edmonton
+			religion_authority = 0.4
+		}
+		effect = {
+			piety = -1000
+			wealth = -500
+			narrative_event = { id = dominion.12 tooltip = dominion_12_TT }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	form_tor_lea = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 60
+
+		potential = {
+			has_dlc = "Sons of Abraham"
+			religion = rinkite
+			NOR = { 
+				is_title_active = d_toronto_leafs 
+				is_title_active = d_montreal_canadiens	
+			}
+			is_heretic = no
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+			capital_scope = { region = world_central_canada } #what the hell was with those old requirements 
+		}
+		allow = {
+			piety = 1000
+			wealth = 500
+			completely_controls = c_toronto
+			religion_authority = 0.4
+		}
+		effect = {
+			piety = -1000
+			wealth = -500
+			narrative_event = { id = dominion.13 tooltip = dominion_13_TT }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	form_mon_can = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 60
+
+		potential = {
+			has_dlc = "Sons of Abraham"
+			religion = rinkite
+			NOR = { 
+				is_title_active = d_toronto_leafs 
+				is_title_active = d_montreal_canadiens	
+			}
+			is_heretic = no
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+			capital_scope = { region = world_central_canada } #what the hell was with those old requirements 
+		}
+		allow = {
+			piety = 1000
+			wealth = 500
+			completely_controls = c_hochelaga
+			religion_authority = 0.4
+		}
+		effect = {
+			piety = -1000
+			wealth = -500
+			narrative_event = { id = dominion.14 tooltip = dominion_14_TT }
+		}
+		ai_will_do = {
+			factor = 1
 		}
 	}
 
@@ -394,6 +489,275 @@ decisions = {
 		}
 		ai_will_do = {
 			factor = 1
+		}
+	}
+
+}
+
+title_decisions = {
+	secretly_convert_to_rinkite_holy_site = {
+		filter = owned
+		ai_target_filter = self
+	
+		only_playable = yes
+		
+		from_potential = {
+			ai = no
+			NOT = { is_incapable = yes }
+			NOT = { secret_religion = rinkite }
+			NOT = { religion = rinkite }
+			NOT = { controls_religion = yes }
+		}
+		
+		potential = {
+			tier = COUNT
+			NOT = {
+				location = { religion = rinkite }
+			}
+			OR = {
+				is_holy_site = rinkite
+				any_de_jure_vassal_title = {
+					is_holy_site = rinkite
+				}
+			}
+			OR = {
+				holder_scope = {
+					character = FROM
+				}
+				AND = {
+					tier = BARON
+					holder_scope = {
+						liege = {
+							character = FROM
+						}
+					}
+				}
+			}
+		}
+		
+		allow = {
+			FROM = {
+				piety = 250
+				prisoner = no
+				NOT = { is_incapable = yes }
+				NOT = { is_inaccessible_trigger = yes }
+				NOT = { society_member_of = secret_religious_cult }
+			}
+		}
+		
+		effect = {
+			FROM = {
+				piety = -250
+				set_secret_religion = rinkite
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	secretly_convert_to_dominionist_holy_site = {
+		filter = owned
+		ai_target_filter = self
+	
+		only_playable = yes
+		
+		from_potential = {
+			ai = no
+			NOT = { is_incapable = yes }
+			NOT = { secret_religion = dominionist }
+			NOT = { religion = dominionist }
+			NOT = { controls_religion = yes }
+		}
+		
+		potential = {
+			tier = COUNT
+			NOT = {
+				location = { religion = dominionist }
+			}
+			OR = {
+				is_holy_site = dominionist
+				any_de_jure_vassal_title = {
+					is_holy_site = dominionist
+				}
+			}
+			OR = {
+				holder_scope = {
+					character = FROM
+				}
+				AND = {
+					tier = BARON
+					holder_scope = {
+						liege = {
+							character = FROM
+						}
+					}
+				}
+			}
+		}
+		
+		allow = {
+			FROM = {
+				piety = 250
+				prisoner = no
+				NOT = { is_incapable = yes }
+				NOT = { is_inaccessible_trigger = yes }
+				NOT = { society_member_of = secret_religious_cult }
+			}
+		}
+		
+		effect = {
+			FROM = {
+				piety = -250
+				set_secret_religion = dominionist
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	secretly_convert_to_lyonist_holy_site = {
+		filter = owned
+		ai_target_filter = self
+	
+		only_playable = yes
+		
+		from_potential = {
+			ai = no
+			NOT = { is_incapable = yes }
+			NOT = { secret_religion = lyonist }
+			NOT = { religion = lyonist }
+			NOT = { controls_religion = yes }
+		}
+		
+		potential = {
+			tier = COUNT
+			NOT = {
+				location = { religion = lyonist }
+			}
+			OR = {
+				is_holy_site = lyonist
+				any_de_jure_vassal_title = {
+					is_holy_site = lyonist
+				}
+			}
+			OR = {
+				holder_scope = {
+					character = FROM
+				}
+				AND = {
+					tier = BARON
+					holder_scope = {
+						liege = {
+							character = FROM
+						}
+					}
+				}
+			}
+			has_global_flag = dom_splint
+		}
+		
+		allow = {
+			FROM = {
+				piety = 250
+				prisoner = no
+				NOT = { is_incapable = yes }
+				NOT = { is_inaccessible_trigger = yes }
+				NOT = { society_member_of = secret_religious_cult }
+			}
+		}
+		
+		effect = {
+			FROM = {
+				piety = -250
+				set_secret_religion = lyonist
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	secretly_convert_to_three_mothers_holy_site = {
+		filter = owned
+		ai_target_filter = self
+	
+		only_playable = yes
+		
+		from_potential = {
+			ai = no
+			NOT = { is_incapable = yes }
+			NOT = { secret_religion = three_mothers }
+			NOT = { religion = three_mothers }
+			NOT = { controls_religion = yes }
+		}
+		
+		potential = {
+			tier = COUNT
+			NOT = {
+				location = { religion = three_mothers }
+			}
+			OR = {
+				is_holy_site = three_mothers
+				any_de_jure_vassal_title = {
+					is_holy_site = three_mothers
+				}
+			}
+			OR = {
+				holder_scope = {
+					character = FROM
+				}
+				AND = {
+					tier = BARON
+					holder_scope = {
+						liege = {
+							character = FROM
+						}
+					}
+				}
+			}
+			has_global_flag = dom_splint
+		}
+		
+		allow = {
+			FROM = {
+				piety = 250
+				prisoner = no
+				NOT = { is_incapable = yes }
+				NOT = { is_inaccessible_trigger = yes }
+				NOT = { society_member_of = secret_religious_cult }
+			}
+		}
+		
+		effect = {
+			FROM = {
+				piety = -250
+				set_secret_religion = three_mothers
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 0
 		}
 	}
 
