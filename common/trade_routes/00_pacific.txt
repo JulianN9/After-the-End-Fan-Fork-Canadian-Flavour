@@ -18,6 +18,7 @@ great_pacific_trade = { # The Interstate
 			province_id = 534
 			province_id = 543
 			province_id = 548
+			province_id = 550
 			province_id = 1882
 			province_id = 1762
 		}
@@ -73,17 +74,17 @@ great_pacific_trade = { # The Interstate
 	path = {
 		1608 1614 534
 	}
-	# Coast of Oregon - Salish Sea
+	# Coast of Oregon - Victoria
 	path = {
-		1608 1610 1609
+		1608 1610 550
 	}
-	# Salish Sea - Seattle
+	# Victoria - Seattle
 	path = {
-		1609 1611 543
+		550 1609 1611 543
 	}
-	# Salish Sea - Vancouver
+	# Victoria - Vancouver
 	path = {
-		1609 548
+		550 1609 548
 	}
 	# La Paz - Sea of Cortes - Los Angeles
 	path = {
