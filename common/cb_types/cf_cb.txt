@@ -388,30 +388,31 @@ feather_war = {
 					grant_title = PREVPREV
 					copy_title_laws = PREV
 				}
+			}
 			set_global_flag = haida_proclaimed
 			narrative_event = { id = castart.14 }
 		}
 	}
 
-	on_fail_title = {
+	on_reverse_demand = {
 		if = {
 			limit = {
-				holder_scope ={
+				ROOT ={
 					has_landed_title = k_vancouver
 				}
 			}
-			FROM  = {
-				usurp_title_plus_barony_if_unlanded = { target = k_vancouver type = claim }
+			k_vancouver  = {
+				usurp_title_plus_barony_if_unlanded = { target = FROM type = claim }
 			}
 		}
 		else_if = {
 			limit = {
-				holder_scope = {
+				ROOT = {
 					has_landed_title = k_great_coast
 				}
 			}
-			FROM = {
-				usurp_title_plus_barony_if_unlanded = { target = k_great_coast type = claim }
+			k_great_coast = {
+				usurp_title_plus_barony_if_unlanded = { target = FROM type = claim }
 			}
 		}
 		FROM = {
@@ -421,80 +422,79 @@ feather_war = {
 					grant_title = PREVPREV
 					copy_title_laws = PREV
 				}
+			}
 			set_global_flag = haida_proclaimed
 			narrative_event = { id = castart.14 }
 		}
 	}
 	
 	on_attacker_leader_death = {
-		ROOT = {
-			if = {
-				limit = {
-					holder_scope ={
-						has_landed_title = k_vancouver
-					}
-				}
-				FROM  = {
-					usurp_title_plus_barony_if_unlanded = { target = k_vancouver type = claim }
+		if = {
+			limit = {
+				ROOT ={
+					has_landed_title = k_vancouver
 				}
 			}
-			else_if = {
-				limit = {
-					holder_scope = {
-						has_landed_title = k_great_coast
-					}
-				}
-				FROM = {
-					usurp_title_plus_barony_if_unlanded = { target = k_great_coast type = claim }
+			k_vancouver  = {
+				usurp_title_plus_barony_if_unlanded = { target = FROM type = claim }
+			}
+		}
+		else_if = {
+			limit = {
+				ROOT = {
+					has_landed_title = k_great_coast
 				}
 			}
-			FROM = {
-				activate_title = { title = e_haida status = yes }
-				primary_title = {
-					e_haida = {
-						grant_title = PREVPREV
-						copy_title_laws = PREV
-					}
-				set_global_flag = haida_proclaimed
-				narrative_event = { id = castart.14 }
+			k_great_coast = {
+				usurp_title_plus_barony_if_unlanded = { target = FROM type = claim }
 			}
+		}
+		FROM = {
+			activate_title = { title = e_haida status = yes }
+			primary_title = {
+				e_haida = {
+					grant_title = PREVPREV
+					copy_title_laws = PREV
+				}
+			}
+			set_global_flag = haida_proclaimed
+			narrative_event = { id = castart.14 }
 		}	
 		end_war = invalid
 	}
 
 	on_defender_leader_death = {
-		FROM = {
-			if = {
-				limit = {
-					holder_scope ={
-						has_landed_title = k_vancouver
-					}
-				}
-				ROOT  = {
-					usurp_title_plus_barony_if_unlanded = { target = k_vancouver type = claim }
+		if = {
+			limit = {
+				FROM ={
+					has_landed_title = k_vancouver
 				}
 			}
-			else_if = {
-				limit = {
-					holder_scope = {
-						has_landed_title = k_great_coast
-					}
-				}
-				ROOT = {
-					usurp_title_plus_barony_if_unlanded = { target = k_great_coast type = claim }
-				}
-			}
-			ROOT = {
-				activate_title = { title = e_haida status = yes }
-				primary_title = {
-					e_haida = {
-						grant_title = PREVPREV
-						copy_title_laws = PREV
-					}
-				set_global_flag = haida_proclaimed
-				narrative_event = { id = castart.14 }
+			k_vancouver  = {
+				usurp_title_plus_barony_if_unlanded = { target = ROOT type = claim }
 			}
 		}
+		else_if = {
+			limit = {
+				FROM = {
+					has_landed_title = k_great_coast
+				}
+			}
+			k_great_coast = {
+				usurp_title_plus_barony_if_unlanded = { target = ROOT type = claim }
+			}
+		}
+		ROOT = {
+			activate_title = { title = e_haida status = yes }
+			primary_title = {
+				e_haida = {
+					grant_title = PREVPREV
+					copy_title_laws = PREV
+				}
+			}
+			set_global_flag = haida_proclaimed
+			narrative_event = { id = castart.14 }
+		}	
 		end_war = invalid
 	}
 
