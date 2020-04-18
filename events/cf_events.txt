@@ -151,7 +151,7 @@ narrative_event = { # Confederation Wars holy site fallen
 	}
 }
 
-narrative_event = {
+narrative_event = { # Laurier
 	id = canada.103
 	title = confedtitle.3
 	desc = confeddisc.3
@@ -354,5 +354,177 @@ narrative_event = {
 	option = { # No
 		name = EVTOPTBcanada.2
 		ai_chance = { factor = 25 }
+	}
+}
+
+
+#######################################################
+# Province Events
+#######################################################
+# Greater Ontario
+narrative_event = {
+	id = canada.111
+	title = canadatitle.111
+	desc = canadatitle.111
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_war
+	is_triggered_only = yes
+
+	option = {
+		name = canadadesc.111
+	}
+}
+
+# Greater Quebec
+narrative_event = {
+	id = canada.112
+	title = canadatitle.112
+	desc = canadatitle.112
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_war
+	is_triggered_only = yes
+
+	option = {
+		name = canadadesc.112
+	}
+}
+
+# Newfoundland and Labradour
+narrative_event = {
+	id = canada.113
+	title = canadatitle.113
+	desc = canadatitle.113
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_war
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				religon = confederated
+			}
+			d_con_cel = { active = yes }
+			create_random_priest = {
+				random_traits = yes
+				learning = 8
+				religion = confederated
+				culture = newfie
+				dynasty = random
+				age = 41
+			}
+			new_character = {
+				succession = open_elective
+				character_event = { id = misc.3 } # Diversity
+				character_event = { id = misc.4 } # Physique
+				c_st_johns = { gain_title = PREV }
+				d_con_cel = { gain_title = PREV }
+				set_defacto_liege = ROOT
+			}
+			d_con_cel = {
+				de_jure_liege = k_newfoundland
+			}
+		}
+	}
+
+	option = {
+		name = canadadesc.113
+	}
+}
+
+# Manitoba
+narrative_event = {
+	id = canada.114
+	title = canadatitle.114
+	desc = canadatitle.114
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_war
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				religon = confederated
+			}
+			d_con_exo = { active = yes }
+			create_random_priest = {
+				random_traits = yes
+				learning = 8
+				religion = confederated
+				culture = metis
+				dynasty = random
+				age = 41
+			}
+			new_character = {
+				succession = open_elective
+				character_event = { id = misc.3 } # Diversity
+				character_event = { id = misc.4 } # Physique
+				c_st_johns = { gain_title = PREV }
+				d_con_exo = { gain_title = PREV }
+				set_defacto_liege = ROOT
+			}
+			d_con_exo = {
+				de_jure_liege = k_manitoba
+			}
+		}
+	}
+
+	option = {
+		name = canadadesc.114
+	}
+}
+
+#Saskatchewan
+narrative_event = {
+	id = canada.115
+	title = canadatitle.115
+	desc = canadatitle.115
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_war
+	is_triggered_only = yes
+
+	option = {
+		name = canadadesc.115
+	}
+}
+
+#Alberta
+narrative_event = {
+	id = canada.116
+	title = canadatitle.116
+	desc = canadatitle.116
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_war
+	is_triggered_only = yes
+
+	option = {
+		name = canadadesc.116
+	}
+}
+
+# South BC
+narrative_event = {
+	id = canada.117
+	title = canadatitle.117
+	desc = canadatitle.117
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_war
+	is_triggered_only = yes
+
+	option = {
+		name = canadadesc.117
+	}
+}
+
+# North BC
+narrative_event = {
+	id = canada.118
+	title = canadatitle.118
+	desc = canadatitle.118
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_war
+	is_triggered_only = yes
+
+	option = {
+		name = canadadesc.118
 	}
 }

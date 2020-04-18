@@ -4,7 +4,6 @@ character_event = {
 	id = castart.1
 	hide_window = yes
 	prisoner = no
-	only_independent = yes
 	only_playable = yes
 	is_triggered_only = yes
 
@@ -39,6 +38,7 @@ character_event = {
 
 narrative_event = {
 	id = castart.2
+	title = castarttitle.2
 	desc = castartdesc.2
 	picture = GFX_evt_lunatic_arabic
 	border = GFX_event_narrative_frame_diplomacy
@@ -92,6 +92,7 @@ narrative_event = {
 
 narrative_event = {
 	id = castart.3
+	title = castarttitle.3
 	desc = castartdesc.3
 	picture = GFX_evt_lunatic_arabic
 	border = GFX_event_narrative_frame_diplomacy
@@ -107,7 +108,7 @@ narrative_event = {
 
 	immediate = {
 		clr_character_flag = vancouver_king
-		culture = cowichan
+		culture = salish
 	}
 
 	option = {
@@ -115,11 +116,11 @@ narrative_event = {
 		hidden_tooltip = {
 			any_courtier_or_vassal = {
 				limit = { lower_tier_than = COUNT }
-				culture = cowichan
+				culture = salish
 			}
 			d_fraser = {
 				holder_scope = {
-					culture = musqueam
+					culture = salish
 				}
 			}
 			narrative_event = {
@@ -131,22 +132,13 @@ narrative_event = {
 			hidden_tooltip = {
 				any_realm_province = {
 					if = {
-						limit = { de_jure_liege_or_above = d_victoria }
-						culture = cowichan
-					}
-					if = {
-						limit = {
-							culture = haida
+						limit = { 
+							OR = {
+								culture = haida
+								culture = canuck
+							}
 						}
-						culture = komoks
-					}
-					if = {
-						limit = { de_jure_liege_or_above = d_fraser }
-						culture = musqueam
-					}
-					if = {
-						limit = { de_jure_liege_or_above = k_cascadia }
-						culture = tulalip
+						culture = salish
 					}
 				}
 			}
@@ -165,14 +157,20 @@ province_event = {
 
 	trigger = {
 		OR = {
-			culture_group = northwest_coast
+			culture = haida
 			culture = canuck
 		}
 		owner = {
 			OR = {
-				culture_group = coast_salish
+				OR = {
+					culture = haida
+					culture = canuck
+				}
 				any_liege = {
-					culture_group = coast_salish
+					OR = {
+						culture = haida
+						culture = canuck
+					}
 				}
 			}
 		}
@@ -181,34 +179,23 @@ province_event = {
 	immediate = {
 		if = {
 			limit = { de_jure_liege_or_above = d_victoria }
-			culture = cowichan
+			culture = salish
 		}
 		if = {
 			limit = {
-				culture = haida
-			}
-			culture = komoks
-		}
-		if = {
-			limit = { de_jure_liege_or_above = d_fraser }
-			culture = musqueam
-		}
-		if = {
-			limit = { 
-				de_jure_liege_or_above = {
-					OR = {
-						d_puget
-						d_olympus
-					} 
+				OR = {
+					culture = haida
+					culture = canuck
 				}
 			}
-			culture = tulalip
+			culture = salish
 		}
 	}
 }
 
 narrative_event = {
 	id = castart.5
+	title = castarttitle.5
 	desc = castartdesc.5
 	picture = GFX_evt_lunatic_arabic
 	border = GFX_event_narrative_frame_diplomacy
@@ -302,6 +289,7 @@ narrative_event = {
 
 narrative_event = {
 	id = castart.6
+	title = castarttitle.6
 	desc = castartdesc.6
 	picture = GFX_evt_lunatic_arabic
 	border = GFX_event_narrative_frame_diplomacy
@@ -342,11 +330,11 @@ narrative_event = {
 			}
 		}
 	}
-
 }
 
 narrative_event = {
 	id = castart.7
+	title = castarttitle.7
 	desc = castartdesc.7
 	picture = GFX_evt_lunatic_arabic
 	border = GFX_event_narrative_frame_diplomacy
@@ -380,11 +368,11 @@ narrative_event = {
 	option = {
 		name = castartoptA.7
 	}
-
 }
 
 narrative_event = {
 	id = castart.8
+	title = castarttitle.8
 	desc = castartdesc.8
 	picture = GFX_evt_lunatic_arabic
 	border = GFX_event_narrative_frame_diplomacy
@@ -409,11 +397,8 @@ narrative_event = {
 				}
 			}
 			c_harrison = {
-				holder_scope = {
-					war = {
-						target = ROOT
-						casus_belli = claim_all
-					}
+				narrative_event = {
+					id = castart.9 days = 1
 				}
 			}
 		}
@@ -422,11 +407,41 @@ narrative_event = {
 	option = {
 		name = castartoptA.8
 	}
+}
 
+narrative_event = {
+	id = castart.9
+	title = castarttitle.9
+	desc = castarttitle.9
+	picture = GFX_evt_lunatic_arabic
+	border = GFX_event_narrative_frame_diplomacy
+	only_playable = yes
+	is_triggered_only = yes
+
+	option = {
+		name = castartoptA.9
+		hidden_tooltip = {
+			war = {
+				target = k_vancouver
+				casus_belli = claim_all
+			}	
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name =castartoptB.9
+		ai_chance = {
+			factor = 0
+		}
+	}
 }
 
 narrative_event = {
 	id = castart.11
+	title = castarttitle.11
 	desc = castartdesc.11
 	picture = GFX_evt_lunatic_arabic
 	border = GFX_event_narrative_frame_diplomacy
@@ -534,6 +549,7 @@ narrative_event = {
 
 narrative_event = {
 	id = castart.12
+	title = castarttitle.12
 	desc = castartdesc.12
 	picture = GFX_evt_lunatic_arabic
 	border = GFX_event_narrative_frame_diplomacy
@@ -571,17 +587,18 @@ narrative_event = {
 					}	
 				}
 			}
-			limit = {
-				c_harrison = {
-					holder_scope = {
-						religion = rinkite
+			if = {
+				limit = {
+					c_harrison = {
+						holder_scope = {
+							religion = rinkite
+						}
 					}
 				}
 				c_harrison = {
 					holder_scope = {
-						war = {
-							target = ROOT
-							casus_belli = claim_all
+						narrative_event = {
+							id = castart.9 days = 1
 						}
 					}
 				}
@@ -596,11 +613,16 @@ narrative_event = {
 
 narrative_event = {
 	id = castart.13
+	title = castarttitle.13
 	desc = castartdesc.13
 	picture = GFX_evt_lunatic_arabic
 	border = GFX_event_narrative_frame_diplomacy
 	is_triggered_only = yes
 	only_playable = yes
+
+	immediate = {
+		prestige = 250
+	}
 
 	option = {
 		name = castartoptA.13
@@ -614,18 +636,19 @@ narrative_event = {
 					}	
 				}
 			}
-			limit = {
-				c_harrison = {
-					holder_scope = {
-						religion = rinkite
+			if = {
+				limit = {
+					c_harrison = {
+						holder_scope = {
+							religion = rinkite
+						}
 					}
 				}
-			}
-			c_harrison = {
-				holder_scope = {
-					war = {
-						target = ROOT
-						casus_belli = claim_all
+				c_harrison = {
+					holder_scope = {
+						narrative_event = {
+							id = castart.9 days = 1
+						}
 					}
 				}
 			}
@@ -637,6 +660,7 @@ narrative_event = {
 
 	option = {
 		name = castartoptB.13
+		prestige = -500
 		ai_chance = {
 			factor = 4
 			modifier = {
@@ -655,12 +679,7 @@ narrative_event={ #Unite Haida Tlguug
 	desc = castartdesc.14
 	picture = GFX_EVT_red_river_summer
 	is_triggered_only = yes
-	
-	trigger = {
-		is_playable = yes
-		capital_scope = { region = custom_canada }
-		has_global_flag = haida_proclaimed
-	}
+	major = yes
 	
 	option = {
 		name = castartoptA.14
@@ -672,7 +691,7 @@ narrative_event={ #Unite Haida Tlguug
 	option = {
 		name = EVTOPT_metis_confederacy_coreligionist
 		trigger = {
-			NOT = { has_landed_title = e_usa }
+			NOT = { has_landed_title = e_canada }
             NOT = { has_landed_title = e_haida }
 			e_haida = {
 				holder_scope = {
@@ -708,98 +727,12 @@ narrative_event={ #Unite Haida Tlguug
 	}
 }
 
-narrative_event={
-	id = castart.15
-	title = castarttitle.15
-	desc = castartdesc.15
-	picture = GFX_EVT_red_river_summer
-	is_triggered_only = yes
-	
-	trigger = {
-		is_playable = yes
-		capital_scope = { region = custom_canada }
-		has_global_flag = haida_proclaimed
-	}
-	
-	option = {
-		name = castartoptA.15
-		trigger = {
-			has_landed_title = e_haida
-		}
-		prestige = 3000
-		give_nickname = nick_the_great
-		if = { #New Imperial Bloodline. (male)
-			limit = { 
-				has_dlc = "Holy Fury" 
-				is_female = no
-			}
-			create_bloodline = {
-				type = metis_confederacy_male
-			}
-			new_bloodline = {
-				set_description = "bloodline_desc_metis_confederacy"
-			}	
-			sound_effect = bloodline_added			
-		}
-		else_if = { #New Imperial Bloodline. (female)
-			limit = { 
-				has_dlc = "Holy Fury" 
-				is_female = yes
-			}
-			create_bloodline = {
-				type = metis_confederacy_female
-			}
-			new_bloodline = {
-				set_description = "bloodline_desc_metis_confederacy"
-			}	
-			sound_effect = bloodline_added			
-		}
-	}
-	option = {
-		name = EVTOPT_metis_confederacy_coreligionist
-		trigger = {
-			NOT = { has_landed_title = e_usa }
-            NOT = { has_landed_title = e_haida }
-			e_haida = {
-				holder_scope = {
-					culture_group = ROOT
-				}
-			}
-		}
-	}
-	option = {
-		name = EVTOPT_metis_confederacy_bystander
-		trigger = {
-			NOT = { has_landed_title = e_haida }
-			NOT = { has_landed_title = e_canada }
-			e_haida = {
-				holder_scope = {
-					NOT = { religion = ROOT }
-				}
-			}
-		}
-	}
-	option = {
-		name = EVTOPT_metis_confederacy_canadian
-		trigger = {
-			NOT = { has_landed_title = e_haida }
-			has_landed_title = e_canada
-			e_haida = {
-				holder_scope = {
-					NOT = { religion = ROOT }
-				}
-			prestige = -1000
-			}
-		}
-	}
-}
 
 narrative_event = {
 	id = castart.21
 	desc = castartdesc.21
 	picture = GFX_evt_lunatic_arabic
 	border = GFX_event_narrative_frame_diplomacy
-	only_playable = yes
 	is_triggered_only = yes
 
 

@@ -471,6 +471,9 @@ decisions = {
 				}
 			}
 			set_global_flag = org_sas
+			narrative_event = {
+				id = canada.115 days = 1
+			}
 		}
 		revoke_allowed = {
 			always = no
@@ -665,6 +668,9 @@ decisions = {
 				}
 			}
 			set_global_flag = org_alb
+			narrative_event = {
+				id = canada.116 days = 1
+			}
 		}
 		revoke_allowed = {
 			always = no
@@ -747,6 +753,9 @@ decisions = {
 				}
 			}
 			set_global_flag = org_grt_ont
+			narrative_event = {
+				id = canada.111 days = 1
+			}
 		}
 		revoke_allowed = {
 			always = no
@@ -840,6 +849,9 @@ decisions = {
 				}
 			}
 			set_global_flag = org_grt_qbc
+			narrative_event = {
+				id = canada.112 days = 1
+			}
 		}
 		revoke_allowed = {
 			always = no
@@ -929,6 +941,9 @@ decisions = {
 				}
 			}
 			set_global_flag = org_newf_lab
+			narrative_event = {
+				id = canada.113 days = 1
+			}
 		}
 		revoke_allowed = {
 			always = no
@@ -989,6 +1004,9 @@ decisions = {
 				de_jure_liege = e_canada
 			}
 			set_global_flag = org_man
+			narrative_event = {
+				id = canada.114 days = 1
+			}
 		}
 		revoke_allowed = {
 			always = no
@@ -1059,7 +1077,7 @@ decisions = {
 				}
 			}
 			custom_tooltip = {
-				text = 
+				text = form_nor_bc_tool
 				hidden_tooltip = {
 					k_caledonia = {
 						destroy_landed_title = THIS
@@ -1083,6 +1101,9 @@ decisions = {
 				de_jure_liege = e_canada
 			}
 			set_global_flag = org_sou_bc
+			narrative_event = {
+				id = canada.117 days = 1
+			}
 		}
 		revoke_allowed = {
 			always = no
@@ -1156,6 +1177,9 @@ decisions = {
 				de_jure_liege = e_canada
 			}
 			set_global_flag = org_nor_bc
+			narrative_event = {
+				id = canada.118 days = 1
+			}
 		}
 		revoke_allowed = {
 			always = no

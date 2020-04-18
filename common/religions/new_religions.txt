@@ -1,7 +1,7 @@
 oldworld = {
 
 	dominionist = {
-		graphical_culture = westerngfx
+		graphical_culture = hellenicgfx
 		
 		icon = 86
 		heresy_icon = 87
@@ -55,7 +55,7 @@ oldworld = {
     }
 
 	lyonist = {
-		graphical_culture = westerngfx
+		graphical_culture = hellenicgfx
 
 		icon = 86
 		heresy_icon = 87
@@ -105,7 +105,7 @@ oldworld = {
     }
 
 	three_mothers = {
-		graphical_culture = westerngfx
+		graphical_culture = hellenicgfx
 
 		icon = 88
 		heresy_icon = 89
@@ -186,7 +186,7 @@ oldworld = {
     }
 
 	rinkite = {
-		graphical_culture = westerngfx
+		graphical_culture = hellenicgfx
 		
 		icon = 84
 		heresy_icon = 85

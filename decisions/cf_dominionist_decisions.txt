@@ -154,7 +154,7 @@ decisions = {
 			piety = 1000
 			wealth = 500
 			completely_controls = c_vancouver
-			religion_authority = 0.4
+			religion_authority = 0.3
 		}
 		effect = {
 			piety = -1000
@@ -188,7 +188,7 @@ decisions = {
 			piety = 1000
 			wealth = 500
 			completely_controls = c_edmonton
-			religion_authority = 0.4
+			religion_authority = 0.3
 		}
 		effect = {
 			piety = -1000
@@ -222,7 +222,7 @@ decisions = {
 			piety = 1000
 			wealth = 500
 			completely_controls = c_toronto
-			religion_authority = 0.4
+			religion_authority = 0.3
 		}
 		effect = {
 			piety = -1000
@@ -256,7 +256,7 @@ decisions = {
 			piety = 1000
 			wealth = 500
 			completely_controls = c_hochelaga
-			religion_authority = 0.4
+			religion_authority = 0.3
 		}
 		effect = {
 			piety = -1000

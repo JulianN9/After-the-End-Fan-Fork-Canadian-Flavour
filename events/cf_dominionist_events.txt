@@ -1383,6 +1383,13 @@ narrative_event = {
 			c_cap_diamant = { set_holy_site = PREV }
 			set_parent_religion = { religion = THIS parent = dominionist }
 		}
+		create_bloodline = {
+			type = first_pm
+		}
+		new_bloodline = {
+			set_description = "bloodline_desc_pm_prophet
+		}	
+		sound_effect = bloodline_added	
 		set_global_flag = dominionist_prophet_dead
 	}
 	
@@ -1742,7 +1749,7 @@ narrative_event = {
 
 		is_heretic = no
 		
-		NOT = { is_title_active = d_uel }
+		NOT = { is_title_active = d_ottawa_senators }
 		
 		has_global_flag = dominionist_revolt_successful
 
@@ -1765,11 +1772,12 @@ narrative_event = {
 		new_character = {
 			character_event = { id = misc.3 } # Diversity
 			character_event = { id = misc.4 } # Physique
-			d_uel = {
+			d_ottawa_senators = {
 				grant_title = PREV
 			}
 			set_defacto_liege = THIS
 			wealth = 500
+			set_government_type = order_government
 		}
 		
 		religion_authority = {
@@ -1786,7 +1794,7 @@ narrative_event = {
 	option = {
 		name = domoptB.28
 		trigger = {
-			NOT = { religion = confederated }
+			NOT = { religion = dominionist }
 		}
 	}
 }

@@ -314,10 +314,8 @@ decisions = {
 			any_demesne_title = {
 				tier = KING
 			}
-			religion = raven_tales
-		    OR = {	
-				NOT = { has_global_flag = haida_proclaimed }
-			}
+			religion = raven_tales	
+			NOT = { has_global_flag = haida_proclaimed }
 		}
 		effect = {
 			activate_title = { title = e_haida status = yes }
@@ -333,7 +331,7 @@ decisions = {
 			}
 			wealth = -500
 			set_global_flag = haida_proclaimed
-			narrative_event = { id = castart.15 }
+			narrative_event = { id = castart.14 }
 		}
 		revoke_allowed = {
 			always = no

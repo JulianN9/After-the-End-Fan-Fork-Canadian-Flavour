@@ -70,3 +70,19 @@ laurier = {
 	picture = GFX_bloodlines_placeholder_symbol_2
 }
 
+first_pm = {
+	monthly_character_piety = 1
+	diplomacy = 1
+	martial = 1
+	lyonist_opinion = 15
+	three_mothers_opinion = 5
+	inheritance = patrilineal
+	allow_bastards = no
+	active = {
+		OR = {
+			religion = dominionist
+			religion = lyonist
+			religion = three_mothers
+		}
+	}
+}
