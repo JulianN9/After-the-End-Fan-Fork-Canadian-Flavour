@@ -53,6 +53,30 @@ narrative_event = {
 
 	option = {
 		name = castartoptA.2
+		narrative_event = {
+			id = castart.3 days = 1
+		}	   
+	}
+
+}
+
+narrative_event = {
+	id = castart.3
+	title = castarttitle.2
+	desc = castartdesc.3
+	picture = GFX_evt_lunatic_arabic
+	border = GFX_event_narrative_frame_diplomacy
+	prisoner = no
+	only_independent = yes
+	only_playable = yes
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 100
+	}	
+
+	option = {
+		name = castartoptA.3
 		hidden_tooltip = {
 			clr_character_flag = vancouver_king
 			death = { death_reason = death_natural }
@@ -69,7 +93,7 @@ narrative_event = {
 	}
 
 	option = {
-		name = castartoptB.2
+		name = castartoptB.3
 		hidden_tooltip = {
 			clr_character_flag = vancouver_king
 			death = { death_reason = death_natural }
@@ -91,9 +115,9 @@ narrative_event = {
 }
 
 narrative_event = {
-	id = castart.3
-	title = castarttitle.3
-	desc = castartdesc.3
+	id = castart.4
+	title = castarttitle.4
+	desc = castartdesc.4
 	picture = GFX_evt_lunatic_arabic
 	border = GFX_event_narrative_frame_diplomacy
 	prisoner = no
@@ -112,7 +136,7 @@ narrative_event = {
 	}
 
 	option = {
-		name = castartoptA.3
+		name = castartoptA.4
 		hidden_tooltip = {
 			any_courtier_or_vassal = {
 				limit = { lower_tier_than = COUNT }
@@ -123,8 +147,8 @@ narrative_event = {
 					culture = salish
 				}
 			}
-			narrative_event = {
-				id = castart.5 days = 30
+			character_event = {
+				id = castart.6 days = 30
 			}
 		}
 		custom_tooltip = {
@@ -133,9 +157,8 @@ narrative_event = {
 				any_realm_province = {
 					if = {
 						limit = { 
-							OR = {
-								culture = haida
-								culture = canuck
+							de_jure_liege_or_above = {
+								d_victoria
 							}
 						}
 						culture = salish
@@ -147,7 +170,7 @@ narrative_event = {
 }
 
 province_event = {
-	id = castart.4
+	id = castart.5
 	hide_window = yes
 	has_global_flag = tsaacanuck
 
@@ -162,15 +185,9 @@ province_event = {
 		}
 		owner = {
 			OR = {
-				OR = {
-					culture = haida
-					culture = canuck
-				}
+				culture = salish
 				any_liege = {
-					OR = {
-						culture = haida
-						culture = canuck
-					}
+					culture = salish
 				}
 			}
 		}
@@ -193,17 +210,15 @@ province_event = {
 	}
 }
 
-narrative_event = {
-	id = castart.5
-	title = castarttitle.5
-	desc = castartdesc.5
-	picture = GFX_evt_lunatic_arabic
-	border = GFX_event_narrative_frame_diplomacy
+character_event = {
+	id = castart.6
+	title = castarttitle.6
+	desc = castartdesc.6
 	only_playable = yes
 	is_triggered_only = yes
 
 	option = {
-		name = castartoptA.5
+		name = castartoptA.6
 		hidden_tooltip = {
 			create_random_steward = {
 				random_traits = yes
@@ -227,8 +242,8 @@ narrative_event = {
 				id = adoption.2 days = 5
 			}
 			c_1200048 = {
-				narrative_event = {
-					id = castart.6 days = 10
+				character_event = {
+					id = castart.7 days = 10
 				}
 			}
 			if = {
@@ -241,8 +256,8 @@ narrative_event = {
 				}
 				c_harrison = {
 					holder_scope = {
-						narrative_event = {
-							id = castart.7 days = 10
+						character_event = {
+							id = castart.8 days = 10
 						}
 					}
 				}
@@ -254,7 +269,7 @@ narrative_event = {
 	}
 
 	option = {
-		name = castartoptB.5
+		name = castartoptB.6
 		hidden_tooltip = {
 			create_random_steward = {
 				random_traits = yes
@@ -287,12 +302,10 @@ narrative_event = {
 	}
 }
 
-narrative_event = {
-	id = castart.6
-	title = castarttitle.6
-	desc = castartdesc.6
-	picture = GFX_evt_lunatic_arabic
-	border = GFX_event_narrative_frame_diplomacy
+character_event = {
+	id = castart.7
+	title = castarttitle.7
+	desc = castartdesc.7
 	prisoner = no
 	only_playable = yes
 	is_triggered_only = yes
@@ -321,23 +334,21 @@ narrative_event = {
 	}
 
 	option = {
-		name = castartoptA.6
+		name = castartoptA.7
 		hidden_tooltip = {
 			c_1200046 = {
 				narrative_event = {
-					id = castart.8 days = 10
+					id = castart.9 days = 10
 				}
 			}
 		}
 	}
 }
 
-narrative_event = {
-	id = castart.7
-	title = castarttitle.7
-	desc = castartdesc.7
-	picture = GFX_evt_lunatic_arabic
-	border = GFX_event_narrative_frame_diplomacy
+character_event = {
+	id = castart.8
+	title = castarttitle.8
+	desc = castartdesc.8
 	prisoner = no
 	only_playable = yes
 	is_triggered_only = yes
@@ -366,14 +377,14 @@ narrative_event = {
 	}
 
 	option = {
-		name = castartoptA.7
+		name = castartoptA.8
 	}
 }
 
 narrative_event = {
-	id = castart.8
-	title = castarttitle.8
-	desc = castartdesc.8
+	id = castart.9
+	title = castarttitle.9
+	desc = castartdesc.9
 	picture = GFX_evt_lunatic_arabic
 	border = GFX_event_narrative_frame_diplomacy
 	prisoner = no
@@ -388,6 +399,10 @@ narrative_event = {
 				thirdparty_title = k_vancouver
 			}
 		}
+	}
+
+	option = {
+		name = castartoptA.9
 		if = {
 			limit = {
 				c_harrison = {
@@ -397,29 +412,25 @@ narrative_event = {
 				}
 			}
 			c_harrison = {
-				narrative_event = {
-					id = castart.9 days = 1
+				holder_scope = {
+					narrative_event = {
+						id = castart.10 days = 1
+					}
 				}
 			}
 		}
 	}
-
-	option = {
-		name = castartoptA.8
-	}
 }
 
-narrative_event = {
-	id = castart.9
-	title = castarttitle.9
-	desc = castarttitle.9
-	picture = GFX_evt_lunatic_arabic
-	border = GFX_event_narrative_frame_diplomacy
+character_event = {
+	id = castart.10
+	title = castarttitle.10
+	desc = castarttitle.10
 	only_playable = yes
 	is_triggered_only = yes
 
 	option = {
-		name = castartoptA.9
+		name = castartoptA.10
 		hidden_tooltip = {
 			war = {
 				target = k_vancouver
@@ -432,7 +443,7 @@ narrative_event = {
 	}
 
 	option = {
-		name =castartoptB.9
+		name =castartoptB.10
 		ai_chance = {
 			factor = 0
 		}
@@ -515,7 +526,7 @@ narrative_event = {
 		hidden_tooltip = {
 			k_great_coast = {
 				holder_scope = {
-					narrative_event = { id = castart.12 days = 7 }
+					character_event = { id = castart.12 days = 7 }
 				}
 			}
 			if = {
@@ -528,8 +539,8 @@ narrative_event = {
 				}
 				c_harrison = {
 					holder_scope = {
-						narrative_event = {
-							id = castart.7 days = 10
+						character_event = {
+							id = castart.8 days = 10
 						}
 					}
 				}
@@ -540,19 +551,17 @@ narrative_event = {
 		}
 	}
 	option = {
-		name = castartdescB.11
+		name = castartoptB.11
 		ai_chance = {
 			factor = 0
 		}
 	}
 }
 
-narrative_event = {
+character_event = {
 	id = castart.12
 	title = castarttitle.12
 	desc = castartdesc.12
-	picture = GFX_evt_lunatic_arabic
-	border = GFX_event_narrative_frame_diplomacy
 	prisoner = no
 	only_playable = yes
 	is_triggered_only = yes
@@ -565,7 +574,7 @@ narrative_event = {
 		name = castartoptA.12
 		hidden_tooltip = {
 			c_1200048 = {
-				narrative_event = {
+				character_event = {
 					id = castart.13 days = 10
 				}
 			}
@@ -597,8 +606,8 @@ narrative_event = {
 				}
 				c_harrison = {
 					holder_scope = {
-						narrative_event = {
-							id = castart.9 days = 1
+						character_event = {
+							id = castart.10 days = 1
 						}
 					}
 				}
@@ -611,7 +620,7 @@ narrative_event = {
 
 }
 
-narrative_event = {
+character_event = {
 	id = castart.13
 	title = castarttitle.13
 	desc = castartdesc.13
@@ -646,8 +655,8 @@ narrative_event = {
 				}
 				c_harrison = {
 					holder_scope = {
-						narrative_event = {
-							id = castart.9 days = 1
+						character_event = {
+							id = castart.10 days = 1
 						}
 					}
 				}
