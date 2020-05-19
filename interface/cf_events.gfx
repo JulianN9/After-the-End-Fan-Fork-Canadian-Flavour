@@ -4,8 +4,29 @@ spriteTypes = {
 		texturefile = "gfx/cf_events/hockey_position.tga"
 	}
 
-    spriteType = {
+	spriteType = {
 		name = "GFX_evt_mother_saint"
 		texturefile = "gfx/cf_events/mother_saint.tga"
 	}
+	
+	spriteType = {
+		name = "GFX_evt_canada_provinces"
+		texturefile = "gfx/cf_events/canada_provinces.tga"
+	}
+
+	spriteType = {
+		name = "GFX_evt_haida_empire"
+		texturefile = "gfx/cf_events/haida_empire.tga"
+	}
+
+	spriteType = {
+		name = "GFX_evt_haida_startup"
+		texturefile = "gfx/cf_events/haida_startup.tga"
+	}
+
+	spriteType = {
+		name = "GFX_evt_pe_startup"
+		texturefile = "gfx/cf_events/pe_startup.tga"
+	}
+
 }

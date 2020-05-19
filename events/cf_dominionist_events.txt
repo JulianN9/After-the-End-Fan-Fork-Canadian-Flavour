@@ -289,7 +289,7 @@ narrative_event = { #Canucks
 	}
 }
 
-narrative_event = { #Canucks
+narrative_event = { #Oilers
 	id = dominion.12
 	desc = domdesc.12
 	title = domtitle.12
@@ -383,7 +383,7 @@ narrative_event = { #Canucks
 	}
 }
 
-narrative_event = { #Canucks
+narrative_event = { #Leafs
 	id = dominion.13
 	desc = domdesc.13
 	title = domtitle.13
@@ -477,7 +477,7 @@ narrative_event = { #Canucks
 	}
 }
 
-narrative_event = { #Canucks
+narrative_event = { #Habitants
 	id = dominion.14
 	desc = domdesc.14
 	title = domtitle.14

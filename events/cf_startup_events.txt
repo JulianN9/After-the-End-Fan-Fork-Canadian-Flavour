@@ -20,7 +20,7 @@ character_event = {
 		if = {
 			limit = { has_character_flag = vancouver_king }
 			narrative_event = {
-				id = castart.2 days = 30
+				id = castart.2 days = 10
 			}
 			clr_character_flag = vancouver_king
 		}
@@ -40,7 +40,7 @@ narrative_event = {
 	id = castart.2
 	title = castarttitle.2
 	desc = castartdesc.2
-	picture = GFX_evt_lunatic_arabic
+	picture = GFX_evt_haida_startup
 	border = GFX_event_narrative_frame_diplomacy
 	prisoner = no
 	only_independent = yes
@@ -64,7 +64,7 @@ narrative_event = {
 	id = castart.3
 	title = castarttitle.2
 	desc = castartdesc.3
-	picture = GFX_evt_lunatic_arabic
+	picture = GFX_evt_haida_startup
 	border = GFX_event_narrative_frame_diplomacy
 	prisoner = no
 	only_independent = yes
@@ -118,7 +118,7 @@ narrative_event = {
 	id = castart.4
 	title = castarttitle.4
 	desc = castartdesc.4
-	picture = GFX_evt_lunatic_arabic
+	picture = GFX_evt_haida_startup
 	border = GFX_event_narrative_frame_diplomacy
 	prisoner = no
 	only_independent = yes
@@ -147,7 +147,7 @@ narrative_event = {
 					culture = salish
 				}
 			}
-			character_event = {
+			narrative_event = {
 				id = castart.6 days = 30
 			}
 		}
@@ -157,9 +157,7 @@ narrative_event = {
 				any_realm_province = {
 					if = {
 						limit = { 
-							de_jure_liege_or_above = {
-								d_victoria
-							}
+							culture = canuck
 						}
 						culture = salish
 					}
@@ -210,10 +208,12 @@ province_event = {
 	}
 }
 
-character_event = {
+narrative_event = {
 	id = castart.6
 	title = castarttitle.6
 	desc = castartdesc.6
+	picture = GFX_evt_haida_startup
+	border = GFX_event_narrative_frame_diplomacy
 	only_playable = yes
 	is_triggered_only = yes
 
@@ -385,7 +385,7 @@ narrative_event = {
 	id = castart.9
 	title = castarttitle.9
 	desc = castartdesc.9
-	picture = GFX_evt_lunatic_arabic
+	picture = GFX_evt_haida_startup
 	border = GFX_event_narrative_frame_diplomacy
 	prisoner = no
 	only_playable = yes
@@ -454,7 +454,7 @@ narrative_event = {
 	id = castart.11
 	title = castarttitle.11
 	desc = castartdesc.11
-	picture = GFX_evt_lunatic_arabic
+	picture = GFX_evt_haida_startup
 	border = GFX_event_narrative_frame_diplomacy
 	prisoner = no
 	only_independent = yes
@@ -593,6 +593,9 @@ character_event = {
 						target = ROOT
 						casus_belli = feather_war
 						thirdparty_title = PREV
+					}
+					narrative_event = {
+						id = castart.14 days =1
 					}	
 				}
 			}
@@ -624,7 +627,7 @@ character_event = {
 	id = castart.13
 	title = castarttitle.13
 	desc = castartdesc.13
-	picture = GFX_evt_lunatic_arabic
+	picture = GFX_evt_haida_startup
 	border = GFX_event_narrative_frame_diplomacy
 	is_triggered_only = yes
 	only_playable = yes
@@ -642,6 +645,9 @@ character_event = {
 						target = ROOT
 						casus_belli = feather_war
 						thirdparty_title = PREV
+					}
+					narrative_event = {
+						id = castart.15 days = 1
 					}	
 				}
 			}
@@ -682,23 +688,53 @@ character_event = {
 	}
 }
 
-narrative_event={ #Unite Haida Tlguug
+# War on Van
+character_event = {
 	id = castart.14
 	title = castarttitle.14
 	desc = castartdesc.14
-	picture = GFX_EVT_red_river_summer
+	picture = GFX_evt_haida_startup
+	border = GFX_event_narrative_frame_diplomacy
+	is_triggered_only = yes
+	only_playable = yes
+
+	option = {
+		name = castartoptA.14
+	}
+}
+
+#War on Haida
+character_event = {
+	id = castart.15
+	title = castarttitle.15
+	desc = castartdesc.15
+	picture = GFX_evt_haida_startup
+	border = GFX_event_narrative_frame_diplomacy
+	is_triggered_only = yes
+	only_playable = yes
+
+	option = {
+		name = castartoptA.15
+	}
+}
+
+narrative_event={ #Unite Haida Tlguug
+	id = castart.16
+	title = castarttitle.16
+	desc = castartdesc.16
+	picture = GFX_evt_haida_empire
 	is_triggered_only = yes
 	major = yes
 	
 	option = {
-		name = castartoptA.14
+		name = castartoptA.16
 		trigger = {
 			has_landed_title = e_haida
 		}
 		prestige = 3000
 	}
 	option = {
-		name = EVTOPT_metis_confederacy_coreligionist
+		name = castartoptB.16
 		trigger = {
 			NOT = { has_landed_title = e_canada }
             NOT = { has_landed_title = e_haida }
@@ -710,7 +746,7 @@ narrative_event={ #Unite Haida Tlguug
 		}
 	}
 	option = {
-		name = EVTOPT_metis_confederacy_bystander
+		name = castartoptC.16
 		trigger = {
 			NOT = { has_landed_title = e_haida }
 			NOT = { has_landed_title = e_canada }
@@ -722,7 +758,7 @@ narrative_event={ #Unite Haida Tlguug
 		}
 	}
 	option = {
-		name = EVTOPT_metis_confederacy_canadian
+		name = castartoptD.16
 		trigger = {
 			NOT = { has_landed_title = e_haida }
 			has_landed_title = e_canada
@@ -736,17 +772,103 @@ narrative_event={ #Unite Haida Tlguug
 	}
 }
 
+#####################################################
+#													#
+#			East Coast Events						#
+#													#
+#####################################################
 
+# Inspired by Vinyl cafe - odd jobs
 narrative_event = {
 	id = castart.21
+	title = castarttitle.21
 	desc = castartdesc.21
-	picture = GFX_evt_lunatic_arabic
+	picture = GFX_evt_pe_startup
 	border = GFX_event_narrative_frame_diplomacy
 	is_triggered_only = yes
 
 
 	option = {
 		name = castartoptA.21
+		narrative_event = {
+			id = castart.22
+		}
+		ai_chance = {
+			factor = 1
+		}	   
+	}
+}
+
+narrative_event = {
+	id = castart.22
+	title = castarttitle.22
+	desc = castartdesc.22
+	picture = GFX_evt_pe_startup
+	border = GFX_event_narrative_frame_diplomacy
+	is_triggered_only = yes
+
+
+	option = {
+		name = castartoptA.22
+		narrative_event = {
+			id = castart.23
+		}
+		ai_chance = {
+			factor = 1
+		}	   
+	}
+}
+
+narrative_event = {
+	id = castart.23
+	title = castarttitle.23
+	desc = castartdesc.23
+	picture = GFX_evt_pe_startup
+	border = GFX_event_narrative_frame_diplomacy
+	is_triggered_only = yes
+
+
+	option = {
+		name = castartoptA.23
+		narrative_event = {
+			id = castart.24 days = 30
+		}
+		ai_chance = {
+			factor = 1
+		}	   
+	}
+}
+
+narrative_event = {
+	id = castart.24
+	title = castarttitle.24
+	desc = castartdesc.24
+	picture = GFX_evt_pe_startup
+	border = GFX_event_narrative_frame_diplomacy
+	is_triggered_only = yes
+
+
+	option = {
+		name = castartoptA.24
+		narrative_event = {
+			id = castart.25 days = 30
+		}
+		ai_chance = {
+			factor = 1
+		}	   
+	}
+}
+
+narrative_event = {
+	id = castart.25
+	desc = castartdesc.25
+	picture = GFX_evt_pe_startup
+	border = GFX_event_narrative_frame_diplomacy
+	is_triggered_only = yes
+
+
+	option = {
+		name = castartoptA.25
 		capital_scope = {
 			build_holding = {
 				title = {
@@ -759,5 +881,4 @@ narrative_event = {
 			factor = 1
 		}	   
 	}
-
 }

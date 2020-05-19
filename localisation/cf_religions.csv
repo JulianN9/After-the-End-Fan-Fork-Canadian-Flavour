@@ -183,3 +183,16 @@ EVTNAME_pilgrim_montreal;Pilgrimage to Montreal;;;;;;;;;;;;;x
 EVTDESC_pilgrim_montreal;Once a melting pot of Canadian culture, montreal has maintined it's place at the forefront of cultural devleopments in Canadian society. If you wish to maintain a benevolent image, Lyon would favour you to visit la vielle ville.;;;;;;;;;;;;;x
 EVTNAME_pilgrim_halifax;Pilgrimage to Halifax;;;;;;;;;;;;;x
 EVTDESC_pilgrim_halifax;Many a scheming and powerful once lived in Halifax, controling atlantic trade and scouting Canada's southern enemies. If you seeek to be shrowed in shadows, a visit to Haligonia is not amiss.;;;;;;;;;;;;;x
+
+domtitle.11;Formation of the Kanooks;;;;;;;;;;;;;x
+domdesc.11;With the return of Rinkite control of Vancouver, [Root.GetTitledName] has proclaimed the recreation of the ancient Kanook brotherhood. This ancient team once stood of the defendants of the western regions. Though they were never held to the same regard as the eastern teams, they were known for their perseverance and fearlessness. With the team resotered, the players may once again face the Away Team with undying fortitude.;;;;;;;;;;;;;x
+domtitle.12;Formation of the Petrollers;;;;;;;;;;;;;x
+domdesc.12;With the return of Rinkite control of Edmonton, [Root.GetTitledName] has proclaimed the recreation of the ancient Petroller brotherhood. This ancient team were once the defenders of the plains. They were revered for their adaptability, having fought through some of the most treacherous of landscapes. They were also great diplomats, converting their most terrible foes into benchmen. Their booming voices shall spread The Rules to all the plains.;;;;;;;;;;;;;x
+domtitle.13;Formation of the Blue Maples;;;;;;;;;;;;;x
+domdesc.13;With the return of Rinkite control of Toronto, [Root.GetTitledName] has proclaimed the recreation of the ancient Blue Maple brotherhood. One of the three original teams said to be taught by the Coach himself. The players of the Blue Maples were known to be the most honorable and courageous in the land. A member of the Leafs is expected to memorize the Rules by heart in it's exact written form. Surely they will lead the rinkites back to their former glory.;;;;;;;;;;;;;x
+domtitle.14;Formation of the Denizens;;;;;;;;;;;;;x
+domdesc.14;With the return of [Root.GetHerHis] control of Hochelaga, [Root.GetTitledName] has proclaimed the recreation of the ancient Denizen brotherhood. One of the three original teams, and the largest, the denizens were some of the most devout of all the teams. They will be instrumental in beating back the Ursuline Hordes.;;;;;;;;;;;;;x
+domtitle.28;Formation of the Legislators;;;;;;;;;;;;;x
+domdesc.28;Following the death of the prophet, many of his most devout followers have formed a holy order in order to spread his teachings. Taking on the name of the Legislators, after an ancient hockey team from the capital. The members of this team were known to be some of the strongest men in the region. It is hoped that, by emulating their strength, dominionism can be spread throughout ancient Canada.;;;;;;;;;;;;;x
+domoptA.28;May they spread far and wide.;;;;;;;;;;;;;x
+domoptB.28;Another group of lunatics.;;;;;;;;;;;;;x

@@ -7,7 +7,7 @@ castartoptA.3;Regardless of law, Gidansda shall unite the Haida!;;;;;;;;;;;;;x
 castartoptB.3;Law must prevail, and perhaps Hluuwee is more competant than he seems.;;;;;;;;;;;;;x
 
 castarttitle.4;The Ascension of Hluuwee;;;;;;;;;;;;;x
-castartdesc.4;With your inehritence of the throne of Januug Tlagaang, you have begun the process of encouraging the ancient cultures of the Coast Salish. Said to inhabit the land from Vancouver island to Lincoln before the Hiada and Canuck, encouraging this identity would help seperate the kindgom from our nothern haida Neighbours. Many of your vassals who were nominally haida, but already praticed their own local cultures, have been happy to take on these new identities. Perhaps this is due to a genuine new identity, or perhaps it is an attempt to distance themselves from the more violent haida to the north. These new Coast salish vassals are petitioning me to push further south and reclaim there ancient land.;;;;;;;;;;;;;x
+castartdesc.4;With your inehritence of the throne of Januug Tlagaang, you have begun the process of encouraging the ancient cultures of the Coast Salish. Said to inhabit the land from Vancouver island to Lincoln before the Haida and Canuck, encouraging this identity would help seperate the kindgom from our nothern haida Neighbours. Many of your vassals who were nominally haida, but already praticed their own local cultures, have been happy to take on these new identities. Perhaps this is due to a genuine new identity, or perhaps it is an attempt to distance themselves from the more violent haida to the north. These new Coast salish vassals are petitioning me to push further south and reclaim there ancient land.;;;;;;;;;;;;;x
 castartoptA.4;The oppression of the Coast Salish is no more.;;;;;;;;;;;;;x
 
 castarttitle.6;Birds of a Feather;;;;;;;;;;;;;x
@@ -47,9 +47,29 @@ castartdesc.13;The cowards in Haida Tlagaang have not responded to my claims to 
 castartoptA.13;What are we waiting for?;;;;;;;;;;;;;x
 castartoptB.13;We have other things to attend to.;;;;;;;;;;;;;x
 
-castarttitle.14;The Haida Empire;;;;;;;;;;;;;x
-castartdesc.14;Following the reunifications of the kingdoms of Januug Tlagaang and Haida Tlagaang, [Root.GetTitled.Name] has been procalimed emperor of all Haida people and protector of the peoples of the coast. This surely marks the begining of an era of Haida dominance in the northwest, as the neighbours look on in fear of the mighty raiding fleets being assembled. Perhaps this empire will be strong enough to challenge the Cetic dominance, only time will tell.;;;;;;;;;;;;;x
-castartoptA.14;The entire coast will heed my will.;;;;;;;;;;;;;x
-castartoptB.14;The Raven's wings will cover the coast!;;;;;;;;;;;;;x
-castartoptC.14;Distrubing news.;;;;;;;;;;;;;x
-castartoptD.14;We will reclaim the Canadian land!;;;;;;;;;;;;;x
+castarttitle.16;The Haida Empire;;;;;;;;;;;;;x
+castartdesc.16;Following the reunifications of the kingdoms of Januug Tlagaang and Haida Tlagaang, [Root.GetTitled.Name] has been procalimed emperor of all Haida people and protector of the peoples of the coast. This surely marks the begining of an era of Haida dominance in the northwest, as the neighbours look on in fear of the mighty raiding fleets being assembled. Perhaps this empire will be strong enough to challenge the Cetic dominance, only time will tell.;;;;;;;;;;;;;x
+castartoptA.16;The entire coast will heed my will.;;;;;;;;;;;;;x
+castartoptB.16;The Raven's wings will cover the coast!;;;;;;;;;;;;;x
+castartoptC.16;Distrubing news.;;;;;;;;;;;;;x
+castartoptD.16;We will reclaim the Canadian land!;;;;;;;;;;;;;x
+
+castarttitle.21;An Odd Job;;;;;;;;;;;;;x
+castartdesc.21;Today is a wonderful day, I have nothing to do, and my wife Morley is gone for the day. Perhaps I should build that statue to the coach at his berial ground. I've never had any building experience, but I've got a mallet, chisel and a big rock and I'm sure I get get it done.;;;;;;;;;;;;;x
+castartoptA.21;Just a hole here and there.;;;;;;;;;;;;;x
+
+castarttitle.22;Some helping hands.;;;;;;;;;;;;;x
+castartdesc.22;After a few hours I've simply accomplish making several large holes in the boulder. A couple of my courtiers have walked by and have begun to offer me help. It seems like destruction is very attractive, and already there are upwards of 10 burly men bashing holes into this boulder.;;;;;;;;;;;;;x
+castartoptA.22;This will be done in no time;;;;;;;;;;;;;x
+
+castarttitle.23;A bit overboard?;;;;;;;;;;;;;x
+castartdesc.23;We are now several hour into our work and the project is expanding without bound. In trying to fix the boulder, we have only created more of a mess. Some of my courtiers have started on a structure to house the future statue, others have begun to collect what they believe to be the coach's favorite things. However, in the center of it all sits a sad lump of rock that once was a boulder.;;;;;;;;;;;;;x
+castartoptA.23;I hope I don't have to pay for this;;;;;;;;;;;;;x
+
+castarttitle.24;Morley's return;;;;;;;;;;;;;x
+castartdesc.24;As the day draws to a close, Morely returns to the castle to find no one home. A courtier leads her outside to the mess we have created. She is awestruck by the amount of labourers who stand besides me. She calls out: "who will pay for this", and this cauchophony of sound sends a shockwave to the shaky constructions around me. A rock tumbles down, then a beam, and just as fast as the temple surrounding the boulder came up it tumbles down. Now even more furious, Morley orders all of the workers away, and demands that a proper temple being constructed immediately.;;;;;;;;;;;;;x
+castartoptA.24;Oh dear..;;;;;;;;;;;;;x
+
+castarttitle.25;Two steps forward ...;;;;;;;;;;;;;x
+castartdesc.25;After a couple of arduous months an actual rink has been created tot honour the coach. A beautiful structure, it is filled with many scraps of the garments said to be worn by him. Their mistical colours and patterns attract many a peasent from far and wide. It looks at last that things are returning to normal. As I take Morley for a walk around the rink we stare at the entrance together.;;;;;;;;;;;;;x
+castartoptA.25;Wouldn't a statue look nice here;;;;;;;;;;;;;x

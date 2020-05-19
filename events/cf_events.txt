@@ -365,13 +365,13 @@ narrative_event = {
 narrative_event = {
 	id = canada.111
 	title = canadatitle.111
-	desc = canadatitle.111
-	picture = GFX_evt_battle
+	desc = canadadesc.111
+	picture = GFX_evt_canada_provinces
 	border = GFX_event_narrative_frame_war
 	is_triggered_only = yes
 
 	option = {
-		name = canadadesc.111
+		name = canadaoptA.111
 	}
 }
 
@@ -379,13 +379,13 @@ narrative_event = {
 narrative_event = {
 	id = canada.112
 	title = canadatitle.112
-	desc = canadatitle.112
-	picture = GFX_evt_battle
+	desc = canadadesc.112
+	picture = GFX_evt_canada_provinces
 	border = GFX_event_narrative_frame_war
 	is_triggered_only = yes
 
 	option = {
-		name = canadadesc.112
+		name = canadaoptA.112
 	}
 }
 
@@ -393,8 +393,21 @@ narrative_event = {
 narrative_event = {
 	id = canada.113
 	title = canadatitle.113
-	desc = canadatitle.113
-	picture = GFX_evt_battle
+	desc = {
+		text = canadadesc.113
+		trigger = {
+			NOT = {
+				religion = confederated
+			}
+		}
+	}
+	desc = {
+		text = canadadesccon.113
+		trigger = {
+			religion = confederated
+		}
+	}
+	picture = GFX_evt_canada_provinces
 	border = GFX_event_narrative_frame_war
 	is_triggered_only = yes
 
@@ -427,7 +440,7 @@ narrative_event = {
 	}
 
 	option = {
-		name = canadadesc.113
+		name = canadaoptA.113
 	}
 }
 
@@ -435,8 +448,21 @@ narrative_event = {
 narrative_event = {
 	id = canada.114
 	title = canadatitle.114
-	desc = canadatitle.114
-	picture = GFX_evt_battle
+	desc = {
+		text = canadadesc.114
+		trigger = {
+			NOT = {
+				religion = confederated
+			}
+		}
+	}
+	desc = {
+		text = canadadesccon.114
+		trigger = {
+			religion = confederated
+		}
+	}
+	picture = GFX_evt_canada_provinces
 	border = GFX_event_narrative_frame_war
 	is_triggered_only = yes
 
@@ -469,7 +495,7 @@ narrative_event = {
 	}
 
 	option = {
-		name = canadadesc.114
+		name = canadaoptA.114
 	}
 }
 
@@ -477,13 +503,30 @@ narrative_event = {
 narrative_event = {
 	id = canada.115
 	title = canadatitle.115
-	desc = canadatitle.115
-	picture = GFX_evt_battle
+	desc = {
+		text = canadadesc.115
+		trigger = {
+			NOR = {
+				has_landed_title = e_canada
+				has_landed_title = e_bc
+			}
+		}
+	}
+	desc = {
+		text = canadadesccan.115
+		trigger = {
+			OR = {
+				has_landed_title = e_canada
+				has_landed_title = e_bc
+			}
+		}
+	}
+	picture = GFX_evt_canada_provinces
 	border = GFX_event_narrative_frame_war
 	is_triggered_only = yes
 
 	option = {
-		name = canadadesc.115
+		name = canadaoptA.115
 	}
 }
 
@@ -491,13 +534,30 @@ narrative_event = {
 narrative_event = {
 	id = canada.116
 	title = canadatitle.116
-	desc = canadatitle.116
-	picture = GFX_evt_battle
+	desc = {
+		text = canadadesc.116
+		trigger = {
+			NOR = {
+				has_landed_title = e_canada
+				has_landed_title = e_bc
+			}
+		}
+	}
+	desc = {
+		text = canadadesccan.116
+		trigger = {
+			OR = {
+				has_landed_title = e_canada
+				has_landed_title = e_bc
+			}
+		}
+	}
+	picture = GFX_evt_canada_provinces
 	border = GFX_event_narrative_frame_war
 	is_triggered_only = yes
 
 	option = {
-		name = canadadesc.116
+		name = canadaoptA.116
 	}
 }
 
@@ -505,13 +565,13 @@ narrative_event = {
 narrative_event = {
 	id = canada.117
 	title = canadatitle.117
-	desc = canadatitle.117
-	picture = GFX_evt_battle
+	desc = canadadesc.117
+	picture = GFX_evt_canada_provinces
 	border = GFX_event_narrative_frame_war
 	is_triggered_only = yes
 
 	option = {
-		name = canadadesc.117
+		name = canadaoptA.117
 	}
 }
 
@@ -519,12 +579,12 @@ narrative_event = {
 narrative_event = {
 	id = canada.118
 	title = canadatitle.118
-	desc = canadatitle.118
-	picture = GFX_evt_battle
+	desc = canadadesc.118
+	picture = GFX_evt_canada_provinces
 	border = GFX_event_narrative_frame_war
 	is_triggered_only = yes
 
 	option = {
-		name = canadadesc.118
+		name = canadaoptA.118
 	}
 }

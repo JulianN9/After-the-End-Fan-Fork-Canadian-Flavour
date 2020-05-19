@@ -390,7 +390,7 @@ feather_war = {
 				}
 			}
 			set_global_flag = haida_proclaimed
-			narrative_event = { id = castart.14 }
+			narrative_event = { id = castart.16 }
 		}
 	}
 
@@ -424,7 +424,7 @@ feather_war = {
 				}
 			}
 			set_global_flag = haida_proclaimed
-			narrative_event = { id = castart.14 }
+			narrative_event = { id = castart.16 }
 		}
 	}
 	
@@ -458,7 +458,7 @@ feather_war = {
 				}
 			}
 			set_global_flag = haida_proclaimed
-			narrative_event = { id = castart.14 }
+			narrative_event = { id = castart.16 }
 		}	
 		end_war = invalid
 	}
@@ -493,7 +493,7 @@ feather_war = {
 				}
 			}
 			set_global_flag = haida_proclaimed
-			narrative_event = { id = castart.14 }
+			narrative_event = { id = castart.16 }
 		}	
 		end_war = invalid
 	}

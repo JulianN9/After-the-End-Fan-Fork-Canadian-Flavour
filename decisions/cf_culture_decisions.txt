@@ -331,7 +331,7 @@ decisions = {
 			}
 			wealth = -500
 			set_global_flag = haida_proclaimed
-			narrative_event = { id = castart.14 }
+			narrative_event = { id = castart.16 }
 		}
 		revoke_allowed = {
 			always = no
