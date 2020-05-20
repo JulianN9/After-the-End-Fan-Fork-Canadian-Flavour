@@ -108,4 +108,9 @@ spriteTypes = {
 		name = "GFX_form_mon_can"
 		texturefile = "gfx/interface/form_mon_can.dds"
 	}
+
+	spriteType = {
+		name = "GFX_form_the_haida_empire"
+		texturefile = "gfx/interface/form_the_haida_empire.dds"
+	}
 }
