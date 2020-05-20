@@ -425,7 +425,7 @@ narrative_event = {
 character_event = {
 	id = castart.10
 	title = castarttitle.10
-	desc = castarttitle.10
+	desc = castartdesc.10
 	only_playable = yes
 	is_triggered_only = yes
 
@@ -628,7 +628,6 @@ character_event = {
 	title = castarttitle.13
 	desc = castartdesc.13
 	picture = GFX_evt_haida_startup
-	border = GFX_event_narrative_frame_diplomacy
 	is_triggered_only = yes
 	only_playable = yes
 
@@ -694,7 +693,6 @@ character_event = {
 	title = castarttitle.14
 	desc = castartdesc.14
 	picture = GFX_evt_haida_startup
-	border = GFX_event_narrative_frame_diplomacy
 	is_triggered_only = yes
 	only_playable = yes
 
@@ -709,7 +707,6 @@ character_event = {
 	title = castarttitle.15
 	desc = castartdesc.15
 	picture = GFX_evt_haida_startup
-	border = GFX_event_narrative_frame_diplomacy
 	is_triggered_only = yes
 	only_playable = yes
 
@@ -861,6 +858,7 @@ narrative_event = {
 
 narrative_event = {
 	id = castart.25
+	title = castarttitle.25
 	desc = castartdesc.25
 	picture = GFX_evt_pe_startup
 	border = GFX_event_narrative_frame_diplomacy

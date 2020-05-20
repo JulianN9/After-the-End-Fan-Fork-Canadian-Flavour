@@ -26,6 +26,22 @@ organize_greater_newf_lab;Unite the Provinces of Newfoundland and Labrador;;;;;;
 organize_greater_newf_lab_desc;The provinces of Newfoundland and Labrador were once united under one crown. With the unification of old Quebec this union must be restored.;;;;;;;;;;;;;x
 organize_manitoba;Organize the Province of Manitoba;;;;;;;;;;;;;x
 organize_manitoba_desc;With old Ontario returned to it's rightful size, the important border kingdom of Manitoba has become week. It must be brought under the canadian banner to protect them both from the hordes to the west.;;;;;;;;;;;;;x
+organize_south_bc;Oragnize Southern BC;;;;;;;;;;;;;x
+organize_south_bc_desc;Integrate the southern trade cities of British Columbia into the Canadian empire.;;;;;;;;;;;;;x
+organize_north_bc;Organize Northern BC;;;;;;;;;;;;;x
+organize_north_bc_desc;Integrate the resource rich north of British Columbia into the Canadian empire.;;;;;;;;;;;;;x
+form_van_nucks;Assemble the Kanooks;;;;;;;;;;;;;x
+form_edm_oil;Assemble the Petrollers;;;;;;;;;;;;;x
+form_tor_lea;Assemble the Blue Maples;;;;;;;;;;;;;x
+form_mon_can;Assemble the Denizens;;;;;;;;;;;;;x
+form_van_nucks_desc;Organize a holy order of the rinkite faithful in the name of the ancient team of the Kanooks.;;;;;;;;;;;;;x
+form_edm_oil_desc;Organize a holy order of the rinkite faithful in the name of the ancient team of the Petrollers.;;;;;;;;;;;;;x
+form_tor_lea_desc;Organize a holy order of the rinkite faithful in the name of the ancient team of the Blue Maples.;;;;;;;;;;;;;x
+form_mon_can_desc;Organize a holy order of the rinkite faithful in the name of the ancient team of the Denizens.;;;;;;;;;;;;;x
+dominion_11_TT;The Kanooks are assembled.;;;;;;;;;;;;;x
+dominion_12_TT;The Petrollers are assembled.;;;;;;;;;;;;;x
+dominion_13_TT;The Denizens are assembled.;;;;;;;;;;;;;x
+dominion_14_TT;The Blue Maples are assembled.;;;;;;;;;;;;;x
 
 can_unif_male;Blood of [This.GetFirstNameWithNick];;;;;;;;;;;;;x
 can_unif_female;Blood of [This.GetFirstNameWithNick];;;;;;;;;;;;;x
