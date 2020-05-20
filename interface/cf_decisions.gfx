@@ -78,4 +78,34 @@ spriteTypes = {
 		name = "GFX_become_prime_minister"
 		texturefile = "gfx/interface/canadian_renaissance.dds"
 	}
+
+	spriteType = {
+		name = "GFX_organize_south_bc"
+		texturefile = "gfx/interface/organize_south_bc.dds"
+	}
+
+	spriteType = {
+		name = "GFX_organize_north_bc"
+		texturefile = "gfx/interface/organize_north_bc.dds"
+	}
+
+	spriteType = {
+		name = "GFX_form_van_nucks"
+		texturefile = "gfx/interface/form_van_nucks.dds"
+	}
+
+	spriteType = {
+		name = "GFX_form_edm_oil"
+		texturefile = "gfx/interface/form_edm_oil.dds"
+	}
+
+	spriteType = {
+		name = "GFX_form_tor_lea"
+		texturefile = "gfx/interface/form_tor_lea.dds"
+	}
+
+	spriteType = {
+		name = "GFX_form_mon_can"
+		texturefile = "gfx/interface/form_mon_can.dds"
+	}
 }

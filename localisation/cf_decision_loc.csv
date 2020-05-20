@@ -40,8 +40,8 @@ form_tor_lea_desc;Organize a holy order of the rinkite faithful in the name of t
 form_mon_can_desc;Organize a holy order of the rinkite faithful in the name of the ancient team of the Denizens.;;;;;;;;;;;;;x
 dominion_11_TT;The Kanooks are assembled.;;;;;;;;;;;;;x
 dominion_12_TT;The Petrollers are assembled.;;;;;;;;;;;;;x
-dominion_13_TT;The Denizens are assembled.;;;;;;;;;;;;;x
-dominion_14_TT;The Blue Maples are assembled.;;;;;;;;;;;;;x
+dominion_13_TT;The Blue Maples are assembled.;;;;;;;;;;;;;x
+dominion_14_TT;The Denizens are assembled.;;;;;;;;;;;;;x
 
 can_unif_male;Blood of [This.GetFirstNameWithNick];;;;;;;;;;;;;x
 can_unif_female;Blood of [This.GetFirstNameWithNick];;;;;;;;;;;;;x
