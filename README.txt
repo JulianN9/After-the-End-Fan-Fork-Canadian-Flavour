@@ -4,13 +4,13 @@ https://forum.paradoxplaza.com/forum/index.php?threads/after-the-end-a-post-apoc
 Installation:
 Delete any old versions of this mod you have. 
 Drag and place "After the End - Canadian Flavour" and its .mod file into mod folder 
-at: documents/Paradox Interactive/Crusader Kings II/mod. 
+at: .../documents/Paradox Interactive/Crusader Kings II/mod. 
 
 DO NOT MERGE WITH BASE AFTER THE END.
 
 Features:
 Full featured confederationalism - coronations, crusades, and saints.
-Confederationalism is now a triarchy
+Confederationalism is now a autocephalous with various local heads.
 New Confederated heresy - the United Church
 Canadian renaissance - revitalise the post event candian culture, if the quebecois will let you.
 New unification bloodllines
@@ -18,9 +18,10 @@ Reformable provinces
 New empire for BC and nouvelle France
 4 new old world cultist religions - Dominionism,Rinkite,Lyonism, and the Church of the Three mothers
 New warrior lodge for new religions
+New startup events for the Haida Kings, which can lead to a haida empire or a new salish culture.
 
 Credits:
 Scripted by Conquest
-Written by Pizzamaster and Conquest
+Written by James Dylan, Pizzamaster and Conquest
 Images by Conquest
 This mod is entirely based on and supported by the wonderful work done by the ateff team. Please show them all the support you can.
