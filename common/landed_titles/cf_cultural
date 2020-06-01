@@ -1,0 +1,30 @@
+e_salish = {
+	color={ 253 184 19 }
+	color2={ 210 50 20 }
+	capital = 548 # Vancouver
+	
+	culture = salish 
+	allow = {
+		NOT = {
+			has_game_rule = {
+				name = cultural_empires
+				value = off
+			}
+		}
+		war = no
+		NOT = { tier = emperor }
+		culture = salish
+		OR = {
+			realm_size = 150
+			e_salish = { 
+                OR = { 
+                    is_titular = no 
+                    has_holder = yes 
+                } 
+            }
+		}
+	}
+	short_name = yes
+	
+	creation_requires_capital = no	
+}

@@ -2,4 +2,7 @@ old_world;Old World;;;;;;;;;;;;;x
 american;American;;;;;;;;;;;;;x
 canadian;Canadian;;;;;;;;;;;;;x
 salish;Salish;;;;;;;;;;;;;x
+e_salish;Salish Empire;;;;;;;;;;;;;x
+salish_opinion;[salish.GetName] Opinion;;;;;;;;;;;;;x
+tooltip_coast_salish_cultute;Slaish culture begins to spread.;;;;;;;;;;;;;x
 canadian_opinion;[canadian.GetName] Opinion;;;;;;;;;;;;;x
