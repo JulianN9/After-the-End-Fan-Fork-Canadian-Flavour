@@ -1,16 +1,16 @@
-k_ontario       = { confederated = 1000 }
-k_quebec        = { confederated = 900 }
-k_maritimes     = { confederated = 850 }
-k_aurora        = { confederated = 800 }
+k_ontario       = { dominionist = 1000 }
+k_quebec        = { dominionist = 900 }
+k_maritimes     = { dominionist = 850 }
+k_aurora        = { dominionist = 800 }
 
-k_jamesie       = { confederated = 500 }
-k_newfoundland  = { confederated = 450 }
-k_cote_nord     = { confederated = 250 }
-k_nunavik       = { confederated = 200 }
+k_jamesie       = { dominionist = 500 }
+k_newfoundland  = { dominionist = 450 }
+k_cote_nord     = { dominionist = 250 }
+k_nunavik       = { dominionist = 200 }
 
-k_manitoba      = { confederated = 100 }
-k_prairieland   = { confederated = 90 }
-k_peace         = { confederated = 80 }
-k_klondike      = { confederated = 50 }
-k_caledonia     = { confederated = 25 }
-k_vancouver     = { confederated = 5 }
+k_manitoba      = { dominionist = 100 }
+k_prairieland   = { dominionist = 90 }
+k_peace         = { dominionist = 80 }
+k_klondike      = { dominionist = 50 }
+k_caledonia     = { dominionist = 25 }
+k_vancouver     = { dominionist = 5 }
