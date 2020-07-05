@@ -393,51 +393,10 @@ narrative_event = {
 narrative_event = {
 	id = canada.113
 	title = canadatitle.113
-	desc = {
-		text = canadadesc.113
-		trigger = {
-			NOT = {
-				religion = confederated
-			}
-		}
-	}
-	desc = {
-		text = canadadesccon.113
-		trigger = {
-			religion = confederated
-		}
-	}
+	desc = canadadesc.113
 	picture = GFX_evt_canada_provinces
 	border = GFX_event_narrative_frame_war
 	is_triggered_only = yes
-
-	immediate = {
-		if = {
-			limit = {
-				religon = confederated
-			}
-			d_con_cel = { active = yes }
-			create_random_priest = {
-				random_traits = yes
-				learning = 8
-				religion = confederated
-				culture = newfie
-				dynasty = random
-				age = 41
-			}
-			new_character = {
-				succession = open_elective
-				character_event = { id = misc.3 } # Diversity
-				character_event = { id = misc.4 } # Physique
-				c_st_johns = { gain_title = PREV }
-				d_con_cel = { gain_title = PREV }
-				set_defacto_liege = ROOT
-			}
-			d_con_cel = {
-				de_jure_liege = k_newfoundland
-			}
-		}
-	}
 
 	option = {
 		name = canadaoptA.113
@@ -448,51 +407,10 @@ narrative_event = {
 narrative_event = {
 	id = canada.114
 	title = canadatitle.114
-	desc = {
-		text = canadadesc.114
-		trigger = {
-			NOT = {
-				religion = confederated
-			}
-		}
-	}
-	desc = {
-		text = canadadesccon.114
-		trigger = {
-			religion = confederated
-		}
-	}
+	desc = canadadesc.114
 	picture = GFX_evt_canada_provinces
 	border = GFX_event_narrative_frame_war
 	is_triggered_only = yes
-
-	immediate = {
-		if = {
-			limit = {
-				religon = confederated
-			}
-			d_con_exo = { active = yes }
-			create_random_priest = {
-				random_traits = yes
-				learning = 8
-				religion = confederated
-				culture = metis
-				dynasty = random
-				age = 41
-			}
-			new_character = {
-				succession = open_elective
-				character_event = { id = misc.3 } # Diversity
-				character_event = { id = misc.4 } # Physique
-				c_st_johns = { gain_title = PREV }
-				d_con_exo = { gain_title = PREV }
-				set_defacto_liege = ROOT
-			}
-			d_con_exo = {
-				de_jure_liege = k_manitoba
-			}
-		}
-	}
 
 	option = {
 		name = canadaoptA.114

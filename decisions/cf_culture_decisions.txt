@@ -14,8 +14,8 @@ decisions = {
 			#show_only_failed_conditions = yes
 			capital_scope = { province = 1297 }
 			or ={ 
-				religion = confederated
-				religion = united
+				religion = rinkite
+				religion = dominionist
 			}
 			culture = ontarian
 			ruled_years = 10
