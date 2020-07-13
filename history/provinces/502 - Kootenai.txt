@@ -1,7 +1,7 @@
-# 502 - Kootenay
+# 502 - Kootenai
 
 # County Title
-title=c_kootenay
+title=c_kootenai
 
 # Settlements
 max_settlements=2
