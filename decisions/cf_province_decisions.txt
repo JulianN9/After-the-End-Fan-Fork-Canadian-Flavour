@@ -36,8 +36,8 @@ decisions = {
 			war = no
 			realm_size = 100
 			has_landed_title = k_quebec
-			has_landed_title = k_cote_nord
-			completely_controls = k_cote_nord
+			has_landed_title = k_saguenay
+			completely_controls = k_saguenay
 			completely_controls = d_noranda
 			completely_controls = d_eeyou_istchee
 		}
@@ -58,14 +58,14 @@ decisions = {
 			k_quebec = {
 				de_jure_liege = e_qbc
 			}
-			k_cote_nord = {
+			k_saguenay = {
 				de_jure_liege = e_qbc
 			}
 			d_noranda = {
-				de_jure_liege = k_cote_nord
+				de_jure_liege = k_saguenay
 			}
 			d_eeyou_istchee = {
-				de_jure_liege = k_cote_nord
+				de_jure_liege = k_saguenay
 			}
 			any_demesne_title = {
 				limit = { 
@@ -98,10 +98,10 @@ decisions = {
 							completely_controls = d_mushkegowuk
 						}
 						d_baie_james = {
-							de_jure_liege = k_cote_nord
+							de_jure_liege = k_saguenay
 						}
 						d_mushkegowuk = {
-							de_jure_liege = k_cote_nord
+							de_jure_liege = k_saguenay
 						}
 					}
 				}
@@ -816,7 +816,7 @@ decisions = {
 			scaled_wealth = 1
 			war = no
 			completely_controls = k_quebec
-			completely_controls = k_cote_nord
+			completely_controls = k_saguenay
 			completely_controls = d_eeyou_istchee
 			completely_controls = c_gouin
 			completely_controls = c_vallee_de_lor
@@ -832,11 +832,11 @@ decisions = {
 		effect = {
 			scaled_wealth = -1
 			prestige = -500
-			k_cote_nord = {
+			k_saguenay = {
 				de_jure_liege = e_canada
 			}
 			d_eeyou_istchee = {
-				de_jure_liege = k_cote_nord
+				de_jure_liege = k_saguenay
 			}
 			c_gouin = {
 				de_jure_liege = d_eeyou_istchee
@@ -845,10 +845,10 @@ decisions = {
 				de_jure_liege = d_eeyou_istchee
 			}
 			d_baie_james = {
-				de_jure_liege = k_cote_nord
+				de_jure_liege = k_saguenay
 			}
 			d_kativik = {
-				de_jure_liege =k_cote_nord
+				de_jure_liege =k_saguenay
 			}
 			hidden_tooltip = {
 				k_jamesie = {
