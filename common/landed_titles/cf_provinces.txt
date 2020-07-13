@@ -1,5 +1,5 @@
 e_qbc = {
-	color = {  255 179 71  }
+	color = {  0 45 73  }
 	color2 = { 220 220 0}
 	short_name = yes
 	capital = 1217 #Hochelaga
@@ -24,7 +24,7 @@ e_qbc = {
 }
 
 e_bc = {
-	color = { 95 44 13 }
+	color = { 171 75 81 }
 	color2 = { 220 220 0}
 	short_name = no
 	capital = 548 #Vancouver
