@@ -430,6 +430,9 @@ decisions = {
 			c_cypress_hills = {
 				de_jure_liege = d_battleford
 			}
+			c_north_battleford = {
+				de_jure_liege = d_battleford
+			}
 			c_la_ronge = {
 				de_jure_liege = d_missinipi
 			}
@@ -466,6 +469,13 @@ decisions = {
 					destroy_landed_title = THIS
 					if = {
 						limit = { has_global_flag = org_alb }
+						activate_title = { title = THIS status = no }
+					}
+				}
+				k_keewatin = {
+					destroy_landed_title = THIS
+					if = {
+						limit = { has_global_flag = org_man }
 						activate_title = { title = THIS status = no }
 					}
 				}
@@ -696,6 +706,8 @@ decisions = {
 			OR = {
 				religion = high_church
 				religion = nonconformist
+				religion = ursuline
+				religion = angeline
 				religion = dominionist
 				religion = lyonist
 				religion = three_mothers
@@ -968,6 +980,8 @@ decisions = {
 			OR = {
 				religion = high_church
 				religion = nonconformist
+				religion = ursuline
+				religion = angeline
 				religion = dominionist
 				religion = lyonist
 				religion = three_mothers
@@ -984,9 +998,17 @@ decisions = {
 			scaled_wealth = 1
 			war = no
 			completely_controls = k_manitoba
+			completely_controls = d_nelson
+			completely_controls = d_desnethe
 			OR = {
 				has_landed_title = k_manitoba
 				k_manitoba = {
+					has_holder = no
+				}
+			}
+			OR = {
+				has_landed_title = k_keewatin
+				k_keewatin = {
 					has_holder = no
 				}
 			}
@@ -1002,6 +1024,18 @@ decisions = {
 			}
 			k_manitoba = {
 				de_jure_liege = e_canada
+			}
+			d_nelson = {
+				de_jure_liege = k_manitoba
+			}
+			d_desnethe = {
+				de_jure_liege = k_manitoba
+			}
+			hidden_tooltip = {
+				k_keewatin = {
+					destroy_landed_title = THIS
+					activate_title = { title = THIS status = no }
+				}
 			}
 			set_global_flag = org_man
 			narrative_event = {
@@ -1050,10 +1084,7 @@ decisions = {
 			completely_controls = k_vancouver
 			completely_controls = d_kootenay
 			completely_controls = d_cariboo
-			completely_controls = c_kelowna
-			completely_controls = c_similkameen
-			completely_controls = c_kamloops
-			completely_controls = c_shuswap
+			completely_controls = d_okanagan
 			OR = {
 				has_landed_title = k_vancouver
 				k_vancouver = {
@@ -1076,26 +1107,20 @@ decisions = {
 					copy_title_laws = PREV
 				}
 			}
-			custom_tooltip = {
-				text = form_nor_bc_tool
-				hidden_tooltip = {
-					k_caledonia = {
-						destroy_landed_title = THIS
-						activate_title = { title = THIS status = no }
-					}
-					d_cariboo = {
-						de_jure_liege = k_vancouver
-					}
-					d_okanagan = {
-						de_jure_liege = k_vancouver
-					}
-					d_kootenay = {
-						de_jure_liege = k_vancouver
-					}
-					c_okanogan = {
-						de_jure_liege = d_horse_heaven
-					}
+			hidden_tooltip = {
+				k_caledonia = {
+					destroy_landed_title = THIS
+					activate_title = { title = THIS status = no }
 				}
+			}
+			d_cariboo = {
+				de_jure_liege = k_vancouver
+			}
+			d_okanagan = {
+				de_jure_liege = k_vancouver
+			}
+			d_kootenay = {
+				de_jure_liege = k_vancouver
 			}
 			k_vancouver = {
 				de_jure_liege = e_canada
