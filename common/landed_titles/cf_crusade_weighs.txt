@@ -5,12 +5,13 @@ k_aurora        = { dominionist = 800 }
 
 k_jamesie       = { dominionist = 500 }
 k_newfoundland  = { dominionist = 450 }
-k_cote_nord     = { dominionist = 250 }
+k_saguenay      = { dominionist = 250 }
 k_nunavik       = { dominionist = 200 }
 
 k_manitoba      = { dominionist = 100 }
-k_prairieland   = { dominionist = 90 }
-k_peace         = { dominionist = 80 }
+k_keewatin      = { dominionist = 90 }
+k_prairieland   = { dominionist = 80 }
+k_peace         = { dominionist = 70 }
 k_klondike      = { dominionist = 50 }
 k_caledonia     = { dominionist = 25 }
 k_vancouver     = { dominionist = 5 }
